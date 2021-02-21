@@ -1,7 +1,5 @@
 import React from "react"
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import { Link } from "gatsby"
-
 import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {

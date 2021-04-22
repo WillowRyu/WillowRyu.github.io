@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -11,9 +11,10 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   useEffect(() => {
-    deckDeckGoHighlightElement();
-    return () => { };
-  }, []);
+    deckDeckGoHighlightElement()
+    return () => {}
+  }, [])
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
@@ -21,23 +22,33 @@ const BlogIndex = ({ data, location }) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} className="link-post">
             <header>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none`, textDecoration: `none`, color: '#06c' }} to={node.fields.slug}>
+                <Link
+                  className="link-title"
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                  to={node.fields.slug}
+                >
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small className="link-desc">{node.frontmatter.date}</small>
             </header>
             <section>
-              <p dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
+              <p
+                className="link-desc"
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
               />
             </section>
           </article>

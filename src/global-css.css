@@ -2,6 +2,7 @@ body {
   background-color: var(--theme);
   --theme: #1d1e20;
   --entry: #2e2e33;
+  --pblue: #609fff;
   --primary: rgba(255, 255, 255, 0.84);
   --secondary: rgba(255, 255, 255, 0.56);
   --tertiary: rgba(255, 255, 255, 0.16);
@@ -29,4 +30,9 @@ img {
 .link-desc {
   color: var(--secondary);
   margin-bottom: 0;
+}
+
+a:visited,
+a:link {
+  color: var(--pblue);
 }

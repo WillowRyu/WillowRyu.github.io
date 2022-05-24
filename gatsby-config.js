@@ -8,8 +8,9 @@ module.exports = {
     description: `tip, info and study case of FE enginner`,
     siteUrl: `https://willowryu.github.io`,
     social: {
-      twitter: ''
+      twitter: "",
     },
+    google_site_verification: "xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k",
   },
   plugins: [
     {

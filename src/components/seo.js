@@ -54,12 +54,12 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
-          name: 'google-site-verification',
-          content: 'Wli8uNVN6CNynzeK6JcVCoEJyNhUmI1l4czc6wdA1t8'
+          name: "naver-site-verification",
+          content: "76f6ac32f3fb1d4edd76ca9e23147df017e84e1e",
         },
         {
-          name: 'naver-site-verification',
-          content: '76f6ac32f3fb1d4edd76ca9e23147df017e84e1e',
+          name: "google-site-verification",
+          content: "xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k",
         },
         // {
         //   name: `twitter:card`,

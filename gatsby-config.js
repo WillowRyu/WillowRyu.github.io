@@ -54,7 +54,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -79,6 +79,14 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://willowryu.github.io/",
+        sitemap: "https://willowryu.github.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

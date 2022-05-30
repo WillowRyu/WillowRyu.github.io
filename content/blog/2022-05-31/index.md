@@ -358,6 +358,10 @@ export const useObservableState: ObservableState = <T, K>({
 observable 과 pipe, iniitalState 를 받고, 해당 observable 로  
 받은 데이터를 state 로 return 하며, 자동으로 unsubscribe 까지 해준다.
 
+사실상 react 에서 rxjs 를 더욱 간편하게 사용하기 위해서  
+subscribe 와 unsubscribe, 그리고 렌더링을 위한 state 작업을 모아둔  
+custom hook 이다.
+
 해당 hook 을 사용하여 다시 정리해보자.
 
 ```javascript

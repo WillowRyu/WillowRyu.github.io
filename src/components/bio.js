@@ -26,6 +26,7 @@ const Bio = () => {
           author {
             name
             summary
+            email
           }
           social {
             twitter
@@ -56,8 +57,11 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
+
       <p className="link-title">
         Written by <strong>{author.name}</strong> {author.summary}
+        <br />
+        <a href={`mailto: ${author.email}`}>Send Email</a>
       </p>
     </div>
   )

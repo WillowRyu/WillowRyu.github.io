@@ -4,6 +4,7 @@ module.exports = {
     author: {
       name: `w.r`,
       summary: `Software enginner`,
+      email: "stainer1004@gmail.com",
     },
     description: `tip, info and study case of FE enginner`,
     siteUrl: `https://willowryu.github.io`,

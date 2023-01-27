@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 const Layout = ({ location, title, children, style }) => {
+  deckDeckGoHighlightElement()
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 

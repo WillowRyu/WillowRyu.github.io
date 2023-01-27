@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.6.0",
   "dependencies": {
-    "@deckdeckgo/highlight-code": "^1.0.4",
+    "@deckdeckgo/highlight-code": "^4.4.0",
     "disqus-react": "^1.0.8",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
@@ -17,7 +17,7 @@
     "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-plugin-typography": "^2.4.4",
     "gatsby-remark-copy-linked-files": "^2.2.4",
-    "gatsby-remark-highlight-code": "^1.3.2",
+    "gatsby-remark-highlight-code": "^3.3.0",
     "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-prismjs": "^3.4.5",
     "gatsby-remark-responsive-iframe": "^2.3.4",

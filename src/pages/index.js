@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
@@ -10,10 +10,7 @@ import { rhythm } from "../utils/typography"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  useEffect(() => {
-    deckDeckGoHighlightElement()
-    return () => {}
-  }, [])
+  deckDeckGoHighlightElement()
 
   return (
     <Layout location={location} title={siteTitle}>

@@ -395,28 +395,34 @@ action 사용시 useSetAtom 을 적어주기 힘들다. 아니 귀찮다.
 ```javascript
 
 // jotai-create-actions
-import { WritableAtom, useSetAtom } from 'jotai';
+import { ExtractAtomArgs, WritableAtom, useSetAtom } from 'jotai';
 
 type WithInitialValue<Value> = {
   init: Value;
 };
 
-type ActionProps = {
-  [key: string]: WritableAtom<null, any, void> & WithInitialValue<null>;
+type actionsType<T> = {
+  [k in keyof T]: WritableAtom<null, ExtractAtomArgs<T>, void> & WithInitialValue<null>;
 };
 
 type WrappedActions<T> = {
-  [K in keyof T]: ReturnType<typeof useSetAtom>;
+  [K in keyof T]: ReturnType<typeof useSetAtom<null, ExtractAtomArgs<T[K]>, void>>;
 };
 
-export const jotaiCreateActions = <T extends ActionProps>(actions: T) => {
+export const jotaiCreateActions = <T>(actions: actionsType<T>) => {
   return {
-    ...Object.fromEntries(
-      Object.entries(actions).map(([key, action]) => [key, useSetAtom(action)]),
-    ),
-  } as WrappedActions<typeof actions>;
+    ...(Object.fromEntries(
+      Object.entries(actions).map(([key, action]) => {
+        return [
+          key,
+          useSetAtom(
+            action as WritableAtom<null, ExtractAtomArgs<T>, void> & WithInitialValue<null>,
+          ),
+        ];
+      }),
+    ) as WrappedActions<T>),
+  };
 };
-
 ```
 
 actions 를 돌면서 자동으로 함수를 useSetAtom 으로 감싸준다.
@@ -430,8 +436,8 @@ return {
     modal: modalStore,
   },
   actions: {
-    test: jotaiCreateActions(TestStoreActions),
-    modal: jotaiCreateActions(ModalStoreActions),
+    test: jotaiCreateActions < typeof TestStoreActions > TestStoreActions,
+    modal: jotaiCreateActions < typeof ModalStoreActions > ModalStoreActions,
   },
   selector: {
     test: TestStoreSelector,

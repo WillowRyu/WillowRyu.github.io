@@ -435,11 +435,11 @@ const cxSet = (prefix: string) => {
     const result: string[] = []
     const clsDest = cls.split(" ")
 
-    clsDest.forEach((maybeClass: string) => {
-      if (maybeClass) {
-        result.push(`${prefix}-${maybeClass}`)
+    for (const className of clsDest) {
+      if (className !== "undefined") {
+        result.push(`${prefix}-${className}`)
       }
-    })
+    }
 
     return result.join(" ")
   }
@@ -536,6 +536,49 @@ const App = () => {
   twProps
 </div>
 
+```
+
+## 외부 모듈끼리의 className 주입
+
+추가로 만약 module 내에서가 아닌 remote module 끼리 className 을  
+props 로 주고 받는다면?
+
+twProps 는 들어오는 className 을 받는다면 예외없이 해당 모듈의 prefix 가 붙게 된다.
+
+이때는 외부 모듈의 className 을 적용할 수 없기 때문에 외부 모듈에서 className을  
+주입하고자 한다면 twProps 내부가 아닌 별도로 className 을 받아야 한다.
+
+> 그리고 외부 모듈에서는 반드시 twProps 로 className 을 감싸서 반드시 prefix 를  
+> 붙여서 주입해야 한다.
+
+```javascript
+// module A
+const ModuleA = () => {
+  const externalClassName = twProps("flex items-center")
+  // 이때 externalClassName 은 module A 의 prefix 를 적용하고 있다.
+  // ex) moduleA-flex moduleA-items-center
+
+  return (
+    // ModuleB 로 moduleA 의 prefix 가 적용된 채로 className 을 주입한다.
+    <ModuleB className={externalClassName} />
+  )
+}
+
+// module B
+const ModuleB = ({ externalClassName }: { externalClassName: string }) => {
+  // 이렇게 twProps 외부에 externalClassName 을 배치한다.
+  // 이렇게 하면 module B 의 최종 className 은
+  // moduleB-grid moduleB-grid-cols-1 moduleA-flex moduleA-items-center
+  // 이런식으로 양쪽 모듈의 css 를 모두 사용할 수 있다.
+  return (
+    <div
+      className={`${twProps("grid grid-cols-1")}
+      ${externalClassName ?? ""}`}
+    >
+      test
+    </div>
+  )
+}
 ```
 
 ## 마무리

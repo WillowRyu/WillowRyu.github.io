@@ -50,6 +50,7 @@
   ],
   "license": "MIT",
   "main": "n/a",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

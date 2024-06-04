@@ -67,7 +67,7 @@ export function CountControl({ control, count = 0 }: CountControlProps) {
 
 ```javascript
 export function CountControl() {
-  const [conut, setCount] = useState < number > 0
+  const [conut, setCount] = useState<number>(0);
   const control = {
     increment: () => setCount(count + 1),
     decrement: () => setCount(count - 1),
@@ -330,7 +330,7 @@ state 를 제공하며 `Usecase` 레이어의 주요목적은 `StateService`를 
 ```javascript
 export function TodoInput() {
   const { command } = TodoListUsecase()
-  const [title, setTitle] = useState < string > ""
+  const [title, setTitle] = useState<string>("");
 
   return (
     <div>

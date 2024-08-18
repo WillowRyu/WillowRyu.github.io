@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Project"
 date: "2024-08-18"
-description: "프로젝트 업그레이드 회고"
+description: "Rspack, Federation runtime, 회고"
 ---
 
 ![ff](./1.png)

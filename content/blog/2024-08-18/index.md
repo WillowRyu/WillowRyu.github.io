@@ -120,25 +120,34 @@ mfe 가 별도의 라이브러리로 분리되면서 기존에 있던 불편한�
 mfe 의 plugin 으로 옮겨서 적용했다.
 
 ```javascript
-import { FederationRuntimePlugin } from '@module-federation/enhanced/runtime';
+import { FederationRuntimePlugin } from "@module-federation/enhanced/runtime"
 
 function externalRemoteLoadPlugin(): FederationRuntimePlugin {
   return {
-    name: 'external-remote-load-plugin',
-    init(args) {
-      args.options.remotes = args.options.remotes.map((remote) => {
-        (remote as any).entry = (remote as any).entry + '?' + Date.now();
-        return remote;
-      });
+    name: "external-remote-load-plugin",
+    beforeRequest: args => {
+      const { options, id } = args
+      const remoteName = id.split("/").shift()
+      const remote = options.remotes.find(remote => remote.name === remoteName)
+      if (!remote) {
+        return args
+      }
 
-      return args;
+      // @ts-ignore
+      if (remote?.entry?.includes("?t=")) {
+        return args
+      }
+
+      // @ts-ignore
+      remote.entry = `${remote?.entry}?t=${Date.now()}`
+      return args
     },
-  };
+  }
 }
 ```
 
-이러면 `remoteEntry.js`, 지금은 새롭게 적용한 `manifest.json` 파일에대해  
-`cache busting` 을 plugin 없이 자동으로 적용 시킬 수 있다.
+이러면 `remoteEntry.js` 파일에대해 `cache busting` 을 plugin 없이 적용 가능하다.  
+`manifest.json` 파일을 사용 할 경우 추가 코드가 필요하지만 맥락은 같다.
 
 또 다른 하나는 `hmr` 과 `react-dom` 와 관련된 부분이다.
 

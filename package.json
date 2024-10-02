@@ -46,7 +46,8 @@
     "fe",
     "front-end",
     "react",
-    "flutter"
+    "flutter",
+    "Rust"
   ],
   "license": "MIT",
   "main": "n/a",

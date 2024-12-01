@@ -1,5 +1,5 @@
 ---
-title: "SPA 에서 사용하는 hot remote module replace 실험"
+title: "SPA 에서 사용하는 Hot Remote Module Replacement 실험"
 date: "2024-12-01"
 description: "feat: Module Federation"
 ---

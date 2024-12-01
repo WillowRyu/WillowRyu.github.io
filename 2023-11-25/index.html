@@ -1,0 +1,562 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Spoqa Han Sans Neo',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Spoqa Han Sans Neo',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.37087882f53630232b20.css" id="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}body{background-color:var(--theme);--theme:#1d1e20;--entry:#2e2e33;--pblue:#609fff;--primary:hsla(0,0%,100%,0.84);--secondary:hsla(0,0%,100%,0.56);--tertiary:hsla(0,0%,100%,0.16);--content:hsla(0,0%,100%,0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333;--gap:24px;--radius:8px}img{display:block;margin:0 auto}.link-post{margin-bottom:calc(var(--gap)*1.5)}.link-title{color:var(--primary)}.link-desc{color:var(--secondary);margin-bottom:0}a:link,a:visited{color:var(--pblue)}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;-webkit-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=0f40eccc76f1834aab0a5215019710bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=0f40eccc76f1834aab0a5215019710bb"/><title data-react-helmet="true">Tailwindcss with MFA | FE Factory</title><meta data-react-helmet="true" name="description" content="feat.Module Federation"/><meta data-react-helmet="true" property="og:title" content="Tailwindcss with MFA"/><meta data-react-helmet="true" property="og:description" content="feat.Module Federation"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="naver-site-verification" content="76f6ac32f3fb1d4edd76ca9e23147df017e84e1e"/><meta data-react-helmet="true" name="google-site-verification" content="xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k"/><link href="//fonts.googleapis.com/css?family=Noto+Serif+KR:400,700|Noto+Sans+KR:400,700" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-6403a9343c4daea86c21.js"/><link as="script" rel="preload" href="/framework-643cd9d57cfac08fd2c4.js"/><link as="script" rel="preload" href="/styles-3c579c614835d628a567.js"/><link as="script" rel="preload" href="/app-e0eca157ef08c2086462.js"/><link as="script" rel="preload" href="/commons-4533d1fa39224d48c06a.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"/><link as="fetch" rel="preload" href="/page-data/2023-11-25/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3490846071.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;color:#1d1d1f"><header><h3 class="link-title" style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit;text-decoration:none" href="/">FE Factory</a></h3></header><main class="link-title"><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">Tailwindcss with MFA</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">November 26, 2023</p></header><section><p>오늘은 MFA(feat.Module Federation)에서<br>
+tailwindcss 를 좀더 자연스럽게 사용하는 팁을 적어본다.</p>
+<p>하나의 프로젝트를 여러 모듈로 나뉘어 개발할때 중요한 부분 중 하나는<br>
+각 모듈이 하나의 기능을 가지고 독립적으로 실행 가능하도록 개발하는 것이 좋다.</p>
+<p>module federation 역시 양방향으로 사용가능하기 때문에<br>
+remote 로 내보내는 모듈들 역시 host 가 되었든 host 에서 사용하게 되든<br>
+독립적인 실행이 가능해야 한다.</p>
+<p>비즈니스 로직이나 상태 관리는 js 로 컨트롤이 가능하기 때문에<br>
+각 모듈별 요구사항을 충족하게 만드는데 어렵지는 않다.</p>
+<p>다만 style 은 조금 다르다.</p>
+<p>웹을 기준으로 보면 remote 모듈은 결국 하나의 browser 에서 실행되는데<br>
+우리의 browser 에서 style 을 처리할때는<br>
+css 라는 이름처럼 cascading 하게 처리하게 되는데 여기서 같은 Specificity 를<br>
+가지게 되면 나중에 들어오는 style 이 앞의 style 을 덮어 쓰게 된다.</p>
+<p>이런 css의 알고리즘은 일반적으로는 문제가 되지 않지만 tailwind 에서는<br>
+약간의 문제가 생긴다.</p>
+<h2>Tailwind 의 Specificity</h2>
+<p>예를 들어</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">function CustomInput(props) {
+  const className = `border rounded px-2 py-1 ${props.className || &quot;&quot;}`
+  return &lt;input {...props} className={className} /&gt;
+}
+
+function MyInput(props) {
+  return &lt;CustomInput {...props} className=&quot;p-3&quot; /&gt;
+}</code>
+        </deckgo-highlight-code>
+<p>위 예에서 MyInput 의 classname 은 <code class="language-text">border rounded px-2 py-1 p-3</code> 이 생성된다.<br>
+하지만 <code class="language-text">px-2</code> 와 <code class="language-text">py-1</code> 그리고 <code class="language-text">p-3</code> 은 같은 특이성을 가진다.</p>
+<p>그리고 tailwind 에서 classname 을 생성할때 css 의 순서는 아래 순서대로 생성된다.</p>
+<blockquote>
+<p>className 에 적힌 class 의 순서는 아무의미 없다.</p>
+</blockquote>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">.p-3 {
+  padding: 0.75rem/* 12px */;
+}
+
+.px-2 {
+  padding-left: 0.5rem/* 8px */;
+  padding-right: 0.5rem/* 8px */;
+}
+
+.py-1 {
+  padding-top: 0.25rem/* 4px */;
+  padding-bottom: 0.25rem/* 4px */;
+}</code>
+        </deckgo-highlight-code>
+<p>결국 <code class="language-text">px-2</code> 와 <code class="language-text">py-1</code> 이 적용되고 <code class="language-text">p-3</code> 은 무시 되는 효과가 나타난다.<br>
+이문제는 MFA 가 아닌 일반적인 프로젝트에서도 볼 수 있는 문제 중 하나이다.<br>
+이 문제를 해결하기 위한 라이브러리가 존재한다.</p>
+<p><a href="https://github.com/dcastil/tailwind-merge" target="_blank">Tailwind-merge</a>
+라는 라이브러리를 사용하면 깔끔하게 충돌되는 className 을 제거해주고, 위 문제를 해결할 수 있다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">function CustomInput(props) {
+  const className = twMerge(&quot;border rounded px-2 py-1&quot;, props.className)
+  return &lt;input {...props} className={className} /&gt;
+}
+// -&gt; className =&gt; border rounded p3</code>
+        </deckgo-highlight-code>
+<p>자세한 사용법은 해당 github 을 참조하자.
+그럼 이제 2번째 문제로 가보자.</p>
+<h2>Utility className 의 독립성</h2>
+<p>Tailwind 의 장점 중 하나는 className 에 유틸리티 클래스를 사용하여 style 을<br>
+빠르게 작성하고, 공유할 수 있다는 점이 존재한다.</p>
+<p>Tailwind 의 트리쉐이킹인 purge 동작은 해당 모듈에서 사용하지 않는 css 를 제거해주는<br>
+아주 좋은 최적화 기능이다.<br>
+하지만 이 부분이 결국 MFA 를 만들때 걸림돌이 된다.</p>
+<p>예를 들어 <code class="language-text">Host</code>, <code class="language-text">Module A</code>, <code class="language-text">Module B</code> 3개의 모듈이 존재한다고 할때,<br>
+우리가 원하는건 각 모듈이 독립적인 style 을 가져가고, 어떤 모듈에서 remote 로 호출되어도<br>
+style 을 유지하기를 바랄 것이다.</p>
+<p>만약 remote 에서 tailwind 가 없다면? remote 를 부르는 host 에서 해당 remote 모듈의<br>
+style 을 가지고 있지 않는 한 remote 모듈의 style 을 정상적으로 적용되지 않는다.</p>
+<p>예를 들어,</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">// Remote A
+const RemoteA = () =&gt; {
+  ;&lt;div className=&quot;grid grid-cols-1&quot;&gt;RemoteA&lt;/div&gt;
+}
+
+// Remote B
+const RemoteB = () =&gt; {
+  ;&lt;div className=&quot;grid grid-cols-2&quot;&gt;RemoteB&lt;/div&gt;
+}
+
+// Host
+import &quot;./styles.tw.css&quot; // tailwindcss
+const HostComponent = () =&gt; {
+  return (
+    &lt;&gt;
+      &lt;div className=&quot;flex items-center&quot;&gt;
+        // Remote A 와 Remote B 를 가져온다.
+        &lt;RenderRemoteA /&gt;
+        &lt;RenderRemoteB /&gt;
+      &lt;/div&gt;
+    &lt;/&gt;
+  )
+}</code>
+        </deckgo-highlight-code>
+<p>여기서 <code class="language-text">RemoteA</code> 와 <code class="language-text">RemoteB</code> 는 생성된 css style 없이 Host 로 가게 된다.<br>
+하지만 Host 가 가지고 있는 class 는 tailwind 의 최적화로 인해 <code class="language-text">flex items-center</code><br>
+두개의 css style 만 가지고 있으므로 remote 들은 style 이 적용되지 않는다.</p>
+<p>결국 Remote 들이 각자의 style 을 가지고 있기 위해서는 Host 처럼 각각
+<code class="language-text">import './styles.tw.css'</code> 이런식으로 tailwind 를 가지고 있어야 한다.</p>
+<p>그럼 문제가 해결되었나? 해결 된듯 해 보이지만 아직도 문제가 존재한다.<br>
+일반적인 classname 은 중복이 되어도 다른 모듈의 css 항목이 가지고 있기 때문에,<br>
+문제가 되지 않지만 <code class="language-text">@media</code> 와 같은 항목을 사용할때는 문제가 생긴다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">/* ModuleA CSS */
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+}
+
+
+/* ModuleB CSS */
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>이런식으로 Module A, B 가 각각 <code class="language-text">@media</code> 항목을 사용할때, 둘의 특이성은<br>
+동일하기 때문에 뒤늦게 로드되는 style 이 먼저 로드된 style 을 덮어 버리게 된다.<br>
+위 media 쿼리의 정렬 문제는 <code class="language-text">postcss-sort-media-queries</code> 로 해결할 수는 있다.</p>
+<p>그럼 이제 모두 해결된건가? 해치웠나?<br>
+아직 문제가 남아있다.</p>
+<h2>Utility className 의 중복</h2>
+<p>remote 모듈이 몇개 없을때는 문제가 되지 않지만, remote 모듈이 많아지면<br>
+각 remote 모듈마다 동일한 classname 을 가진 stylesheet 가 생성되기 때문에<br>
+같은 classname 의 중복이 무자비하게 생성된다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/370739be96250bf75f459eb88f3c9d1a/248b0/231126-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.2972972972973%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeUlEQVQI14XOSw6DMAwE0FymQY2UJv7kg2jZtIKk9z9QB9YURvZunmyz9m+sE2tKSb331t6Gwd7/JISQ9vAe03ov03N+f8bXHCMRM9Y5d4gBaq2lFHgRMcvaHqIYTxKhTzEuw/DWIZTN0jqVkVhV5PJtAJzNOetWlx97AiyfKyGLXwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="classname"
+        title="classname"
+        src="/static/370739be96250bf75f459eb88f3c9d1a/fcda8/231126-1.png"
+        srcset="/static/370739be96250bf75f459eb88f3c9d1a/12f09/231126-1.png 148w,
+/static/370739be96250bf75f459eb88f3c9d1a/e4a3f/231126-1.png 295w,
+/static/370739be96250bf75f459eb88f3c9d1a/fcda8/231126-1.png 590w,
+/static/370739be96250bf75f459eb88f3c9d1a/efc66/231126-1.png 885w,
+/static/370739be96250bf75f459eb88f3c9d1a/c83ae/231126-1.png 1180w,
+/static/370739be96250bf75f459eb88f3c9d1a/248b0/231126-1.png 1316w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>이런식으로 쌓이게 된다.</p>
+<p>classname 이 계속 쌓이게 되면 이는 결국 성능저하를 가지고 오게 되며<br>
+해당 Element 의 style 을 디버깅 할때 걸림돌이 될 수 있다.</p>
+<p>이를 해결하기 위해서 몇가지 방법이 존재한다.</p>
+<h2>해결법</h2>
+<ol>
+<li>첫번째는 <code class="language-text">Tailwind 를 Host 나 Root 에서 한번 포함한다.</code></li>
+</ol>
+<p>remote 모듈에서 각각 tailwind 를 불러오지 않고, root 에서 한번만 불러오거나,<br>
+해당 remote 를 사용하는 Host 에서만 생성하면 이런 중복을 줄일 수 있을 것이다.</p>
+<p>만약 root 에서 한번 불러온다면, 해당 Root 에는 모든 tailwind class 가 포함되어야<br>
+하며, 이는 tailwind 의 최적화 기능을 사용할 수 없기 때문에 좋은 방법이 아니다.</p>
+<p>그럼 특정 Host 에서 불러온다면?<br>
+style sheet 는 빌드 타임에 생성된다. 그런데 Host 에서는 자신이 불러오는 Remote 모듈에서<br>
+사용되는 class 를 과연 알수 있을까?</p>
+<p>Host 의 tailwind content 설정에 사용하는 Remote 모듈의 path 를 등록한다면<br>
+빌드타임에 알수는 있을 것이다.</p>
+<p>하지만 MFA 나 ModuleFederation 에서 remote 모듈은 독립적으로 개발하고 배포된다.<br>
+만약 remote 의 style 이 변경되어 배포 된다면 그 변경사항을 Host 가 알수 있을까?</p>
+<p>Host 가 변경사항을 적용하기 위해서는 사용하는 remote 모듈이 변경될때 Host 본인도<br>
+다시 빌드가 되어야 한다.</p>
+<p>이는 Host 와 Remote 에 거대한 의존성이 생기게 되고, MFA 와 개발원칙과 어울리지 않는<br>
+방식으로 변하게 된다.<br>
+추가로 해당 의존성은 어떻게 관리할 것인가?<br>
+만약 해당 Host 도 또 다른 Host 에 연결되어 있다면?</p>
+<ol start="2">
+<li>두번째는 <code class="language-text">twin.macro 와 같은 css-in-Js 를 사용한다.</code></li>
+</ol>
+<p>css-in-js 는 여기서 좋은 해결법이 될 수 있다.<br>
+런타임에 난독화된 classname 의 style 을 inject 하기때문에<br>
+각 모듈간 classname 의 충돌도 없고<br>
+twin.macro 같은 경우 tailwind 문법을 그대로 사용할 수 있기 때문이다.</p>
+<p>하지만 이를 위해선 className 에서 별도의 함수로 매번 감싸줘야 하는 불편함이 있고,<br>
+추가로 css-in-js 의 동작방식으로 인한 추가 런타임 비용이 들어가게 된다.</p>
+<ol start="3">
+<li>세번째는 <code class="language-text">tailwind 자체적으로 prefix 를 붙여준다.</code></li>
+</ol>
+<p>Tailwind 에서는 자체적으로 className 의 충돌을 막기 위해 prefix 옵션을 제공한다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">module.exports = {
+  prefix: &quot;custom1-&quot;,
+}</code>
+        </deckgo-highlight-code>
+<p>이렇게 하면 실제로 개발 할때</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">&lt;div className=&quot;custom1-grid custom1-grid-cols-1&quot;&gt;
+  &lt;span&gt;Custom&lt;/span&gt;
+&lt;/div&gt;</code>
+        </deckgo-highlight-code>
+<p>이런식으로 prefix 를 제공할 수 있고, 생성되는 css 에서도 prefix 가 붙어 나오게 된다.<br>
+추가로 vscode 같은 ide 에서도 자동완성 역시 지원된다.</p>
+<p>다만 이 방식의 단점은 가뜩이나 긴 classname 을 더 길게 만들어 DX 가 저하되고,<br>
+classname 을 복사해서 다른 모듈에서 사용하기가 아주 불편해지는 점이 생긴다.</p>
+<ol start="4">
+<li>네번째는 <code class="language-text">ShaodwDom</code> 을 사용해 dom 을 캡슐화 시킨다.</li>
+</ol>
+<p>ShaodwDom 을 활용해서 해당 모듈을 dom 트리에서 별도로 격리 시켜 버리면, 해당 모듈들은<br>
+같은 className 이라도 독립적인 style 을 활용할 수 있게 된다.</p>
+<p>하지만 이는 또다른 문제를 야기한다.<br>
+말 그대로 격리되어 있기 때문에 디자인 시스템과 같은<br>
+공유 컴포넌트를 사용하기 위해서는 해당 remote 모듈에서 공유 컴포넌트의 style 을<br>
+전부 가지고 있어야 한다.<br>
+배보다 배꼽이 커질 수 있는 방법이다.</p>
+<p>이 모든 해결법에는 모두 tradeoff 가 존재한다.<br>
+실제로 moduleFederation 에서 알려진 큰 문제점 중 하나이다.</p>
+<p><a href="https://github.com/nrwl/nx/issues/9784#issuecomment-1095128433" target="_blank">Nx Git Issue</a> 해당 링크를 살펴보면 Nx 의 개발자가 이 문제에 대해 설명을 잘 해준다.</p>
+<h2>새로운 해결법</h2>
+<p>결국 개발 할때는 기존 Tailwind 를 사용하듯이 일반적으로 사용하고,<br>
+빌드 될때는 모든 classname 에 prefix 가 붙어서 빌드 된다면 이문제는 해결된다.</p>
+<p>이를 해결하기 위해 몇가지 트릭을 사용했다.<br>
+먼저 postcss 의 <code class="language-text">postcss-prefix</code> plugin 을 사용해 빌드될때 styleSheet 의 모든<br>
+className 에 고유 prefix 를 붙여준다.<br>
+가장 좋은 prefix 는 해당 package 또는 모듈의 이름이다.</p>
+<p>prefix 가 붙은 styleSheet 의 style 을 적용하기 위해서는 실제 컴포넌트에서도<br>
+해당 prefix 가 붙은 className 을 써야한다.</p>
+<p>예를들어 <code class="language-text">custom1-flex custom2-items-center</code> 이런식으로 써야 하는데<br>
+위에 적었듯이 개발할때는 일반적인 tailwind 를 사용하고<br>
+빌드될때 해당 부분을 변경해줘야 한다.</p>
+<p>이를 위해 Webpack 의 <code class="language-text">string-replace-loader</code> 를 사용해서 빌드타임때 dom 의 className에 있는 class 앞에 모두 prefix 를 붙여줄 것 이다.</p>
+<p>예를들면 이런식이다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">const twClassnameTransForm = prefix =&gt; {
+  return {
+    test: /\.tsx$/,
+    loader: &quot;string-replace-loader&quot;,
+    options: {
+      search: /className=[&#39;&quot;]([^&#39;&quot;]*)[&#39;&quot;]/g,
+      replace(_, p1) {
+        const classNames = p1.trim().split(&quot; &quot;)
+        const prefixedClassNames = classNames.map(className =&gt; {
+          if (className.startsWith(prefix)) {
+            return className
+          } else {
+            return `${prefix}-${className}`
+          }
+        })
+        return `className=&quot;${prefixedClassNames.join(&quot; &quot;)}&quot;`
+      },
+    },
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>해당 loader 를 사용하면 실제로 작성한 tailwind className 앞에 내가 원하는 prefix 가<br>
+모두 붙어서 빌드 된다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">&lt;div className=&quot;grid grid-cols-1&quot;&gt;
+  &lt;span&gt;Custom&lt;/span&gt;
+&lt;/div&gt;
+
+// 빌드 후
+
+&lt;div className=&quot;custom1-grid custom1-grid-cols-1&quot;&gt;
+  &lt;span&gt;Custom&lt;/span&gt;
+&lt;/div&gt;</code>
+        </deckgo-highlight-code>
+<p>이런식으로 추가된다.<br>
+이제 각 모듈간 독립적으로 className 을 가지게 되며, 개발 할때는 일반적인<br>
+tailwind 의 사용을 활용할 수 있게 된다.</p>
+<h2>TwMerge 를 포함한다면?</h2>
+<p>위 방법은 단순히 className 을 string 으로만 적었을때 적용할 수 있다.<br>
+하지만 TwMerge 나 props 로 className 을 받아서 적용할때는 어떻게 해야 할까?</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">&lt;div className={twMerge(&quot;grid grid-cols-1&quot;, props)}&gt;
+  &lt;span&gt;Custom&lt;/span&gt;
+&lt;/div&gt;
+
+// 또는
+
+&lt;div className={`grid grid-cols-1 ${props}`}&gt;
+  &lt;span&gt;Custom&lt;/span&gt;
+&lt;/div&gt;</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">string-replace-loader</code> 는 단순하게 string 찾아서 변경시켜 주기 때문에
+이런식의 className 은 변환 시킬 수 없다.</p>
+<p>이를 해결하기 위해서는 별도의 Util 이 필요하다.<br>
+먼저 TwMerge 에서 옵션으로 prefix 설정을 추가하고 별도의 함수로 추출해야 한다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">const extendsTwMergeConfig = ... // twMerge theme 관련 custom 설정
+
+const twMerge = (prefix: string) =&gt; {
+  return isDev
+    ? extendTailwindMerge(extendsTwMergeConfig)
+    : extendTailwindMerge({
+        ...extendsTwMergeConfig,
+        prefix: `${prefix}-`,
+      });
+};
+
+export const twCombine = twMerge(packageName);</code>
+        </deckgo-highlight-code>
+<p>이런식으로 twMerge 를 개발환경일때는 prefix 를 붙이지 않고 빌드 환경일때만 prefix 가 적용 되도록
+하여 <code class="language-text">twCombine</code> 이라는 함수를 유틸로 노출한다.</p>
+<p>그리고 이 역시 <code class="language-text">string-replace-loader</code> 를 사용해서 변경해주는 loader 가 필요하다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">// transform util
+const twMergeClassNameAddPrefix = (classNames, prefix) =&gt; {
+  const transCls = classNames.map(className =&gt; {
+    const pattern = /[\&#39;\&quot;]+/g
+    if (!pattern.test(className)) {
+      return className
+    }
+
+    const trimClassName = className.replace(pattern, &quot;&quot;)
+    if (trimClassName.startsWith(prefix)) {
+      return trimClassName
+    } else {
+      return `&quot;${prefix}-${trimClassName}&quot;`
+    }
+  })
+  return transCls
+}
+
+// 실제 Loader
+const twMergeClassnameTransForm = prefix =&gt; {
+  return {
+    test: /\.tsx$/,
+    loader: &quot;string-replace-loader&quot;,
+    options: {
+      search: /className={twCombine\((.*?)\)}/g,
+      replace(_, p1) {
+        const classNames = p1.trim().split(&quot;,&quot;)
+        const prefixedClassNames = classNames.map(className =&gt; {
+          const trimed = className.trim()
+          const splitClass = trimed.split(/\s+/)
+
+          if (splitClass.length &gt; 1) {
+            return twMergeClassNameAddPrefix(splitClass, prefix)
+          }
+
+          const pattern = /[\&#39;\&quot;]+/g
+          if (!pattern.test(trimed)) {
+            return trimed
+          }
+
+          const trimClassName = trimed.replace(pattern, &quot;&quot;)
+          if (trimClassName.startsWith(prefix)) {
+            return trimClassName
+          } else {
+            return `&quot;${prefix}-${trimClassName}&quot;`
+          }
+        })
+        return `className={twCombine(${prefixedClassNames.join(&quot;, &quot;)})}`
+      },
+    },
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>twCombine 의 변형은 조금 더 복잡하다.<br>
+중첩되는 className 과 ’,’ 로 구분되는 className 으로 인해 로직이 더 생겼다.</p>
+<p>추가로 props 로 받는 className 에 대해서도 별도의 util 을 만들어서 자동으로 prefix 가<br>
+들어가도록 수정한다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">const cxSet = (prefix: string) =&gt; {
+  return function (cls: string) {
+    const result: string[] = []
+    const clsDest = cls.split(&quot; &quot;)
+
+    for (const className of clsDest) {
+      if (className !== &quot;undefined&quot;) {
+        result.push(`${prefix}-${className}`)
+      }
+    }
+
+    return result.join(&quot; &quot;)
+  }
+}
+
+const twProps = (pkgname: string) =&gt; {
+  const cx = cxSet(pkgname)
+  return (className: string) =&gt; (isDev ? className : cx(className))
+}</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">twProps</code> 같은 경우 <code class="language-text">twCombine</code> 과 마찬가지로 개발환경에서는 일반 className 을<br>
+return 하고 빌드타임때는 prefix 를 붙이도록 되어있다.<br>
+실제로 사용할때는 이런식으로 사용이 가능하다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">const className = &quot;flex&quot;
+const App = () =&gt; {
+  const ref = false
+  return (
+    &lt;div
+      className={twCombine(
+        &quot;grid grid-cols-1&quot;,
+        twProps(ref ? &quot; px-0&quot; : &quot;py-2&quot;),
+        twProps(&quot;p-3&quot;)
+      )}
+    &gt;
+      Template
+    &lt;/div&gt;
+  )
+}
+
+// 또는 TwProps With Combine
+&lt;div
+  className={twCombine(
+    twProps(&quot;grid grid-cols-1&quot;),
+    twProps(ref ? &quot; px-0&quot; : &quot;py-2&quot;),
+    twProps(&quot;p-3&quot;)
+  )}
+&gt;
+  twProps
+&lt;/div&gt;
+
+// 단순히 props 로 className 을 받았을때
+&lt;span className={twProps(`grid grid-cols-[1fr_1fr] ${className}`)}&gt;
+  Span
+&lt;/span&gt;
+
+// 일반적인 사용
+&lt;span className=&quot;grid grid-cols-[1fr_1fr]&quot;&gt;Center&lt;/span&gt;</code>
+        </deckgo-highlight-code>
+<p>이제 위 모든 className 이 build 할때 지정한 prefix 가 들어가게 된다.</p>
+<blockquote>
+<p>주의할 점은 <code class="language-text">twCombine</code> 사용시 아래처럼 <code class="language-text">string className</code> 이 twProps<br>
+사이에 있으면 안된다.<br>
+<code class="language-text">string className</code>은 처음 시작되거나, 그게 아니면 twProps 로만<br>
+사용되어야 한다.</p>
+</blockquote>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">// OK
+&lt;div
+  className={twCombine(
+    twProps(&quot;grid grid-cols-1&quot;),
+    twProps(ref ? &quot; px-0&quot; : &quot;py-2&quot;),
+    twProps(&quot;p-3&quot;)
+  )}
+&gt;
+  twProps
+&lt;/div&gt;
+
+
+// OK
+&lt;div
+  className={twCombine(
+    &quot;grid grid-cols-1&quot;,
+    twProps(ref ? &quot; px-0&quot; : &quot;py-2&quot;),
+    twProps(&quot;p-3&quot;)
+  )}
+&gt;
+  twProps
+&lt;/div&gt;
+
+
+// FAIL!!
+&lt;div
+  className={twCombine(
+    twProps(&quot;grid grid-cols-1&quot;),
+    &quot;flex&quot;,
+    twProps(&quot;p-3&quot;)
+  )}
+&gt;
+  twProps
+&lt;/div&gt;</code>
+        </deckgo-highlight-code>
+<h2>외부 모듈끼리의 className 주입</h2>
+<p>추가로 만약 module 내에서가 아닌 remote module 끼리 className 을<br>
+props 로 주고 받는다면?</p>
+<p>twProps 는 들어오는 className 을 받는다면 예외없이 해당 모듈의 prefix 가 붙게 된다.</p>
+<p>이러면 외부 모듈의 className 을 적용할 수 없기 때문에 외부 모듈의 className은<br>
+twProps 내부가 아닌 별도로 className 을 받아야 한다.</p>
+<blockquote>
+<p>그리고 외부 모듈에서는 반드시 twProps 로 className 을 감싸서 반드시 prefix 를<br>
+붙여서 주입해야 한다.</p>
+</blockquote>
+<p>밑의 예를 보자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">// module A
+const ModuleA = () =&gt; {
+  const externalClassName = twProps(&quot;flex items-center&quot;)
+  // 이때 externalClassName 은 module A 의 prefix 를 적용하고 있다.
+  // ex) moduleA-flex moduleA-items-center
+
+  return (
+    // ModuleB 로 moduleA 의 prefix 가 적용된 채로 className 을 주입한다.
+    &lt;ModuleB externalClassName={externalClassName} /&gt;
+  )
+}
+
+// module B
+const ModuleB = ({ externalClassName }: { externalClassName: string }) =&gt; {
+  // twProps 외부에 externalClassName 을 배치한다.
+  // 이렇게 하면 module B 의 최종 className 은
+  // moduleB-grid moduleB-grid-cols-1 moduleA-flex moduleA-items-center
+  // 이런식으로 양쪽 모듈의 css 를 모두 사용할 수 있다.
+  return (
+    &lt;div
+      className={`${twProps(&quot;grid grid-cols-1&quot;)}
+      ${externalClassName ?? &quot;&quot;}`}
+    &gt;
+      test
+    &lt;/div&gt;
+  )
+}</code>
+        </deckgo-highlight-code>
+<h2>마무리</h2>
+<p>webpack 의 loader 와 별도의 util 함수를 활용해 DX 저하는 없애고,<br>
+실제로 빌드된 모듈에서는 독립적인 className 을 갖도록 하여 className 의 중복과<br>
+충돌을 없어지도록 만들었다.</p>
+<p>물론 여기서도 tradeoff 가 존재한다.</p>
+<p>twProps 라는 함수로 감싸야 하는 점과 별도의 공통 util 함수를 추출해야 하는점,<br>
+webpack 을 사용해야 한다는점, 그리고 React 기준이라는 부분.<br>
+twCombine 사용시 주의해야 할 부분 등.</p>
+<p>위 방법도 어디서 언제 문제가 생길지 모르고, 그냥 tailwind 를 moduleFederation 에<br>
+적용하기 위한 또 하나의 방법이라고 봤으면 좋겠다.<br>
+다행히 아직까지는 문제가 없다.</p>
+<p>다른 번들러에서도 <code class="language-text">string-replace-lorder</code> 와 같은 플러그인이 있어서<br>
+방법만 안다면 충분히 활용해볼만 하다.</p>
+<p>해당 방법을 사용하기 위한 함수와 설명은 충분히 한 것 같아, 별도의 디테일한 설정은<br>
+따로 기술하지 않겠다.</p>
+<p>그리고 혹시 tailwind 를 module federation 에서 사용하고 있고,<br>
+위와 같은 문제를 겪은 뒤 해결한 경험이 있다면 연락해줬으면 한다. 🥹</p>
+<p>다음 글은 아마 <code class="language-text">Signal</code> 에 대한 글로.</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAZpq7M6napnO0lEwVf/EABwQAAICAgMAAAAAAAAAAAAAAAECAxEAIQQxNP/aAAgBAQABBQLk6XWBDUlEQUsbrESOm84Y5//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASH/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8BwjP/xAAaEAADAQEBAQAAAAAAAAAAAAABESEAECJx/9oACAEBAAY/ApQ9QdJwMNmDe0/vBz//xAAcEAEBAQEAAgMAAAAAAAAAAAABEQAhEDFBUXH/2gAIAQEAAT8hkh/hyUKF+s4sB+LNMAqeBGTdAEnG9BmiHEmR1e7/2gAMAwEAAgADAAAAEMzfPP/EABgRAAMBAQAAAAAAAAAAAAAAAAABEUFh/9oACAEDAQE/EEqy8NlZ/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERQWH/2gAIAQIBAT8QVCdMkR//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAhMUFhcZH/2gAIAQEAAT8QhYgVINHGRbDZ29uGEJSq+piFBHaEDAuN9po4t/cXByIQfMFQqV5fcVeiE6wNpTtSr6rn/9k=" alt="w.r" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" src="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg" alt="w.r" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p class="link-title">Written by <strong>w.r</strong> <!-- -->Software enginner<br/><a href="mailto: stainer1004@gmail.com">Send Email</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2023-09-19/">← <!-- -->Jotai 사용, 쉽고 빠른 Convention</a></li><li><a rel="next" href="/2024-05-13/">JS Quiz<!-- --> →</a></li></ul></nav><div id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-166907717-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2023-11-25/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-513da999c145725089ff.js"],"app":["/app-e0eca157ef08c2086462.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96a045a5dd84c95a551e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c5cc7b36b26ee13ac8d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"],"polyfills-dom":["/polyfills-dom-09a2ec672631c68af484.js"],"polyfills-core-js":["/polyfills-core-js-af16ac8aca11911e40aa.js"]};/*]]>*/</script><script src="/polyfill-513da999c145725089ff.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js" async=""></script><script src="/commons-4533d1fa39224d48c06a.js" async=""></script><script src="/app-e0eca157ef08c2086462.js" async=""></script><script src="/styles-3c579c614835d628a567.js" async=""></script><script src="/framework-643cd9d57cfac08fd2c4.js" async=""></script><script src="/webpack-runtime-6403a9343c4daea86c21.js" async=""></script></body></html>

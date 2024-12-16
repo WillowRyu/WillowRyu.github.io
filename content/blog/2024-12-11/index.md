@@ -129,10 +129,9 @@ USB, NFC, 블루투스 장치를 뜻한다.
 
 ## 실제 코드 예제
 
-일단 github repo 는 [PasskeyEx](https://github.com/WillowRyu/passkey-ex) 이다.
-
 클라이언트 부분은 Remix 로 만들어봤고  
-서버는 Rust 와 Webauthn 을 위한 node server 도 함께 사용했다.
+서버는 Rust 와 Webauthn 을 위한 node server 도 함께 사용했다.  
+전체 코드 repo는 맨 아래에 있다.
 
 ![index](./1.gif)
 
@@ -589,6 +588,8 @@ where
 디자인을 바꾸고, 클라이언트를 Remix 로 변경하면서 이것저것 조금더 추가하고  
 했을 뿐이다.  
 거의 싹 갈아 엎긴 했다. 🤡
+
+github repo: <a href="https://github.com/WillowRyu/passkey-ex" target="_blank">https://github.com/WillowRyu/passkey-ex</a>
 
 ## 끝
 

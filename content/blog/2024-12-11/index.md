@@ -582,7 +582,7 @@ where
 
 코드 설명이 조금 빈약한데 다 설명하려니 너무 많아서  
 더 궁금하다면 코드로 예제를 실행해보고 살펴보길 바란다.  
-아니면 구글의 [Passkey example](https://developers.google.com/codelabs/passkey-form-autofill?hl=ko#0) 을 살펴보자.
+아니면 구글의 <a href="https://developers.google.com/codelabs/passkey-form-autofill?hl=ko#0" target="_blank">Passkey example</a>을 살펴보자.
 
 내가 만든 코드역시 해당 코드를 참고 했으며, 서버를 Rust로 변경하고  
 디자인을 바꾸고, 클라이언트를 Remix 로 변경하면서 이것저것 조금더 추가하고  

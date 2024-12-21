@@ -1,6 +1,6 @@
 ---
 title: 'Flutter Environments Setting'
-date: '2020-08-10'
+date: '2020-08-11'
 description: 'Flutter 에서 환경변수 설정'
 ---
 
@@ -305,6 +305,7 @@ Environment 값만 변경 시키면 된다.
 
 위 예제의 전체 코드
 
-Github: https://github.com/WillowRyu/flutter-env-setting
+Github: <a href="https://github.com/WillowRyu/flutter-env-setting" target="_blank">https://github.com/WillowRyu/flutter-env-setting</a>  
+
 
 출처: 내 머리 & 기억나지 않는 어떤 개발자의 글

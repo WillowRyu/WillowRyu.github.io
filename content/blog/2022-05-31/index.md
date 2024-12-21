@@ -440,7 +440,7 @@ export function Counter() {
 
 **ReactiveX** 는 새로운 것도 아니고, 비인기 개념도 아니다.
 
-[ReactiveX](https://reactivex.io/languages.html)
+ReactiveX: <a href="https://reactivex.io/languages.html" target="_blank">https://reactivex.io/languages.html</a>
 
 홈페이지를 보면 알겠지만, 수많은 주류 언어에서 사용되고 있으며  
 observable stream 을 이해하기 시작하면, 어떠한 언어에서도 활용이  

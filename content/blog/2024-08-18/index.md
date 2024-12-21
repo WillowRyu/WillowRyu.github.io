@@ -154,7 +154,8 @@ function externalRemoteLoadPlugin(): FederationRuntimePlugin {
 기존에 local 에서 특정 host 와 remote 를 연결해서 개발할때 자체적으로 만든 명령어를  
 사용하여 각 모듈을 개발 서버로 띄워서 hmr 기능을 활용하도록 만들었다.
 
-다만 `react` 에서 `context` 의 공유 문제나 특정 모듈이 먼저 로드 될때 (=design-system)  
+다만 `react` 에서 `context` 의 공유 문제나 특정 모듈이 먼저 로드 되어야 할때,  
+예를 들어 디자인시스템 등,   
 shared 로 설정된 `react` 와 `react-dom` 를 어떤 모듈에서 가져와 사용할지에 대해  
 애매한 부분이 있었다.
 

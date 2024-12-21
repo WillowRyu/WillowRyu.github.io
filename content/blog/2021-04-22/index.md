@@ -156,8 +156,8 @@ RAIL 가이드에 따르면 사용자가 서비스와 상호작용 할때
 translate, opacity, scale, rotate 등이 그 예가 될 것이다.
 
 composite 레이어에서 작동하는 다른 속성을 찾고 싶다면  
-https://csstriggers.com/ 여기서 검색해보면 된다.
+<a href="https://csstriggers.com/" target="_blank">https://csstriggers.com/</a> 여기서 검색해보면 된다.
 
-그외 주의점 과 자세한 설명은
-[Dev summit](https://youtu.be/RCFQu0hK6bU)
+그외 주의점 과 자세한 설명은  
+Dev summit: <a href="https://youtu.be/RCFQu0hK6bU" target="_blank">Youtube</a>  
 해당 영상을 참고하자.

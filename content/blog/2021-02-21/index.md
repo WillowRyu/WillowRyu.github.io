@@ -140,8 +140,8 @@ export default App
 참고로 react 에서 lazy 를 사용할때는 default 만 지원한다.  
 이를 named export 시키고 싶다면 별도 파일을 만들어서 로드해야 한다.  
 자세한건  
-https://ko.reactjs.org/docs/code-splitting.html  
-위를 참고하자.
+<a href="https://ko.reactjs.org/docs/code-splitting.html  " target="_blank">https://ko.reactjs.org/docs/code-splitting.html</a>  
+위를 참고하자.  
 
 code splitting 이 되지 않은 순수한 페이지 이다.  
 해당 코드의 제품을 빌드 해보자. bundle 파일은 어떻게 될까?

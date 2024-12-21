@@ -1,6 +1,6 @@
 ---
 title: 'Flutter Cupertino Date Picker'
-date: '2020-07-02 15:14'
+date: '2020-07-03 15:14'
 description: '간단한 Custom Cupertino Date Picker'
 ---
 
@@ -396,7 +396,7 @@ localization 관련 코드를 추가하자.
 
 위 예제의 전체 코드 
  
-Github: https://github.com/WillowRyu/flutter-cupertino-datepicker 
+github repo: <a href="https://github.com/WillowRyu/flutter-cupertino-datepicker" target="_blank">https://github.com/WillowRyu/flutter-cupertino-datepicker</a>
 
 
 출처: 내 머리..

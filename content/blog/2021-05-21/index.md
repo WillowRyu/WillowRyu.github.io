@@ -7,7 +7,7 @@ description: "지금 쓰는 함수의 색상은 무엇일까"
 algebraic effects 를 조사하다가 좋은 글을 찾게 되었다.  
 해당 주제를 보기 전 일단
 
-[What Color is Your Function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
+[What Color is Your Function]: <a href="https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/" target="_blank">https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/</a>  
 
 이 글을 읽고 진행하길 바란다.
 

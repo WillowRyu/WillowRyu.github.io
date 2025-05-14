@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Spoqa Han Sans Neo',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Spoqa Han Sans Neo',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.37087882f53630232b20.css" id="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}body{background-color:var(--theme);--theme:#1d1e20;--entry:#2e2e33;--pblue:#609fff;--primary:hsla(0,0%,100%,0.84);--secondary:hsla(0,0%,100%,0.56);--tertiary:hsla(0,0%,100%,0.16);--content:hsla(0,0%,100%,0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333;--gap:24px;--radius:8px}img{display:block;margin:0 auto}.link-post{margin-bottom:calc(var(--gap)*1.5)}.link-title{color:var(--primary)}.link-desc{color:var(--secondary);margin-bottom:0}a:link,a:visited{color:var(--pblue)}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;-webkit-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=0f40eccc76f1834aab0a5215019710bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=0f40eccc76f1834aab0a5215019710bb"/><title data-react-helmet="true">Flutter Cupertino Date Picker | FE Factory</title><meta data-react-helmet="true" name="description" content="간단한 Custom Cupertino Date Picker"/><meta data-react-helmet="true" property="og:title" content="Flutter Cupertino Date Picker"/><meta data-react-helmet="true" property="og:description" content="간단한 Custom Cupertino Date Picker"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="naver-site-verification" content="76f6ac32f3fb1d4edd76ca9e23147df017e84e1e"/><meta data-react-helmet="true" name="google-site-verification" content="xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k"/><link href="//fonts.googleapis.com/css?family=Noto+Serif+KR:400,700|Noto+Sans+KR:400,700" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-6403a9343c4daea86c21.js"/><link as="script" rel="preload" href="/framework-643cd9d57cfac08fd2c4.js"/><link as="script" rel="preload" href="/styles-3c579c614835d628a567.js"/><link as="script" rel="preload" href="/app-e0eca157ef08c2086462.js"/><link as="script" rel="preload" href="/commons-4533d1fa39224d48c06a.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"/><link as="fetch" rel="preload" href="/page-data/2020-07-03/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3490846071.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;color:#1d1d1f"><header><h3 class="link-title" style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit;text-decoration:none" href="/">FE Factory</a></h3></header><main class="link-title"><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">Flutter Cupertino Date Picker</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">July 03, 2020</p></header><section><p>디자인 시스템 없이 Flutter 를 사용하는 대부분의 개발자들이 Material Design 을<br>
+많이 사용할 것 으로 본다.  </p>
+<p>그 중 DatePicker 같은 경우 cupertino 와 Material 의 차이가<br>
+가장 많이 나는 위젯 중 하나라고 볼 수 있다. </p>
+<p>Material 에서는 달력 자체가 나타나는 반면, cupertino 에서는 bottom bar 가 나타나며<br>
+선택하는 모양으로 표현했다. </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 436px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2bea3a5c000b5a3e1a26e37e956dadea/8574c/material-date-picker.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 141.2162162162162%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAAAsTAAALEwEAmpwYAAADKElEQVQ4y6VU60uTYRTfHxKhhWSgplJEVGIRBRKUqBlRDJegwS4woQgC+9gNamozjCxNo6ZtWmC6PvrNbxHVZm5zqcxd3d775Xnft/O8zzbdvCUdDmfnufzO7zznnL0Gu91u6bpj7rq7J7V13QagwWaznXo4V9W3erT3T23PUrUDa43uHNG1ulBrHOGK3ljD/Y92c4fBarHUPvHVDil1b7mql9yBPrZU1zInV/6CO9RfrOVO5uCAerb7s+3WTYPVajn2+EeDS7zuoU++powT7A0Pc/E9fWaYbhlnGj/QFf3URq10pg8PSOe6J62dGGytfPCzelCqH6JPDzHnR5nmcbbhHXN8kL4wytQPM/ufZUocVEkPTbTUkdn3XK67N2nrNGHm1le/Gj2o0cU0jbGXXOxlF9fsllrc4tUJqdUjgl5xC3BEtGWMaZpQrz36ZO4wGSwWy+LioqZpkiRquoATjawk47HVyMoa/EQja6mklhNR4MF6Z2ZMpiw4rCgqL+TBKBqLxeOJaDSWTKbAzVCUqmqqfsqwLNjpPDgYCsEaKQpCSJZl8BUV34SIYFUimiYjRCwGT0/nmXHaBCkIAvgkBPiwCUBFUcgFPS8J7EyeOaQzkxs7CLlA4q4zbwdW1YIlSYrjuF2Y9Tdm7UYnf22dORwOQzKiKIJlGAbO0uk0WJqmYQeeyvM82YQorF5tr9fb1ta2lzdruFvFzFBtiAfM8CoSOJVKAQlkAUu4nUgkcIfTSah7Op2BnWJm0hXyvGy3dSFH0PLvEZ6V8DAUFAyYkS5ATlEUnFF4pFR4M88LElI0iXX75DIn/XRORjytbn4zGRJSG9IPsLiKAEbC1xA68YYb/CarIlvMrORmc2MzYZhgB45IIZYSNGRPoheAIUNSMNKkeDxOCkb6B0tcxWQCZh5quUXBdm3V1kPyLxOm5pao6F/1X8yBQICUB20SGM4EIy+nZbCqgkQJRTL4m/FlagqD4QO4M3NM0AKUlsBN0GRFW2YUMttZ8OzsbDAY9Pl8/q0k8NsfWsAWZN7vX5j3QXdGRkba29sxGGJc3V5ac5pfghiNRrPZ/Beoq0Uf6gHpFgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="material-date-picker"
+        title="material-date-picker"
+        src="/static/2bea3a5c000b5a3e1a26e37e956dadea/8574c/material-date-picker.png"
+        srcset="/static/2bea3a5c000b5a3e1a26e37e956dadea/12f09/material-date-picker.png 148w,
+/static/2bea3a5c000b5a3e1a26e37e956dadea/e4a3f/material-date-picker.png 295w,
+/static/2bea3a5c000b5a3e1a26e37e956dadea/8574c/material-date-picker.png 436w"
+        sizes="(max-width: 436px) 100vw, 436px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 517px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b62240fc84274a90b06bbdf49a50f359/fa2f5/cupertino-date-picker.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.86486486486486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+ElEQVQ4y42T3WoaURDHz15IRShqENKASLASpOBWFHwQZUUJwSUPoHilN37cG8hFc9EHyF7YFpJ38UZQU1ALIpFkVVy/9kzOjLtgi0kz8Gdm58z5nZmzu+z01M+OjtxhRcno19ffodG44VdXN/AeNRrfOO7JZM6N42OffHb2mTGfz8tcrg/hi4uc3mzewe3tD65pP0HTfsHOvy6sbTbvQVUvDbf7o+z3nzDbwuVyWYedcXi/UW2tVjMEQ2Z7Fi6VSgQ0TZOvVitYLpdgGAZgzDknL9Yoj892Lfpqtfo2cLFYwGw2I83ncwKh32w2lNtutxQLEbBSqbwOxDHG4zG0223o9XrQ7XYJOBqNAA/qdDqg6zq0Wi3MvQl8tjo0cTzsZDqdCr/rEMe3O0T/9PSMuf8Dxf2Y6/WaI8AWAkWOQPiMd4jjitHtO1z8C/xiv2VRhE2aYoOJDR8SGh5s1XDrpXzdB/oURXkQ9tc3geP1+30YDockjPEa9m0wGEA2m/0jGLuPMJVKSfV6nQWDwVQymewWi8VJPp9/RK+q6kSsT8RhJIxzudwE1wqFAtWI3O9QKJTVNI2l02mJJRIJhEniMOR/slqXbTmdTtnhcJAw3l+zak9wbyAQkGKxGCNgNBqlTtkB83rx13SRPB7PoRImupcikQiLx+PsBa2FabizEZULAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="cupertino-date-picker"
+        title="cupertino-date-picker"
+        src="/static/b62240fc84274a90b06bbdf49a50f359/fa2f5/cupertino-date-picker.png"
+        srcset="/static/b62240fc84274a90b06bbdf49a50f359/12f09/cupertino-date-picker.png 148w,
+/static/b62240fc84274a90b06bbdf49a50f359/e4a3f/cupertino-date-picker.png 295w,
+/static/b62240fc84274a90b06bbdf49a50f359/fa2f5/cupertino-date-picker.png 517w"
+        sizes="(max-width: 517px) 100vw, 517px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>둘 중 원하는 뭘 선택해도 되지만, 여기서는 cupertino 의 date picker 를 살펴보자.<br>
+cupertino 의 date picker 를 사용할 경우
+onDateTimeChanged 라는 콜백함수로<br>
+날짜 데이터 변경을 알 수 있다.</p>
+<p>여기에 날짜를 변경 한 뒤 사용자가 직접 제어할 수 있도록<br>
+cancel 과 done 기능을 추가해보자.</p>
+<h3>Init Project</h3>
+<p>일단 신규 프로젝트에서 cupertino date picker 를 불러오는 버튼을
+설정 하자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          brightness: Brightness.light,
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          title: Text(
+            &#39;Cupertino Date Picker&#39;,
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+        ),
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: CupertinoButton(
+                  child: Text(
+                    &#39;OPEN DATE PICKER&#39;,
+                    textAlign: TextAlign.center,
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );</code>
+        </deckgo-highlight-code>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 314px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/22d2be84ec0b5245a7aaac3c3c763bc1/5b158/date-picker.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 214.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAIAAAD3xz8iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEEElEQVRIx52W+08jVRTHbwzrKoWCfUwftDMdZvoubSn0waMLRZZE2ZWN7q6vmGj8zfgH+INR/wR/hI1uNDH+pDGFlvUn6WNFXdhklxZiqAIhrLW1ZSUppTN94Gmn1C5ghDn55uTO9HzmnHvu3DtF1l5nb5+7t88FvsfWZ7X3gweZLL12h2t84sUhrw9uujzD3pExR78HwgaHR90DXqPZjlwuz+iI79Iln29s3OnyuD1DIKdroMfmcLkH33jzralrL/f1uy9PvHDj5uvD3tGBQe/1G69euTrVY7UjCeUWk84OpalVSgsVRglh4yTV2DDSLsatEsJavSRsIpWlHdO1KwwdXWYR4ehQO5BAPynAtE6Pd3Lq+tDIuESuxpREVQocJD2SWKZSqEjfxKS3f8Bisl6UGp5SjyGBwvLRhx/8mUzGY7F0OuUbHWlvE2CYVCoRc8KkErkMa332mXffebtYKi58+82tTz5+7eYrLTI7UpLm2MqDUrmyublZLpd3dnZCoVA0Go1EouFwOHr3biQSCYcjcCeTybIMm8ru/haLffr+exfENNIYHPHYw8PDw1LN0ul0MplMpVLgs9ndra0t7g48NJfLQQDLMBD83ddftXRokEbfy8EHBwfFYhEev55IQBUbG5uPHv2RSCS2t7eBXF9f39vbAzifz0Pw93eCLZ0aRGmNMFu4LhQKLMtC5TCuVCrNnhvAoyEAcsB4Pjh7AeBunSUeW2nATM0KNWuMG74B3wnOPS3qRqShXjYH/6814IsiElG6J8o+O9wqUiOaLywAmNL3NM/5jPB8cK5NDJm1eh6ZazCOKIqKx+PnhgOzApkOEQS5ygtukxsRDvAqH7gdYELTzatsv1BpQmQ3zW/O7Qojomh9PB7jDetOwkzTgPlP2IBI8vhSwd4pF9lS8V8PKp6amXiy2xCUL7CZHPt3nn28X9VurqoCc6JhXWaE40QzDKn28uyvfzFbu8xGltl+zPyeYRIZJndQT87BwYAfztBTug17vlKqVVuqCy5PK1t/+hsG257h/JGONSwYmBVCw46VfcalqpVtQgRlWOW1zkKlEZF6K4/9XG+Y1uKEQ//c8Jy/U2VGuh4XHzjg7+SfmZszbeqLrzzk0zBYKsro4HFu12Gt2RE7f+baS6JHRos9xq9suQ6RlJbnYQCwSo3zej1n2zAKqdX42toa931mjuwk0/hpf3+/+n2eD1RhCSb/+adF7p/B4ZGVSuUmgZWbfqqGffnF7VYJiYQy+qWrV8Kh0PLS0r17v9y/v7yw8MPM9PStmemZGfDgpm9//tni4o/Ly7WA5aXAnN/tdmPaISQzPd/ZZRLJVEqcVuIUeJVGp6GNGtpEas0ggjKCughtLYBWkbrnMFzS7VI5rv0DXIu4pK4ZNZAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="date-picker"
+        title="date-picker"
+        src="/static/22d2be84ec0b5245a7aaac3c3c763bc1/5b158/date-picker.png"
+        srcset="/static/22d2be84ec0b5245a7aaac3c3c763bc1/12f09/date-picker.png 148w,
+/static/22d2be84ec0b5245a7aaac3c3c763bc1/e4a3f/date-picker.png 295w,
+/static/22d2be84ec0b5245a7aaac3c3c763bc1/5b158/date-picker.png 314w"
+        sizes="(max-width: 314px) 100vw, 314px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Cupertino DatePicker 같은 경우 해당 DatePicker 를 보여주고
+말고는 위젯 자체를 숨기거나 보여주거나 해야 한다.</p>
+<p>(Scaffold 에서 지원하는 게 아닌 datepicker 위젯을 만들어두고
+해당 위젯을 보여줄 지 말지 직접 컨트롤 해야 한다.)</p>
+<p>이를 위해 일단 Cupertino DatePicker 위젯을 별도로 만들자.</p>
+<h3>Create Cupertino Date Picker</h3>
+<blockquote>
+<p><code class="language-text">/lib/date_picker.dart</code></p>
+</blockquote>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">  import &#39;package:flutter/cupertino.dart&#39;;
+
+class CuDatePicker extends StatelessWidget {
+  const CuDatePicker({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoDatePicker(
+      initialDateTime: DateTime.now(),
+      maximumDate: new DateTime.now(),
+      minimumYear: 2018,
+      maximumYear: 2020,
+      mode: CupertinoDatePickerMode.date,
+      onDateTimeChanged: (DateTime value) {},
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>(date picker 에 들어간 설정은 이름만 봐도 뭘 하는건지<br>
+알 수 있으리라 생각한다.)  </p>
+<p>만들어진 DatePicker 를 메인화면에 적용해보면</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 305px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f73cb836d7a74671adda62f30c563e7a/a3e09/cu-datepicker.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 206.08108108108104%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAApCAIAAAC6D54pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD6ElEQVRIx7WVS08TURTHJ8GEKAiERxEoFktpkafoAlBaBNr6ESAE/RCKbnWpRjE89kYWJhiILFghj+iCBCQCCW2pWoWE0CeFdvqYTh/4n7llmCkt4sLD7c3cOec359xzzz1QFyta82UKpbq+vulWtaahoOhKfmFpYUl5abkiZRSXylWaBrVSUylXZhdczSq5SRVXqAf6e4dev3r54vnjwUd9fb0P7g90d3fl5V3OybmUm5uDgecLF7Jut7X+3tmZ/TAxNjg4MNCfXVxDtbXfmZ+fm5mZmf44PTExMTU1NTk5OT4+Pjw8PDIyMjo6OoK/0bGhoTerq6tHR0d2p2v585f3z56WlF2jDMZ7eBWNxhKJBB4OePH7/REIy4ZCIYZhQsFQOBxmWRbPmGH2de6TvFJF9egNwKCDAvOvX7bl5eX19fVv39ZMJtPKysrGxsbmpmlpaWl3dzcej8MG9j9+/lDUNFIGgwFf4t1wAnWCF7yMJ+KYhWUsFiPO8fx9y6JQ1Utg/GJsxO5jNuzMTw9jdjI2D/PdzS0PAkyU04vgmgaEbRR75tQRNhzhZmGEGVZQJ2Grpep02IJE2fRCYKt1S6WupYwZYPZvsFpTm9Hz/4Y1lNGYCkej0fPAKnVdGs9Qi5cpQQlHpay9QfX09Ihh6Hw+H8ozGAwiBJqmvV6vOJakZw5uBqwXYBgFAgGQYFDVZHl4eJgWroZnvV4v9gw/brfb5XKBRz2eBV+Xwpg9Hg9gXCx4BowoMoWd6hkK4hZXJ8qLnwZ8kAFuTvXsdDrhlliThAnLjDC55Zj39vaETWJGzg+xhXDY6XAgInxdErY42xD4wbbFZ4st4BMgyXsBVtUdnzPpMjTt397eRobIFogplvv7+1ar1Wazka7EwRYzl23imWTI4XCgAbndHuSZ1Bms7XY7ErG2tma2WE7gLXO1UCSkIjGgpmmcbuA4PRGcFraP7oQOBQM0u5OEkbCZ42zTvAR5Ic75TprcRWqRoHuKjyogEgFOc6uS2ZbCxCdIPCMLMM0Eq+paKL1B0gAFtwieZBuX7Az43mmYz1mQvEQg6WHuYog8I04UCeoBFU7u8xlh8xdDCiNanCpChRGWOP9MYZPaluyZnBYpOGKaKWweNhjPboApSwlsOAWfq/Wevs//CDdR3dLueX5YqWlMekaGIucTWMJ+y2JWwbNOp8P/btwYkhsisaTEhVlQgQdsMm2WK2ooWZl8/N1bFJSPFxwM+sHs7OzCwsL8sSwuLrpdbjpAE5sDr/fJ4MM8WRVVIG8sKq1oa2vXdd7VIgxdp1bX2dGh5Yb2ZIaKjM67Xc3NLQWySplG+wfL6PF9Fh8idQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="cu-datepicker"
+        title="cu-datepicker"
+        src="/static/f73cb836d7a74671adda62f30c563e7a/a3e09/cu-datepicker.png"
+        srcset="/static/f73cb836d7a74671adda62f30c563e7a/12f09/cu-datepicker.png 148w,
+/static/f73cb836d7a74671adda62f30c563e7a/e4a3f/cu-datepicker.png 295w,
+/static/f73cb836d7a74671adda62f30c563e7a/a3e09/cu-datepicker.png 305w"
+        sizes="(max-width: 305px) 100vw, 305px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>해당 화면처럼 나온다.<br>
+(버튼은 위치는 위로 올렸다. 스샷 다시 찍기 귀찮음..)  </p>
+<p>모양은 나오지만 우리가 원하는 건 아이폰처럼 하단에 적절한 크기와<br>
+모양으로 나타나길 원한다.<br>
+이제 위치와 크기를 수정 해보자.  </p>
+<p>우리는 date picker 를 scaffold 에서 제공하는 bottom sheet 에서
+나타나도록 별도로 수정 할 것이다.</p>
+<p>그리고 해당 bottom sheet 의 높이를 설정하고,<br>
+date-picker 내부의 width 를 제한 할 것이다.  </p>
+<p>(이는 landscape 레이아웃 에서의 문제 때문이다.<br>
+뒤에서 설명 할 것 이다.)</p>
+<p>그럼 크게 Todo 를 정리해보자.</p>
+<ul>
+<li>버튼으로 bottom modal sheet 를 Toggle 할 수 있어야 한다.</li>
+<li>Date Picker 는 Cancel, Done 라는 별도의 컨트롤 버튼이 존재한다.</li>
+<li>Date Picker 가 나타내는 시각은 한국 시간에 맞춘다.</li>
+</ul>
+<h3>버튼으로 BottomModal 컨트롤</h3>
+<p>showModalBottomSheet 같은 경우 Future<void> 를 반환한다.<br>
+Widget 이 아니라 Future 를 반환 하기 때문에 뭔가 버튼이나 제스처에<br>
+연결 시켜 사용해야 편하니 기존 버튼을 별도로 export 하여 만들자.  </p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">class _BuildButton extends StatelessWidget {
+  const _BuildButton({
+    Key key,
+    @required this.showPicker,
+  }) : super(key: key);
+
+  final Function(BuildContext context) showPicker;
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoButton(
+      child: Text(
+        &#39;OPEN DATE PICKER&#39;,
+      ),
+      onPressed: () {
+        showPicker(context);
+      },
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>간단하게 버튼을 분리했다.<br>
+이제는 해당 showPicker 함수에 date picker 를 넣어주면 된다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">    Future&lt;void&gt; showPicker(BuildContext context) {
+    return showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return CuDatePicker();
+      },
+    );
+  }</code>
+        </deckgo-highlight-code>
+<p>Root Widget (여기서는 MyApp) 에 showPicker 함수를 만들어주자.  </p>
+<h3>Create Bottom Modal Sheet</h3>
+<p>이제 DatePicker 의 모양을 변경 해야한다. </p>
+<p>height 를 조정하고 내부 width 를 제한 할 것 이다.<br>
+height 의 크기는 현재 스크린의 약 3/1 정도를 차지하도록 만들 것 이다.  </p>
+<p>현재 스크린의 3/1 길이..<br>
+반응형으로 생각하면 현재 디바이스 스크린의 길이를<br>
+구하는 유틸 함수를 미리 만들어 두자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">double getHeightByPercentOfScreen(double percent,  BuildContext context) {
+  return MediaQuery.of(context).size.height * percent / 100;
+}</code>
+        </deckgo-highlight-code>
+<p>현재 스크린의 크기에서 원하는 퍼센테이지를 입력 받아 그 길이를<br>
+구하는 함수이다.<br>
+조금만 손 보면 당연히 width 길이도 구할 수 있다.</p>
+<p>그럼 hegiht 를 구했고, 내부 width 의 크기는 퍼센테이지로 구해도 되지만,<br>
+기존 모바일의 길이를 생각히면 maxwidth 를 400 으로 정했다.</p>
+<p>showPicker 함수를 수정하고 datePicker 위젯에 width 제한을 두자.</p>
+<blockquote>
+<p><code class="language-text">lib/main.dart</code></p>
+</blockquote>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">  Future&lt;void&gt; showPicker(BuildContext context) {
+    return showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: getHeightByPercentOfScreen(33.0, context),
+          child: CuDatePicker(),
+        );
+      },
+    );
+  }</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p><code class="language-text">lib/date_picker.dart</code></p>
+</blockquote>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">import &#39;package:flutter/cupertino.dart&#39;;
+
+class CuDatePicker extends StatelessWidget {
+  const CuDatePicker({
+    Key key,
+    this.onDateChange,
+  }) : super(key: key);
+
+  final Function(DateTime value) onDateChange;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: BoxConstraints(
+        maxWidth: 400.0,
+      ),
+      child: CupertinoDatePicker(
+        initialDateTime: DateTime.now(),
+        maximumDate: new DateTime.now(),
+        minimumYear: 2018,
+        maximumYear: 2020,
+        mode: CupertinoDatePickerMode.date,
+        onDateTimeChanged: onDateChange ?? (DateTime value) {},
+      ),
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>이제 한번 date-picker 를 소환해보자.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 303px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1990d423fd030a87dc4ffc1ea698d74d/6728c/date-picker-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 217.56756756756758%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAsCAIAAADqwg+aAAAACXBIWXMAAAsTAAALEwEAmpwYAAADj0lEQVRIx+1W204TURQdExODoIBCy0VJRXgY7dAZSpEiEGitnSkGqy0xipWrSG3obaZgEL6AZ32TH1CjfAUJ+BtQA9iCcinQiqvn0GFQTPRVWZnu7LP3Wmfvs3syGUZp6Zh8aI08bbI57tjs9rtut+TqlFyuRqtVdHV++PjxzZuZ206xr39gZmZmNBiEPz7+4tWr148e+xjBaDbX1wvmepazsJz5Wl2DkW+EU8vynHDD5nA5pC6jyWJpanOIXdYWG8c3trbf7rr3oOFGC1NgsObp2bwLhvyLVQUlhqLymsKymiI8cPRX8y9UnS2+XKivPldqyCu+dOZ8Oezp8+VM/qVTunqm6koNbzK573Z5Pfcdjlu60pKDR1ei15VmH70OFpHyMr3U6fK6JN/NZhNvOldxnamtrYlEIiN+/8iIPxaLWZubWfaa0cgZNeA4jmXZ1ta2WGwsEAj0e7zKo4fVV6oZXhDGxsagj0ajsizDh40SqI6aon5QUaYGB/lqiHkeBWUCJIaGhh77fL29vX19fYODQz09PQMDA1j6fE+Gh58pigIafhFFQT+MIAgQ070BtDA6OhoJh6LhEGw4FMz6+AWD4XBEziGmKJwq1kbDUeVZUA6EZH9IDoRhlZGgjCCpegBFK1YrgxCKyH4ifh46sFhqqv5eTPUxBelDm3Xkn8XGX9v+Q2TFxv9PfPy0T8Qn4n9GDI++ev8c0GffJGazeWpqamJi4uXfYHJysq7OxLjd7vX19ZWVlVWCLzms5qD1KUBOJpO3HA6mu7t7f38/k8l8J0ilUpubm9vb23t7e4jDwkc8Q0A5cJASRYnxer3wdnZ2dgkSiQQ2hh4RKDc2NlB5LwfKQQp6p1M8IoaNL8UTXxKUB7u1tQUx/G8EKu14McpStlokq0mlPhPgCMeIcVSEYDEJjASkHQJQcQTUX1paisfjcCktnU4fiumEkF5YWEBxbKxut7i4COXc3Nz8/Dw9f07sPFIZRZaXl9eSSbU9AL2g8lcC2tHPYnXa4OGQGLLaNpawaYKj03YyHo9HK94gQAuwtD4K7h7FoRiXBP+7Vgz22toa9CmCJDmFSqBidCGKIiNJLnqTaGM4ENL7GtD7BEsJYMJFpL29Hd8kwuzsrDqzdCaDW46Zf9IAS9y87NYEIL9/97asooqZnp7Gx1JHR4ckSegE1mazWRosQKMGdrsdKSchgFx52VBYef0HLvqAEIIBtHIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="date-picker1"
+        title="date-picker1"
+        src="/static/1990d423fd030a87dc4ffc1ea698d74d/6728c/date-picker-1.png"
+        srcset="/static/1990d423fd030a87dc4ffc1ea698d74d/12f09/date-picker-1.png 148w,
+/static/1990d423fd030a87dc4ffc1ea698d74d/e4a3f/date-picker-1.png 295w,
+/static/1990d423fd030a87dc4ffc1ea698d74d/6728c/date-picker-1.png 303w"
+        sizes="(max-width: 303px) 100vw, 303px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>이제 어느정도 모양이 잡혔다.<br>
+하지만 아직 부족하다.  </p>
+<h3>Create Cancel, Done Buttons</h3>
+<p>날짜 선택 후 실행 될 또다른 로직을 위해<br>
+추가로 Done 버튼과 Cancel 버튼을 추가해주자.  </p>
+<p>우리는 bottom sheet 를 7:3 비율로 나눠서
+상단(3) 에 버튼을 두고,<br>
+하단(7) 에 날짜 선택을 넣을 것 이다.</p>
+<p>그러기 위해 버튼 부분의 위젯을 만들고, bottomSheet 에<br>
+Column 위젯을 추가 할 것이다. </p>
+<p>먼저 2개의 버튼 셋이 포함 된 위젯.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">class _BuildButtonSet extends StatelessWidget {
+  const _BuildButtonSet({
+    Key key,
+    this.onPressCancel,
+    this.onPressDone,
+  }) : super(key: key);
+
+  final Function onPressCancel;
+  final Function onPressDone;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        CupertinoButton(
+          child: Text(
+            &#39;Cancel&#39;,
+            style: TextStyle(
+              color: Colors.red,
+            ),
+          ),
+          onPressed: onPressCancel ??
+              () {
+                Navigator.pop(context);
+              },
+        ),
+        CupertinoButton(
+          child: Text(
+            &#39;Done&#39;,
+          ),
+          onPressed: onPressCancel ??
+              () {
+                Navigator.pop(context);
+              },
+        ),
+      ],
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>Cancel 과 Done , 2개의 버튼을 가진 위젯이 완성 되었으니<br>
+이제 DatePicker 와 합치기 위해 showPicker 함수를 수정하자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">    Future&lt;void&gt; showPicker(BuildContext context) {
+    return showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: getHeightByPercentOfScreen(33.0, context),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 3,
+                child: _BuildButtonSet(),
+              ),
+              Expanded(
+                flex: 7,
+                child: CuDatePicker(),
+              )
+            ],
+          ),
+        );
+      },
+    );
+  }</code>
+        </deckgo-highlight-code>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 318px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0465e1a5b1a06acbd2866f546e6c3522/cd2d9/date-picker-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 212.16216216216216%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAqCAIAAAA8m+yHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEpklEQVRIx6WV2U9bRxSHpxIQoCze9w1jYzBLSqJSCqEyi222go2NbYQFAZyFzdi+Jly7UR+iKFJf2qc8VlUrFAhNbQhu1f+heWlSBam0qQSlINaAwIDZeu69sYuiNnXdo9HRzJnfN+ec0Vwb6WoNgw2Gm336JmPHB/WWemNXXUuntqWzvLpV22q///nk7buf1TTZHEP4nU/uGzquN7f3+u98esN1+4rWiCordDZNvdVSq9EbyzQtlXXGKp3pirattEJfUWf0fHSv3/Pxe5oWS9fgCH5X32qvbrB4/Pd6+r2XK7QoQ65JEl5OylamZEtT6dJMdm4Whxg0vjKLq0jJFl2gibM4inSGLCmDn5IpTKaJURr3rey8ZMG7iKbS8kSKyopyvV5XW1srFotYLBYHjM2GwSUNVhDMkUlrdbrmsjLNpVK6SJEsrERM6SW9tvrWrTFHnwPHcZ1OJ5fLVSpV3jmDZa5c3tjYiPt8vXa7u6OjsfL9VH4xYkuLbdb2MRx3Op0ej2d0dNTtdrvARkj3yo9AELY8bjeIcMzbpal6m5+P2LKL1nYTHAmk1+vt7+/v6uru6r7a09PrcDg67fa+vr7u7qsQHBoaAgHwIDaZDBm8fMSRqK0WM44TMIZh4CERpAYRDCiCmHiIWigBLHw+X3sbCfPFcqvFAt1Se14Mc3kwxzB2cxi7PozdcGLXhrFrQ0QQtqjTIbMZMkPZXFnR+czkNuZ0YU434UdIDyO6eR4uQDxpvtXSfh4m8nujIzqPmYcs29xmhIeAhJJcEsbPw28wCja1GZmCXMQTSqxWSwIwA2B4SFarNQGYJVQgHo+fEGxgCPMQNyHY3GagiQoRTyBOoGcCFqoRk8Wx2awJwgwmy2azJVg2jcZIDKaLixCbw0vswuj/98ISL1ukRlzJ33wY8cI8eclrn2ScMENciISK0tjP0H+GBQBbzD6/n/yM/91A5vf7zSYjBb9jNLTAT9TAwMBgHAYyl8vd+mETg7iwnGI/PhYIBMfHxx/EYSALBqe9mDuTp0QsccH334XOzs6Oj4/P4rCjoyPw3zyaSmPmIKZIFQoGzjY39n6dP9zZOYxEDt9ov6zurUbOJiYepDFliAXw7Awcth8OR+KwcDgM4qlJEmYIFKHZxwS8vx9TQIZ/gvcp+OFEKkOCGPzcGAz97OzsrK+vUwfBcnd3d2trCyax46KZAZa+Dm9ubq6trR1GXkkhCMeBX15e3tjYAEH4r8xSRI/CYbJnKvPe3l4kenMwh/yLi4vEoeSSgi/QRIjGk1PwwcEB8M+e/bSwsHByckLVCcHV1dWlpaUfnjx5PjcHS6giCgsQjSuLZQZbWVmheo7B0AhVDjQPQarsh9AzZM7myL4NzcIa6qH2QLq9vQ2TfdJevnwJceiWOosq++upyTS6CKXR+MHAI1hHyKcDOlCAlHpwp6enEKEmhEVf2FdffpGSJUAZHGVzU8Pc3PM/lpZ+X1wEPz//88zM9HQw+HgGbDoQCIRCod9evIgJnj79saamOp2Th+g55elMCfzdqYsuFqhLCgpLwCvzC5UqtVJF+DxyTsTJATIOX5TOlDGVVX8C0GX10bqJquoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="date-picker2"
+        title="date-picker2"
+        src="/static/0465e1a5b1a06acbd2866f546e6c3522/cd2d9/date-picker-2.png"
+        srcset="/static/0465e1a5b1a06acbd2866f546e6c3522/12f09/date-picker-2.png 148w,
+/static/0465e1a5b1a06acbd2866f546e6c3522/e4a3f/date-picker-2.png 295w,
+/static/0465e1a5b1a06acbd2866f546e6c3522/cd2d9/date-picker-2.png 318w"
+        sizes="(max-width: 318px) 100vw, 318px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>이제 원하는 date picker 가 완성되었다.<br>
+여기서 추가로 디자인이나 크기를 원하는 상태로 수정 하면 된다.<br>
+로직은 onPressCancel, onPressDone, onDateChange 에<br>
+적절히 넣어서 사용하면 된다.</p>
+<h3>Localization</h3>
+<p>마지막으로 DatePicker 에 나오는 시간을 한국 시간으로 변경해보자.<br>
+localization 을 하기 위해 pubspec.yaml 에서 flutter_localizations 을 추가하자.  </p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">...
+  dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+...</code>
+        </deckgo-highlight-code>
+<p>그리고 main.dart 의 MaterailApp 에서
+localization 관련 코드를 추가하자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">      return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale(&#39;ko&#39;, &#39;KO&#39;),
+        const Locale(&#39;en&#39;, &#39;US&#39;),
+      ],
+      home: ...</code>
+        </deckgo-highlight-code>
+<p>이제 앱을 리셋 시키고 다시 date picker 를 열어보면</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 332px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9587a509bb2d72e7475d6993dc1e5192/f8dc5/date-picker-3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 205.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAApCAIAAAC6D54pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFC0lEQVRIx52U21MTdxTHdzpD6yhVkr0mu5vNbTcXAgZaAUUuEhEI3qjtDKOwibQSciOQi8EnfCi9vGm99H+ore1DR+tDW0RRkPLqi32sYKioJBESCKQnG6DqjDJw5pff/nJ+55Pv75zf5iCW8rp9lbWV1futlfXWirqyyvrSPbUwLOXVdYeOHv1MrNjfuGd/o62lrfqA/aO9DTUHD8MoragvUNUijR9XnWuu6f98T3NTc0NDQ2trq91ut9lslZVVPp/v+k8/tre3t7Udv3jhQiAQaGpqOj84+O03Xx9osBUw+xCKr1LoyxUaC8mZKM6s1BQrtcUwKzTFjK6UE8pgpnUWTrCyuhJKbWYFq8ZUQWjLC9hapFB/qJAUWI2gN1hYNY8SSoykMZKBIcdpGaYAD0rQRXJSqdLp1TynVL0vV79HVRWobQiqrair2ef3eb0eNwyB11MkQSso5dqg4UMSOq3G4/P6u7qCn544WFO9gy7ZprcjOFfiFDsikajH44lEIjA7nc7Tkr26cLvd4XDY2xsI+Py9rS1yJb+NtyOUZrfYcTI6MAB7/f39LpfrzJnunh63q9vldnu6u7tdrh7J0xMMBsOh0MC5c87OUzhjyClTmhKx8xTAsBcKhbw+H8T5/T6f1yNN7l5IyePxer2wCzFnz0a7Tjsw1rgdlGm1UezsiEZX4Ug4HAhG3IGwty/s6Qv7+3Pr3mAYMsrD0Wi0yykCvENoRZTa15TBevuDnkDQFwh6A0F/ILfu7VvdWodx1lRoOAKw5Q04nNNfHeH8HAq9DjtIVthpPIywWvMb8Lq9+X0NPu10KFR8kQmUGY0odq7n/G57DTYfQUiScjgc4NoczPF46TFEqaRFUdwkLCo4I2FtA5jZAkxyZrT0OKKgVVLOm4VNaMkxBMPJzecswbvbEBQjNgkPAAx/bNz6CYKi+BaUKXUxUXYCoZmt5ExxptxVEaRiS9U2YSVHEZykHQ5xi8pKbenb3u135mwm4SVh+LJOqZNs7g3Lw6xQvgU4V+2cst566mQ7dAro6X0bGcRAq3N0duSOvVuCXd1fDA19NTg4eH4jg5gvh4agsZEqI1YstaHbw39ks9n4y40tmUhA5Pj9Uag2ZmmF7mm5B/CL56mpfzKLi5m32FIms7Kc+TeRnk5lxx5MUJwRM7cgkProyDD83kI8vphOL77TkvOpTDY78WCcUuVhzjR6dyQHpzYgwdKpFET+NTFOqgyY+RACj1V4YeHVuKWlpUQiMTs7m0qlY7GZRCIOHoj5Hy5uBmXjOgzbyWTyiWTpdBoAWIDezMzM8+cvIPE1+AHJGlCjDYFHHp6fnwfBeDw+NTX1+PFjiJubm5uampacc8+ePYPFujLB8jKhHiEYYR0G5UeP/p6cnBwbG5uefvL06ezY+Dgw4Hz48CHUHGLyygSjl/F1CE7zo3dWYTgqKL+QLJVKwcXGYjFwwuFjT2Lw03kYqk2yPGqwITijv39vNA8DsChd9crKyvLyMmDghDWULX/sPDw5OUGpBLnhAFKIMrdu3gAXMFnJJAyqnVlYSEH9wJ9MvkxJl5SPGf7z9124CoOCfagwNjYevHnj17t3RkZuD98bvfvLz9cvfXfx+6tXrly+dOXyZVhfu/ZDfvfOyO1bv920tzTvIAQUCibT7d2GabfvIuQEK8OVRRiNkizF6ChGuzZrMQUnw+kinJYTzPad+AcyTs7XEObG/wBHBqIYKvEfDgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="date-picker3"
+        title="date-picker3"
+        src="/static/9587a509bb2d72e7475d6993dc1e5192/f8dc5/date-picker-3.png"
+        srcset="/static/9587a509bb2d72e7475d6993dc1e5192/12f09/date-picker-3.png 148w,
+/static/9587a509bb2d72e7475d6993dc1e5192/e4a3f/date-picker-3.png 295w,
+/static/9587a509bb2d72e7475d6993dc1e5192/f8dc5/date-picker-3.png 332w"
+        sizes="(max-width: 332px) 100vw, 332px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>한글로 변경 된 picker 를 볼 수 있다.<br>
+여기서 만약 한글로 변경 되지 않는다면 해당 모바일 폰의 설정 에서<br>
+지역과 언어를 한국으로 변경해보자.</p>
+<p>추가로 DateTime 설정에 관해서 쓸 내용도 있지만 이는 별도로<br>
+글을 써서 정리를 해보겠다.  </p>
+<p>위 예제의 전체 코드 </p>
+<p>github repo: <a href="https://github.com/WillowRyu/flutter-cupertino-datepicker" target="_blank">https://github.com/WillowRyu/flutter-cupertino-datepicker</a></p>
+<p>출처: 내 머리..</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAZpq7M6napnO0lEwVf/EABwQAAICAgMAAAAAAAAAAAAAAAECAxEAIQQxNP/aAAgBAQABBQLk6XWBDUlEQUsbrESOm84Y5//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASH/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8BwjP/xAAaEAADAQEBAQAAAAAAAAAAAAABESEAECJx/9oACAEBAAY/ApQ9QdJwMNmDe0/vBz//xAAcEAEBAQEAAgMAAAAAAAAAAAABEQAhEDFBUXH/2gAIAQEAAT8hkh/hyUKF+s4sB+LNMAqeBGTdAEnG9BmiHEmR1e7/2gAMAwEAAgADAAAAEMzfPP/EABgRAAMBAQAAAAAAAAAAAAAAAAABEUFh/9oACAEDAQE/EEqy8NlZ/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERQWH/2gAIAQIBAT8QVCdMkR//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAhMUFhcZH/2gAIAQEAAT8QhYgVINHGRbDZ29uGEJSq+piFBHaEDAuN9po4t/cXByIQfMFQqV5fcVeiE6wNpTtSr6rn/9k=" alt="w.r" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" src="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg" alt="w.r" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p class="link-title">Written by <strong>w.r</strong> <!-- -->Software enginner<br/><a href="mailto: stainer1004@gmail.com">Send Email</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-07-02/">← <!-- -->Flutter Multi Device Debugging</a></li><li><a rel="next" href="/2020-08-11/">Flutter Environments Setting<!-- --> →</a></li></ul></nav><div id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-166907717-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020-07-03/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-513da999c145725089ff.js"],"app":["/app-e0eca157ef08c2086462.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96a045a5dd84c95a551e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c5cc7b36b26ee13ac8d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"],"polyfills-dom":["/polyfills-dom-09a2ec672631c68af484.js"],"polyfills-core-js":["/polyfills-core-js-af16ac8aca11911e40aa.js"]};/*]]>*/</script><script src="/polyfill-513da999c145725089ff.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js" async=""></script><script src="/commons-4533d1fa39224d48c06a.js" async=""></script><script src="/app-e0eca157ef08c2086462.js" async=""></script><script src="/styles-3c579c614835d628a567.js" async=""></script><script src="/framework-643cd9d57cfac08fd2c4.js" async=""></script><script src="/webpack-runtime-6403a9343c4daea86c21.js" async=""></script></body></html>

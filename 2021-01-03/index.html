@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Spoqa Han Sans Neo',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Spoqa Han Sans Neo',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.37087882f53630232b20.css" id="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}body{background-color:var(--theme);--theme:#1d1e20;--entry:#2e2e33;--pblue:#609fff;--primary:hsla(0,0%,100%,0.84);--secondary:hsla(0,0%,100%,0.56);--tertiary:hsla(0,0%,100%,0.16);--content:hsla(0,0%,100%,0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333;--gap:24px;--radius:8px}img{display:block;margin:0 auto}.link-post{margin-bottom:calc(var(--gap)*1.5)}.link-title{color:var(--primary)}.link-desc{color:var(--secondary);margin-bottom:0}a:link,a:visited{color:var(--pblue)}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;-webkit-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=0f40eccc76f1834aab0a5215019710bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=0f40eccc76f1834aab0a5215019710bb"/><title data-react-helmet="true">react web 클린하게 시작하기 | FE Factory</title><meta data-react-helmet="true" name="description" content="최소한의 패키지로 시작하자"/><meta data-react-helmet="true" property="og:title" content="react web 클린하게 시작하기"/><meta data-react-helmet="true" property="og:description" content="최소한의 패키지로 시작하자"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="naver-site-verification" content="76f6ac32f3fb1d4edd76ca9e23147df017e84e1e"/><meta data-react-helmet="true" name="google-site-verification" content="xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k"/><link href="//fonts.googleapis.com/css?family=Noto+Serif+KR:400,700|Noto+Sans+KR:400,700" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-6403a9343c4daea86c21.js"/><link as="script" rel="preload" href="/framework-643cd9d57cfac08fd2c4.js"/><link as="script" rel="preload" href="/styles-3c579c614835d628a567.js"/><link as="script" rel="preload" href="/app-e0eca157ef08c2086462.js"/><link as="script" rel="preload" href="/commons-4533d1fa39224d48c06a.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"/><link as="fetch" rel="preload" href="/page-data/2021-01-03/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3490846071.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;color:#1d1d1f"><header><h3 class="link-title" style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit;text-decoration:none" href="/">FE Factory</a></h3></header><main class="link-title"><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">react web 클린하게 시작하기</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">January 02, 2021</p></header><section><p>새해부터 이런 기초적인 내용을 왜 쓰기 사작하는가<br>
+작년 중순부터 연말까지 너무 바빴던 것도 있고<br>
+새로운 프로젝트를 시작하면서 정리했던 내용 중 필요한 부분을 콕 찝어서<br>
+정리해두기로 생각했다.<br>
+여기서 Backend 내용은 빠져있다. Backend 는 별도로 다룰 예정.</p>
+<h3>Web Project 를 시작하기 위해</h3>
+<p>생각을 해보자.<br>
+새로운 web project 를 만들려면 다들 가장 먼저 뭘 하는가?  </p>
+<p>일단 어떤 내용의 서비스를 만들지 생각하고, 어떤 도구들이 필요한지<br>
+모바일도 지원하는지, Backend 는 어디를 쓸지, App 으로도 출시할지,<br>
+응용프로그램 을 지원할지, 브라우저는 어디까지 지원할지 등둥<br>
+고려해야 할 것이 아주 많고 그에 따라 수많은 도구들이 존재한다.  </p>
+<p>내가 이번에 새로운 프로젝트를 시작하며 가장 크게 고려한 것은 필요할 때까지<br>
+사용하지 않는다 였다.  </p>
+<p>패키지의 최소 설치는 (= opensource 최소 이용) 번들 사이즈를 줄일 수 있고,<br>
+보안적으로 많은 도움을 준다.  </p>
+<p>그리고 오픈소스의 버전관리에서 벗어날 수 있으며,<br>
+필요한 기능은 직접 만들어 쓰기 때문에 개발하는데 조금더 깊이 파고들 수 있다.  </p>
+<p>실제 회사에서는 Electron 과 반응형 웹, 그리고 graphql 을 사용하는 프로젝트로 했고,<br>
+이번 예제에서는 단순히 반응형 웹에 초첨을 맞춰본다. 여기서 만약<br>
+더 필요한 지원이 있다면 차차 늘려가면 된다.<br>
+(ex: React Native, Ionic, electron, apollo, relay 등등)</p>
+<h3>Init Project</h3>
+<p>현재 FE 에서 가장 많이 사용되는 툴은 아무래도 React 일 것 이다.<br>
+난 Angular 를 좋아하지만 각각 장단점이 있으니, 그리고 React 를 사용하는 곳이<br>
+훠얼씬 많으니 React 중심으로 얘기한다.  </p>
+<p>빈 폴더를 하나 만들고 React 를 설치 해보자.</p>
+<blockquote>
+<p><code class="language-text">test-project</code></p>
+</blockquote>
+<p>test-project 란 폴더를 만들고 먼저 중심이 되는 React 를 설치 해보자.  </p>
+<p>잠깐! 여기서 create-reacr-app 으로 땡치려는 사람은 이글을 보지말고<br>
+그냥 하던대로 개발을 계속 하면 된다.<br>
+cra 를 사용할거면 이런 글을 쓸 이유가 없다.  </p>
+<p>물론 cra 에는 react 중심기능을 포함하여 test 관련 라이브러리나 webpack 같은<br>
+번들러가 포함되어 있기 때문에 사용하기 편할 수도 있다.<br>
+문제는 강제로 해당 패키지들을 사용해야 한다는 것이다.<br>
+(물론 바꿀수는 있다. 그런데 그럴거면 cra 를 사용할 의미가 있는가)  </p>
+<p>처음부터 클린하게 만들다 보면 모르는 것을 볼 수도 있고, 새로운 것을 배울 수도 있다.<br>
+그래서 순수하게 react 설치부터 시작한다.  </p>
+<p>만들었던 test-project 에서 npm init 을 사용하여 package json 을 초기화하자.  </p>
+<h3>React 설치</h3>
+<blockquote>
+<p><code class="language-text">yarn add react react-dom</code></p>
+</blockquote>
+<p>react 와 react-dom 의 차이는?<br>
+차이라기 보단 react 는 정확히 우리가 알고있는 react 의 기능을 가지고 있는 코어 라이브러리다.<br>
+react를 사용하여 후크, 라이프사이클, compoenet 등을 정의하고 사용할 수 있다.<br>
+react 로 만들어진 요소들을 dom 요소에 붙이기 위해 react-dom 이 필요한 것이다.<br>
+기존에는 둘이 합쳐져 있었지만 react-native 가 등장하며 분리되었다.  </p>
+<p>react, react-dom 은 웹앱을 위해 사용하고,
+react, react-native 는 모바일 App 을 위해 사용한다.  </p>
+<p>자 그럼 react 와 react-dom 을 설치 했으니 끝난 것인가? 아니다.<br>
+우리는 react 로 개발하며 로컬에서 컴포넌트를 디버깅하고 테스트하고 보기 위해<br>
+만들어진 ui 들을 브라우저에서 편하게 볼 수 있도록 해당 코드들을 번들링 하고<br>
+추가로 web server 를 구동하여 편리하게 개발할 수 있는 기능이 필요하다.  </p>
+<h3>Bundler 설치</h3>
+<p>현재 가장 많이 쓰이는 번들링 도구는 Webpack 이다.<br>
+플러그인도 다양하고, 커스텀하게 설정할 수 있고, 다양한 커뮤니티와 많은 프로젝트에서<br>
+사용 중 이다.  </p>
+<p>하지만 이 글의 제목이 무엇인가? 클린하게 설치하기다.<br>
+그리고 현재 상황에서 webpack 의 다양한 설정이 필요한가?<br>
+정답은 아니오 이다.  </p>
+<p>webpack 에 익숙하다면 webpack 을 사용해도 좋지만 zero configuration 을 지향하는<br>
+parcel 을 고려해보도록 하자.<br>
+parcel 을 특이하게 설정 파일이 없다. (만들수도 있다.)<br>
+자동으로 파일들을 감지해서 번들링하고 dev server 뿐만 아니라 hmr 도 지원한다.  </p>
+<p>자세한 내용은 <a href="https://ko.parceljs.org/">https://ko.parceljs.org/</a> 여길 참조하자.<br>
+(한글 사이트도 존재한다.)</p>
+<blockquote>
+<p><code class="language-text">yarn add --dev parcel-bundler</code></p>
+</blockquote>
+<h3>Typescript 설치</h3>
+<p>참고로 저렇게만 설치해도 이제 개발을 시작할 수 있다.<br>
+하지만 현재 fe 개발에 필수로 들어가는 또 하나의 도구가 있다.<br>
+typescript 는 꼭 같이 사용하길 바란다.<br>
+서비스가 커질수록 typescript 의 혜택은 어마어마하다.  </p>
+<p>잘 정의된 type 는 그 자체로 가이드 문서가 될 수 있다.<br>
+이는 후에 새로운 멤버가 합류해도 빠르게 적응할 수 있고, 서비스의 안정성을<br>
+한껏 높여준다.</p>
+<blockquote>
+<p><code class="language-text">yarn add typescript</code></p>
+</blockquote>
+<p>추가로 typescript 를 사용하기 위해서는 @types 라는 추가 패키지를 설치 해야 한다.<br>
+이 @types 에는 일반 js 파일로 만들어진 라이브러리들의 타입을 추론하기 위해<br>
+해당 기능들의 type 이 정의 되어있다.  </p>
+<p>유명한 오픈소스 라이브러리는 typescript 지원을 위해 자체적으로 type 이 내장된<br>
+보조 패키지가 존재한다. (없으면 직접 만들어야 한다!)  </p>
+<p>react 와 react-dom 의 기능을 typescript 에서 사용하기 위해 보조 라이브러리를<br>
+추가해보자.</p>
+<blockquote>
+<p><code class="language-text">yarn add --dev @types/react @types/react-dom</code></p>
+</blockquote>
+<p>마지막으로 typescript 를 사용하기 위한 설정파일을 만들어주자.<br>
+typescript 의 설정파일은 tsconfig.json 이란 이름으로 지정되어 있으며<br>
+우리의 root 디렉터리에 만들어 주면 된다.</p>
+<blockquote>
+<p><code class="language-text">test-project/tsconfig.json</code></p>
+</blockquote>
+<deckgo-highlight-code language="json"  >
+          <code slot="code">{
+  &quot;compilerOptions&quot;: {
+    &quot;target&quot;: &quot;ES6&quot;,
+    &quot;module&quot;: &quot;commonjs&quot;,
+    &quot;allowJs&quot;: true,
+    &quot;jsx&quot;: &quot;react&quot;,
+    &quot;sourceMap&quot;: true,
+    &quot;outDir&quot;: &quot;./dist&quot;,
+    &quot;strict&quot;: true,
+    &quot;noImplicitAny&quot;: true,
+    &quot;esModuleInterop&quot;: true,
+  },
+  &quot;include&quot;: [
+    &quot;src/**/*&quot;,
+    &quot;*.d.ts&quot;
+  ],
+  &quot;exclude&quot;: [
+    &quot;./node_modules&quot;
+  ]
+}</code>
+        </deckgo-highlight-code>
+<p>해당 설정에 관해서는<br>
+<a href="https://typescript-kr.github.io/pages/tsconfig.json.html">https://typescript-kr.github.io/pages/tsconfig.json.html</a><br>
+여기서 살펴 볼 수 있다. 간단한 설정이니 모른다면 꼭 읽어보자.  </p>
+<h3>Router 패키지 설치</h3>
+<p>웹앱에서 Router 설정은 중요하다.<br>
+여기선 대놓고 공식적으로 사용하라는 react-router 라는 패키지가 존재한다.<br>
+중요한건 얘네들은 react react-dom 쌍처럼 존재하는게 아닌<br>
+각자가 독립적으로 존재한다.  </p>
+<p>react-router - 웹, 모바일<br>
+react-router-dom - 웹<br>
+react-router-native - 모바일  </p>
+<p>지금은 웹앱 프로젝트에 사용 중이니 react-router-dom 을 설치 하면 된다.  </p>
+<blockquote>
+<p><code class="language-text">yarn add react-router-dom</code></p>
+</blockquote>
+<blockquote>
+<p><code class="language-text">yarn add --dev @types/react-router-dom</code></p>
+</blockquote>
+<h3>Dependencies</h3>
+<p>여기서 한가지 의문이 있을수도 있다.<br>
+패키지를 설치 할 때 무엇을 기준으로 dependencies 정의하는가?<br>
+dev dependencies 는 말그대로 내가 개발할 때 필요한 의존성이다.<br>
+bunlder 나 test 프레임워크들 또는 dev server 를 구동하는 패키지들.<br>
+이들은 내가 개발할때 필요한 패키지이고, 실제 제품에서는 필요 없는 것 들이다.  </p>
+<p>그리고 production 으로 빌드할 때 dev 패키지들은 포함되지 않는다.  </p>
+<p><strong>실제로 우리는 번들링 해서 사용하고 웹서비스에만 제공하므로 저둘을 딱히 구분 할 필요는 없다.</strong></p>
+<p>단지 의미론적으로 구분 할 뿐 크게 신경쓰지 말라는 것 이다.<br>
+다만 오픈소스와 패키지 기능을 만들때는 해당 기능을 구분 하는 것이 좋다.<br>
+굳이 런타임에서 필요없는 패키지를 넣어서 기능을 크게 만들 필요는 없다.  </p>
+<h3>index.html</h3>
+<p>자 지금까지 설치한 부분을 살펴보자.  </p>
+<deckgo-highlight-code language="json"  >
+          <code slot="code">{
+  &quot;name&quot;: &quot;test-project&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;description&quot;: &quot;test-project&quot;,
+  &quot;dependencies&quot;: {
+    &quot;react&quot;: &quot;^17.0.1&quot;,
+    &quot;react-dom&quot;: &quot;^17.0.1&quot;,
+    &quot;react-router-dom&quot;: &quot;^5.2.0&quot;,
+    &quot;typescript&quot;: &quot;^4.1.3&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@types/react&quot;: &quot;^17.0.0&quot;,
+    &quot;@types/react-dom&quot;: &quot;^17.0.0&quot;,
+    &quot;@types/react-router-dom&quot;: &quot;^5.1.7&quot;,
+    &quot;parcel-bundler&quot;: &quot;^1.12.4&quot;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>src 폴더를 만들고 index.html 파일을 만든 뒤 react 로 만든 컴포넌트 들이<br>
+들어 갈 수 있도록 초기 페이지를 만들자.  </p>
+<blockquote>
+<p><code class="language-text">test-project/src/index.html</code></p>
+</blockquote>
+<deckgo-highlight-code language="html"  >
+          <code slot="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+
+&lt;head&gt;
+  &lt;title&gt;TestProject&lt;/title&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; charset=&quot;utf-8&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;index.tsx&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p><code class="language-text">test-project/src/index.tsx</code></p>
+</blockquote>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">import React from &#39;react&#39;;
+import ReactDom from &#39;react-dom&#39;;
+import App from &#39;./app&#39;;
+
+ReactDom.render(&lt;App /&gt;, document.getElementById(&#39;app&#39;));</code>
+        </deckgo-highlight-code>
+<p>index.html 과 react 를 연결해주는 index.tsx 을 만들었다면<br>
+이제 시작 파일인 App 을 만들어보자.  </p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">import React from &#39;react&#39;;
+
+const App: React.FC = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;react&lt;/h2&gt;
+    &lt;/div&gt;
+  )
+}
+export default App;</code>
+        </deckgo-highlight-code>
+<p>자 이제 준비는 다 되었다.  </p>
+<h3>start &#x26; build</h3>
+<p>이제 실제 실행하여 개발을 헤보자.<br>
+package.json 에 실행 명령과 빌드 명령을 추가하자.  </p>
+<deckgo-highlight-code language="json"  >
+          <code slot="code">{
+  ...
+  &quot;scripts&quot;: {
+    &quot;start:dev&quot;: &quot;parcel -p 1212 ./src/index.html&quot;,
+    &quot;build:dev&quot;: &quot;parcel build ./src/index.html --public-url ./ --out-dir build/output --no-source-maps&quot;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>parcel 명령어는 매우 심플하다.<br>
+해당 명령어로 시작 할 경우 자동으로 hmr 지원도 추가된다.</p>
+<blockquote>
+<p><code class="language-text">yarn start:dev</code></p>
+</blockquote>
+<p>를 실행하고 <a href="http://localhost:1212">http://localhost:1212</a> 에 접속하면 react 라는 우리가 만든<br>
+글자가 나타난다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 343px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f2cc02990ee238542ff6f37e70fb9edd/41431/21010301.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA0ElEQVQoz2OwsXFydfU2NrY0N7d1dfVycfHU1NKztLQ2t7BycXFzdXMHMrS1ddU0tCSlZKSkZZERQ3h4TGRkXFBQRGhoVHx8SmxsUkBAcHh4VEREVHxCUmxsfHhElJ9/oK9fgJu7Jxpi+Pnz59+/f//8+fP9+/cvYPDt2zcg+fnzl08g8BnI/Pr1GxB9xwAM9+7d279//5EjRx4+fPj///9///79JxowPHv2DKjzzJkzL1++BPKBrvhHNGD4TwFgABrwBwz+/ftLsmaKbB6BmgGY/25iLqsuhwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="screen"
+        title="screen"
+        src="/static/f2cc02990ee238542ff6f37e70fb9edd/41431/21010301.png"
+        srcset="/static/f2cc02990ee238542ff6f37e70fb9edd/12f09/21010301.png 148w,
+/static/f2cc02990ee238542ff6f37e70fb9edd/e4a3f/21010301.png 295w,
+/static/f2cc02990ee238542ff6f37e70fb9edd/41431/21010301.png 343w"
+        sizes="(max-width: 343px) 100vw, 343px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>추가로 build 명령어를 실행해서 실제로 빌드가 잘 되는지 보자.<br>
+build 명령어의 옵션을 보면  </p>
+<p><strong>—out-dir</strong> 은 빌드된 파일을 어디에 저장할 지 나타내는 부분이고<br>
+<strong>—no-source-map</strong> 은 말그대로 소스맵을 생성하지 말라는 옵션이다.<br>
+그리고 <strong>—public-url 옵션에</strong> ./ 을 줬는데 이는 빌드된 index 파일에서<br>
+js 파일을 불러올때 base 경로를 지정 해 주는 옵션이다.  </p>
+<p>기본적으로 빌드했을대는 주소가 /src.133131.js 이런식으로 붙게 되는데<br>
+이는 해당 프로젝트의 루트폴더를 의미하게 된다.  </p>
+<p>우리는 루트 폴더가 아닌 별도의 폴더에 저장하게 되고 추가로 index 파일과<br>
+번들파일은 같은 폴더에 위치하고 있기 때문에 base 경로를 현재 index 파일이<br>
+존재하는 경로로 맞춰주는 것 이다.  </p>
+<p>이제 빌드 명령어를 실행하고 실제로 빌드된 파일을 열어보자.  </p>
+<blockquote>
+<p><code class="language-text">test-project/build/output/index.html</code></p>
+</blockquote>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 343px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f2cc02990ee238542ff6f37e70fb9edd/41431/21010301.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA0ElEQVQoz2OwsXFydfU2NrY0N7d1dfVycfHU1NKztLQ2t7BycXFzdXMHMrS1ddU0tCSlZKSkZZERQ3h4TGRkXFBQRGhoVHx8SmxsUkBAcHh4VEREVHxCUmxsfHhElJ9/oK9fgJu7Jxpi+Pnz59+/f//8+fP9+/cvYPDt2zcg+fnzl08g8BnI/Pr1GxB9xwAM9+7d279//5EjRx4+fPj///9///79JxowPHv2DKjzzJkzL1++BPKBrvhHNGD4TwFgABrwBwz+/ftLsmaKbB6BmgGY/25iLqsuhwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="screen2"
+        title="screen2"
+        src="/static/f2cc02990ee238542ff6f37e70fb9edd/41431/21010301.png"
+        srcset="/static/f2cc02990ee238542ff6f37e70fb9edd/12f09/21010301.png 148w,
+/static/f2cc02990ee238542ff6f37e70fb9edd/e4a3f/21010301.png 295w,
+/static/f2cc02990ee238542ff6f37e70fb9edd/41431/21010301.png 343w"
+        sizes="(max-width: 343px) 100vw, 343px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>똑같이 나올 것이다. (사실 스크린샷은 찍기 귀찮아서 재탕임..)  </p>
+<p>이로써 기본적인 개발 환경설정은 끝났다.<br>
+이제 본인이 필요한 test 프레임워크, 백엔드와 연결 할 패키지, 스타일 관련 등
+필요한 부분만 설치해서 사용하면 된다.  </p>
+<h3>추가 의문점</h3>
+<p>Babel 은 사용안하나요?<br>
+parcel 번들러에는 필수 babel preset plugin 이 포함되어 있다.<br>
+(env, flow, react, typescript)  </p>
+<p>그러므로 추가적인 preset 이 필요 없는 한 별도로 babel 을 설치 할 필요는 없다.  </p>
+<p><strong>참고로 async await 를 사용 하기 위해서는 별도 plugin 을 사용해야 한다.</strong></p>
+<p>사용하는 방법은 @babel/runtime 과 @babel/babel-plugin-transform-runtime<br>
+을 설치하면 된다.</p>
+<p>babel 설정 파일을 사용한다면 parcel 은 자동으로 해당 설정 파일을 읽어서<br>
+빌드하기 떄문에 위 플러그인 설치 후 .babelrc 파일을 생성하여<br>
+해당 plugin 을 지정해 주면 사용 가능하다.  </p>
+<p>자세한 내용은
+<a href="https://ko.parceljs.org/code_splitting.html">https://ko.parceljs.org/code_splitting.html</a><br>
+요기를 참조하자.</p>
+<h3>마무리</h3>
+<p>간단하게 web project 를 시작하는 방법을 적었지만, 빠진 부분이 많다.<br>
+global style 설정이나 스타일 관련 부분이나 이런부분은 본인이 원하는 방향으로<br>
+지정해서 사용하길 바란다.<br>
+사실 오늘 적은 부분은 빙산의 일각이다.</p>
+<p>그리고 프로젝트 폴더 구조나 상태관리나 이런 세세한 부분은 정답은 없지만<br>
+시간이 되면 아마 더 추가할지도..  </p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAZpq7M6napnO0lEwVf/EABwQAAICAgMAAAAAAAAAAAAAAAECAxEAIQQxNP/aAAgBAQABBQLk6XWBDUlEQUsbrESOm84Y5//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASH/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8BwjP/xAAaEAADAQEBAQAAAAAAAAAAAAABESEAECJx/9oACAEBAAY/ApQ9QdJwMNmDe0/vBz//xAAcEAEBAQEAAgMAAAAAAAAAAAABEQAhEDFBUXH/2gAIAQEAAT8hkh/hyUKF+s4sB+LNMAqeBGTdAEnG9BmiHEmR1e7/2gAMAwEAAgADAAAAEMzfPP/EABgRAAMBAQAAAAAAAAAAAAAAAAABEUFh/9oACAEDAQE/EEqy8NlZ/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERQWH/2gAIAQIBAT8QVCdMkR//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAhMUFhcZH/2gAIAQEAAT8QhYgVINHGRbDZ29uGEJSq+piFBHaEDAuN9po4t/cXByIQfMFQqV5fcVeiE6wNpTtSr6rn/9k=" alt="w.r" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" src="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg" alt="w.r" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p class="link-title">Written by <strong>w.r</strong> <!-- -->Software enginner<br/><a href="mailto: stainer1004@gmail.com">Send Email</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-08-11/">← <!-- -->Flutter Environments Setting</a></li><li><a rel="next" href="/2021-02-21/">react lazyload =&gt; preload<!-- --> →</a></li></ul></nav><div id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-166907717-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2021-01-03/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-513da999c145725089ff.js"],"app":["/app-e0eca157ef08c2086462.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96a045a5dd84c95a551e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c5cc7b36b26ee13ac8d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"],"polyfills-dom":["/polyfills-dom-09a2ec672631c68af484.js"],"polyfills-core-js":["/polyfills-core-js-af16ac8aca11911e40aa.js"]};/*]]>*/</script><script src="/polyfill-513da999c145725089ff.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js" async=""></script><script src="/commons-4533d1fa39224d48c06a.js" async=""></script><script src="/app-e0eca157ef08c2086462.js" async=""></script><script src="/styles-3c579c614835d628a567.js" async=""></script><script src="/framework-643cd9d57cfac08fd2c4.js" async=""></script><script src="/webpack-runtime-6403a9343c4daea86c21.js" async=""></script></body></html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Spoqa Han Sans Neo',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Spoqa Han Sans Neo',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.37087882f53630232b20.css" id="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}body{background-color:var(--theme);--theme:#1d1e20;--entry:#2e2e33;--pblue:#609fff;--primary:hsla(0,0%,100%,0.84);--secondary:hsla(0,0%,100%,0.56);--tertiary:hsla(0,0%,100%,0.16);--content:hsla(0,0%,100%,0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333;--gap:24px;--radius:8px}img{display:block;margin:0 auto}.link-post{margin-bottom:calc(var(--gap)*1.5)}.link-title{color:var(--primary)}.link-desc{color:var(--secondary);margin-bottom:0}a:link,a:visited{color:var(--pblue)}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;-webkit-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=0f40eccc76f1834aab0a5215019710bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=0f40eccc76f1834aab0a5215019710bb"/><title data-react-helmet="true">기본 컴포넌트 설계 패턴 | FE Factory</title><meta data-react-helmet="true" name="description" content="알아두면 좋다"/><meta data-react-helmet="true" property="og:title" content="기본 컴포넌트 설계 패턴"/><meta data-react-helmet="true" property="og:description" content="알아두면 좋다"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="naver-site-verification" content="76f6ac32f3fb1d4edd76ca9e23147df017e84e1e"/><meta data-react-helmet="true" name="google-site-verification" content="xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k"/><link href="//fonts.googleapis.com/css?family=Noto+Serif+KR:400,700|Noto+Sans+KR:400,700" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-6403a9343c4daea86c21.js"/><link as="script" rel="preload" href="/framework-643cd9d57cfac08fd2c4.js"/><link as="script" rel="preload" href="/styles-3c579c614835d628a567.js"/><link as="script" rel="preload" href="/app-e0eca157ef08c2086462.js"/><link as="script" rel="preload" href="/commons-4533d1fa39224d48c06a.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"/><link as="fetch" rel="preload" href="/page-data/2024-06-04/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3490846071.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;color:#1d1d1f"><header><h3 class="link-title" style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit;text-decoration:none" href="/">FE Factory</a></h3></header><main class="link-title"><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">기본 컴포넌트 설계 패턴</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">June 04, 2024</p></header><section><p>앱을 개발하며 컴포넌트를 만들고 구조를 설계할때 어떤식으로 하면 좋을까<br>
+인터넷이나 책에 다양한 방식의 설계 방법이 존재하고 있지만 공통적으로 말하고 있는 부분은<br>
+비즈니스 로직을 어디다 둘 것인가, 상태관리를 어떤식으로 할 것 인가에 따라<br>
+서비스 설계의 많은 부분이 변경된다.</p>
+<p>물론 리팩토링은 꾸준히 하겠지만 처음 만들때 제대로 정해두지 않으면 팀이 커질수록<br>
+서비스 유지보수에 많은 어려움이 생기고 DX에 악영향을 끼칠수 있다.</p>
+<p>시중에 나와있는 다양한 패턴을 다 설명하는 것 보다 기본적으로 컴포넌트를 만들때<br>
+요정도의 지식을 알고 있다면 추후 서비스를 개발할때 처음부터 헤메는 일은 없을 것 이라 본다.</p>
+<blockquote>
+<p>모든 코드는 React 기준으로 작성되어있다.<br>
+다만 단순히 컴포넌트의 구축 방향을 보기 때문에<br>
+타 UI 프레임워크 에서도 응용할 수 있다.</p>
+</blockquote>
+<p>가장 기본적이고 먼저 볼 부분은 <code class="language-text">Statless</code> 컴포넌트 다.<br>
+말 그대로 이 컴포넌트는 상태를 가지고 있지 않고 오로지 UI 에 집중되어 있다.</p>
+<p>예를 보자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">interface CountControlProps {
+  control: {
+    increment: () =&gt; void;
+    decrement: () =&gt; void;
+    reset: () =&gt; void;
+  }
+  count: number
+}
+
+export function CountControl({ control, count = 0 }: CountControlProps) {
+  const { increment, decrement, reset } = control;
+
+  return (
+    &lt;div&gt;
+      &lt;button onClick={increment} type=&quot;button&quot;&gt;
+        Increment
+      &lt;/button&gt;
+      &lt;button onClick={decrement} type=&quot;button&quot;&gt;
+        Decrement
+      &lt;/button&gt;
+      &lt;button onClick={reset} type=&quot;button&quot;&gt;
+        Reset
+      &lt;/button&gt;
+      &lt;p&gt;count: {count}&lt;/p&gt;
+    &lt;/div&gt;
+  )
+}</code>
+        </deckgo-highlight-code>
+<p>내부에서는 별도의 상태를 가지지 않고 외부에서 모든 <code class="language-text">state</code> 와 <code class="language-text">control</code> 을 주입받는다.</p>
+<p><code class="language-text">Statless</code> 장점은 일단 의존하는 부분이 없기 때문에 <code class="language-text">재사용성이 매우 높고</code><br>
+모든 것이 외부 입력에 의해 컨트롤 되므로 <code class="language-text">테스트 하기가 쉽다</code>.<br>
+아마 디자인 시스템의 대부분 UI 컴포넌트에서 사용될 것이다.</p>
+<p>다음으로 볼 컴포넌트는 <code class="language-text">Stateful</code> 컴포넌트다.<br>
+<code class="language-text">Statless</code> 와 다르게 <code class="language-text">Stateful</code> 은 컴포넌트가 로컬 State 와 로직을 가지고 있다.<br>
+위 CountControl 컴포넌트를 <code class="language-text">Stateful</code> 로 변경하면 아래와 같다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">export function CountControl() {
+  const [conut, setCount] = useState&lt;number&gt;(0);
+  const control = {
+    increment: () =&gt; setCount(count + 1),
+    decrement: () =&gt; setCount(count - 1),
+    reset: () =&gt; setCount(0),
+  }
+
+  const { increment, decrement, reset } = control
+
+  return (
+    &lt;div&gt;
+      &lt;button onClick={increment} type=&quot;button&quot;&gt;
+        Increment
+      &lt;/button&gt;
+      &lt;button onClick={decrement} type=&quot;button&quot;&gt;
+        Decrement
+      &lt;/button&gt;
+      &lt;button onClick={reset} type=&quot;button&quot;&gt;
+        Reset
+      &lt;/button&gt;
+      &lt;p&gt;count: {count}&lt;/p&gt;
+    &lt;/div&gt;
+  )
+}</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">Stateful</code> 은 로컬 State 를 가지며, 자체적으로 State 를 컨트롤한다.<br>
+당연히 외부 주입도 없고, 의존성도 없으며 local state 로 작동하기 때문에<br>
+<code class="language-text">Stateless</code> 와 같이 <code class="language-text">재사용성이 매우 높으며</code>, <code class="language-text">테스트 하기 쉽다.</code></p>
+<p><code class="language-text">Stateful</code> 은 주로 디자인 컴포넌트에서 상태가 필요한 컴포넌트들<br>
+토글바나 다이얼로그, 메뉴 등에 사용된다.</p>
+<h2>Domain 과 합체</h2>
+<p><code class="language-text">Presentatin</code> 과 <code class="language-text">Domain</code> 을 분리하여 만드는 패턴이다.<br>
+아마 <code class="language-text">Container</code> 라고 불리는 컴포넌트 들이 여기 해당된다.</p>
+<p>이때부터는 컴포넌트가 외부 상태와 느슨한 결합이 생기며, 의존성을 가지게 된다.<br>
+예를 들어 서버에서 현재 사용자들을 불러온다고 해보자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">// UserListControl
+
+export const useUserListControl = () =&gt; {
+  const getUsers: Promise&lt;UserModel[]&gt; = async () =&gt; {
+    const res = await fetch(&quot;https://jsonplaceholder.typicode.com/comments&quot;).then((res) =&gt; res.json);
+    return res;
+  }
+
+  return {
+    getUsers
+  }
+}
+
+// Container
+export function UserListContainer() {
+  const [users, setUsers] = useState&lt;UserModel[]&gt;();
+  const [isLoading, setLoading] = useState&lt;boolean&gt;(true);
+
+  const { getUsers } = useUserListControl();
+
+  const getUserList = async () =&gt; {
+    const userList = await getUsers();
+    setUsers(userList);
+    setLoading(false);
+  }
+
+  useEffect(() =&gt; {
+    getUserList();
+  }, []);
+
+  if (isLoading) {
+    return &lt;div&gt;Loading&lt;/div&gt;;
+  }
+
+  if (!users) {
+    return &lt;div&gt;No data&lt;/div&gt;;
+  }
+
+  return (
+    &lt;div&gt;
+      {users.map((user) =&gt; (
+        // User 는 Statelss Component 라고 생각하자
+        &lt;User user={user} key={user.id}&gt;
+      ))}
+    &lt;/div&gt;
+  )
+}</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>정의된 fetch 는 크게 신경쓰지 말자. 임의로 만든것들이다.</p>
+</blockquote>
+<p>아주 간단한 예제이지만 여기서 <code class="language-text">useUserListControl</code> 은 도메인 로직이며,<br>
+<code class="language-text">UserListContainer</code> 는 <code class="language-text">Stateful</code> 컴포넌트 이면서 내부에서 도메인로직을<br>
+부르기 때문에 도메인 로직과 의존성이 생겼다.</p>
+<p><code class="language-text">UserListContainer</code> 는 <code class="language-text">UI 로직에 대한 책임</code>을 가지고, 도메인과 관련된<br>
+비즈니스 로직에 대한 책임은 <code class="language-text">useUserListControl</code> 훅(또는 서비스)으로 위임했다.</p>
+<p>이런식으로 <code class="language-text">DomainSide &lt;-> PresentationSide</code> 로 확실히 분리시켜 두면<br>
+코드를 이해하기 더 쉬울뿐만 아니라 UI 테스트와 비즈니스 로직의 테스트를 용이하게<br>
+만들어준다.</p>
+<p>하지만 우리가 아는 실제 서비스들은 훨씬 복잡하겠지?</p>
+<p>실제로 위 방식은 비교적 간단한 Container 에서 사용하게 되고<br>
+Depth가 깊어짐에 따라 더욱더 많은 상태를 조작하거나 추가 메소드가 필요해진다.</p>
+<p>여기서 CQS 를 결합할 수 있다.<br>
+CQS 는 <code class="language-text">Command Query Separation</code> 즉 읽기와 쓰기를 명확히 분리하는 것이다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/af60fd6c03e1d740419f1752f65dec4b/5a6dd/1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.24324324324324%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiUlEQVQoz6VSy07CQBTtP7n0J/wOt36FkYWuSViQACZGXq0S2NHERExsMVRSSu3DQitBHm0xpS3l2I6BBCFunOTOzJ2cOfeeM0PhH2O9Xu+dUb1eD6VSCeVyGZVKBdVqFY1GA4VCAcViERzHoVarIZ/PEwxN02QviiIhiKJoS54E1el0kEqlkE6nCUkmkyGXcrkcstksGIaBIAhQVRWDwQCj0Yisruse7JTSdQ23xRuwbDMOFvV6HfP5HEEQkOphGB6UFtPExAY8z9vt8C+PfN/fStoZ8ZEz96G8/XS94+HoU8VD9wq61cZs6sTSFAKSZRnNZhM8z5N8OBxCkiRo6jtelGu0+pd45loxXotVBFgsFqQ41Xg6R1k8Qr19hvGHDdueEcmO42C5XBJgktu2jclkiv5bF8zrCWjpGLzIYDJ2YVkmdF0n9lCy8Yh7/hSCcoeuIEHVlBhgwTAM8pIJ0DRN0mGyfi08cHIerHABx53tf5tkCvx901erFSHZmP7bwyjE9ttsHiSJb9ktl43EteSKAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="CQS"
+        title="CQS"
+        src="/static/af60fd6c03e1d740419f1752f65dec4b/fcda8/1.png"
+        srcset="/static/af60fd6c03e1d740419f1752f65dec4b/12f09/1.png 148w,
+/static/af60fd6c03e1d740419f1752f65dec4b/e4a3f/1.png 295w,
+/static/af60fd6c03e1d740419f1752f65dec4b/fcda8/1.png 590w,
+/static/af60fd6c03e1d740419f1752f65dec4b/5a6dd/1.png 802w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>해당 패턴을 적용할때 주의할 점은 실제로 State 가 변경될때 자동으로 전파가 되어야 하며,<br>
+해당 State 를 사용하는 <code class="language-text">Usecase</code> 한테는 동일하게 공유되어야 한다는 것이다.</p>
+<p>일반적으로 <code class="language-text">ObservableState</code> 를 만들어야 하는데, 적용 가능한 방법은<br>
+<code class="language-text">Signal</code>, <code class="language-text">rxjs</code> 또는 <code class="language-text">Relay</code> 나 <code class="language-text">Apollo client</code> 로 graphql 을 활용하는 방법 등이<br>
+있겠다.<br>
+아니면 상태관리 패키지를 사용해도 되고.</p>
+<blockquote>
+<p>gql 을 사용하면 이런 패턴의 상당 부분을 압축 할 수 있다.</p>
+</blockquote>
+<p>일단 여기서는 대중적인? <code class="language-text">Rxjs</code> 로 작성을 해보겠다.<br>
+간단한 TODO List 를 만든다고 생각해보자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">import type { Observable } from &#39;rxjs&#39;;
+import { BehaviorSubject, map } from &#39;rxjs&#39;;
+
+type Todo = {
+  id: number;
+  title: string;
+  completed: boolean;
+};
+
+export const TodoListStateService = () =&gt; {
+  const todos$ = new BehaviorSubject&lt;Todo[]&gt;([
+    {
+      id: 1,
+      title: &#39;first todo&#39;,
+      completed: false,
+    },
+  ]);
+
+  const addTodo = (title: string) =&gt; todos$.next([...todos$.value, {
+    id: todos$.value + 1,
+    title,
+    completed: false,
+  }]);
+
+  const toggleCompleted = (id: Todo[&#39;id&#39;], completed: boolean) =&gt; {
+    todos$.next(todos$.value.map((todo) =&gt; (todo.id === id ? { ...todo, completed } : todo)));
+  };
+
+  return {
+    todos$: todos$.asObservable(),
+    toggleCompleted,
+    addTodo,
+  } as const;
+};</code>
+        </deckgo-highlight-code>
+<p>간단하게 만든 TodoState 다.</p>
+<p>해당 서비스는 Todo 라는 State 의 상태를 관리하고<br>
+업데이트 한다. 사실 react 와 조금 어울리지 않지만 일단 특정 State 의 상태를 책임지는<br>
+서비스를 만들었다고 생각하자.</p>
+<p>그리고 해당 서비스를 이용한 Usecases 를 만들어보자.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code"> export const TodoListUsecase {
+   const { todos$, toggleCompleted, addTodo } = TodoListStateService();
+
+
+    // useObservableState 는 실제로 Observalbe 을 구독해
+    // useState 에 저장하는 유틸함수라고 생각하자.
+
+   const todoList = useObservableState({
+     obs: todos$
+   });
+
+   const inCompletedTodoList = useMemo(() =&gt; {
+    return todoList.filter((todo) =&gt; !todo.completed)
+   }, [todoList]);
+
+   const CompletedTodoList = useMemo(() =&gt; {
+    return todoList.filter((todo) =&gt; todo.completed)
+   }, [todoList]);
+
+   const addTodoItem = (title: string) =&gt; {
+     addTodo(title);
+   }
+
+   const addTodoIfNotExist = (title: string) =&gt; {
+     const alreadyExists = todos.find((todo) =&gt; todo.title === title);
+     if (alreadyExists) {
+        return;
+     }
+     addTodoItem(title);
+   }
+
+   const toggleTodoCompleted = (id: Todo[&#39;id&#39;], completed: boolean) =&gt; {
+     toggleCompleted(id, completed);
+   }
+
+   // 임의로 query 와 command 를 나눴다.
+   return {
+      query: {
+        todoList,
+        inCompletedTodoList,
+        CompletedTodoList,
+      },
+      command: {
+        addTodoItem,
+        addTodoIfNotExist,
+        toggleTodoCompleted
+      }
+   }
+ }</code>
+        </deckgo-highlight-code>
+<p>이제 컴포넌트는 <code class="language-text">Usecase</code> 에 의존하게 되며 TodoList 의 State 를 읽어오는 것과<br>
+변경하는 명령어 역시 전부 <code class="language-text">Usecase</code> 를 통해 이루어진다.</p>
+<p><code class="language-text">Usecase</code> 는 <code class="language-text">StateService</code> 에 의존해 실제 state 를 변경하기전 추가적인 메소드와<br>
+state 를 제공하며 <code class="language-text">Usecase</code> 레이어의 주요목적은 <code class="language-text">StateService</code>를 은폐하기 위함이다.</p>
+<p>도메인과 직접 연결되는 부분에 복잡한 로직과 메소드가 계속 추가 된다면 이해하기도 힘들어지고<br>
+특정 메소드의 테스트에도 많은 부하가 생길 수 있다.<br>
+알수없는 사이드 이펙트는 덤.</p>
+<p>추가로 <code class="language-text">확장성</code>과 <code class="language-text">재사용성</code> 그리고 <code class="language-text">테스트 용이성</code>을 위해 관심사를 확실히 분리한 것이다.<br>
+해당 장점들은 왜 장점이 되는지 잘 생각해보자.</p>
+<p>이렇게 하면 도메인 테스트와 도메인 데이터를 이용한 조회,변경 테스트를 하기가 용이하다.</p>
+<p>추가로 <code class="language-text">CQS</code> 원칙을 사용해 <code class="language-text">read</code> 와 <code class="language-text">write</code> 를 명확하게 분리하여 <code class="language-text">query/command</code>를<br>
+구분하기 쉽고 <code class="language-text">Query</code>는 오로지 read 만 담당하기 때문에 혹시 모를 사이드 이펙트가<br>
+생기지 않는다.</p>
+<p>그리고 문제가 생겼을 경우 <code class="language-text">Query</code> 인지 <code class="language-text">Command</code> 인지 디버깅 하기가 쉬워진다.</p>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">  export function UserListContainer() {
+    const { query } = TodoListUsecase();
+
+    return (
+      &lt;div&gt;
+        {query.todoList.map((todo) =&gt; &lt;TodoItem key={todo.id} todo={todo}&gt;)}
+        &lt;p&gt;{query.inCompletedTodoList.length}&lt;/p&gt;
+      &lt;/div&gt;
+    )
+  }</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code language="javascript"  >
+          <code slot="code">export function TodoInput() {
+  const { command } = TodoListUsecase()
+  const [title, setTitle] = useState&lt;string&gt;(&quot;&quot;);
+
+  return (
+    &lt;div&gt;
+      &lt;input value={title} onChange={e =&gt; setTitle(e.target.value)} /&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; command.addTodoItem(title)}&gt;
+        Add
+      &lt;/button&gt;
+    &lt;/div&gt;
+  )
+}</code>
+        </deckgo-highlight-code>
+<p>사용한다면 대충 이런식으로 사용하지 않을까?</p>
+<blockquote>
+<p>대략적으로 막 적은 코드라 오타나 type 오류가 있을 수 있다.<br>
+그냥 흐름만 보자.</p>
+</blockquote>
+<p>위 코드들은 정말 기본적으로 막 사용한 것들이고 추가로 유명한 상태관리 패키지나<br>
+다른 방식으로 충분히 더 훌륭하게 발전 시킬수 있을 것이다.</p>
+<p>위에 적기도 했지만 graphql 을 사용하고 있다면 위 패턴을<br>
+더욱 짧고 쉽게 압축해서 사용할 수 있다.</p>
+<p>워낙 요즘 패키지들이 이런 부분을 잘 지원해줘서 개념만 잘 익히고, 실제로 본인이 적용해보며<br>
+이것저것 고쳐 보는게 좋을 것이다.</p>
+<blockquote>
+<p>참고한 사이트들</p>
+</blockquote>
+<p><a href="https://martinfowler.com/bliki/CommandQuerySeparation.html">CommandQuerySeparation</a><br>
+<a href="https://martinfowler.com/bliki/PresentationDomainSeparation.html">PresentationDomainSeparation</a><br>
+<a href="https://www.apollographql.com/blog/client-side-architecture-basics">ApolloClient&#x26;client-side-architecture-basics</a></p>
+<p>들어가서 한번씩 읽어보면 좋은 글들이다.<br>
+시간이 된다면 꼭 읽어보자.</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAZpq7M6napnO0lEwVf/EABwQAAICAgMAAAAAAAAAAAAAAAECAxEAIQQxNP/aAAgBAQABBQLk6XWBDUlEQUsbrESOm84Y5//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASH/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8BwjP/xAAaEAADAQEBAQAAAAAAAAAAAAABESEAECJx/9oACAEBAAY/ApQ9QdJwMNmDe0/vBz//xAAcEAEBAQEAAgMAAAAAAAAAAAABEQAhEDFBUXH/2gAIAQEAAT8hkh/hyUKF+s4sB+LNMAqeBGTdAEnG9BmiHEmR1e7/2gAMAwEAAgADAAAAEMzfPP/EABgRAAMBAQAAAAAAAAAAAAAAAAABEUFh/9oACAEDAQE/EEqy8NlZ/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERQWH/2gAIAQIBAT8QVCdMkR//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAhMUFhcZH/2gAIAQEAAT8QhYgVINHGRbDZ29uGEJSq+piFBHaEDAuN9po4t/cXByIQfMFQqV5fcVeiE6wNpTtSr6rn/9k=" alt="w.r" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" src="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg" alt="w.r" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p class="link-title">Written by <strong>w.r</strong> <!-- -->Software enginner<br/><a href="mailto: stainer1004@gmail.com">Send Email</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2024-05-18/">← <!-- -->The New Generation of JavaScript</a></li><li><a rel="next" href="/2024-06-16/">The Programmer&#x27;s Brain<!-- --> →</a></li></ul></nav><div id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-166907717-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2024-06-04/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-513da999c145725089ff.js"],"app":["/app-e0eca157ef08c2086462.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96a045a5dd84c95a551e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c5cc7b36b26ee13ac8d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"],"polyfills-dom":["/polyfills-dom-09a2ec672631c68af484.js"],"polyfills-core-js":["/polyfills-core-js-af16ac8aca11911e40aa.js"]};/*]]>*/</script><script src="/polyfill-513da999c145725089ff.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js" async=""></script><script src="/commons-4533d1fa39224d48c06a.js" async=""></script><script src="/app-e0eca157ef08c2086462.js" async=""></script><script src="/styles-3c579c614835d628a567.js" async=""></script><script src="/framework-643cd9d57cfac08fd2c4.js" async=""></script><script src="/webpack-runtime-6403a9343c4daea86c21.js" async=""></script></body></html>

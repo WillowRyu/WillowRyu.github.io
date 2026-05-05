@@ -273,3 +273,6 @@ Anthropic IPO 가 얼마 안남기도 했고. 🤡
 
 쨌든 AI 를 잘 쓰는 일이 결국 AI 를 어떻게 가둬둘 것인가의 문제라는게  
 써볼수록 점점 더 명확해진다. 🥹
+
+ps. 위에서 다룬 Plan / Execute / Verify 파이프라인을  
+<a href="https://github.com/WillowRyu/agent-handoff" target="_blank">agent-handoff</a> 라는 스킬로 직접 만들어서 공유한다.

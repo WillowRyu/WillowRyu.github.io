@@ -1,7 +1,7 @@
 ---
 title: "AI 랑 잘 일하기 위한 몇가지"
 date: "2026-04-21"
-description: "80~90s 스타일로 교육하자"
+description: "프롬프트가 아니라 일하는 환경을 짜는 일"
 ---
 
 요즘 AI 에이전트랑 하루종일 같이 일한다.  
@@ -14,10 +14,10 @@ PR 리뷰, 디버깅, 리팩토링, 문서 정리까지 웬만한건 다 같이 
 실패하는 테스트를 고치라니 테스트 자체를 지워버리고,  
 리팩토링을 하라니 멀쩡한 로직을 잘라먹고.
 
-최근에는 모델들이 다을 우수해서인지 이제 기초적인 실수는 안하긴 한다.
+최근에는 모델들이 다들 우수해서인지 이제 기초적인 실수는 안하긴 한다.
 
 요즘은 프롬프트만 열심히 짜는 게 아니라,  
-이 녀석들이 일하는 환경 자체를 설계하는 데 더 많은 시간을 더 써야 하는건  
+이 녀석들이 일하는 환경 자체를 설계하는 데 더 많은 시간을 써야 하는건  
 누구나 알 것이다.
 
 흔히 말하는 하네스 엔지니어링(Harness Engineering) 이다.
@@ -69,7 +69,7 @@ AI 주변의 런타임 전체를 설계하는 일이다.
 이 외에 추가적인 많은 기능들 등등.
 
 이렇게 분리해두면 해당 작업을 할 때만 관련 지침이 컨텍스트에 로드된다.  
-i18n 작업 중에 DB 마이그레이션 규칙을 컨텍스트에 들고 있을 이유가 없기 때문이다
+i18n 작업 중에 DB 마이그레이션 규칙을 컨텍스트에 들고 있을 이유가 없기 때문이다.
 
 ### Hook 으로 자동 검증
 
@@ -192,39 +192,72 @@ Gemini 가 어색하게 쓴 타입 정의를 Claude 가 다듬는 식이다.
 크로스 체크와 비슷한 아이디어를 한 모델 안에서 적용한 게  
 요즘 쓰고 있는 3-Agent 파이프라인이다.
 
-- Plan Agent — 요구사항 분석, 코드베이스 조사, 계획 수립. 코드 수정 금지
-- Execute Agent — `plan.md` 에 적힌 대로만 구현. 계획에 없는건 하지 않음
-- Verify Agent — 테스트, 타입체크, 린트, 리뷰. 코드 수정 금지
+- Plan — 요구사항 분석, 코드베이스 조사, 계획 수립. 코드 수정 금지
+- Execute — `plan.md` 에 적힌 대로만 구현. 계획에 없는건 하지 않음
+- Verify — 테스트, 타입체크, 린트, 리뷰. 코드 수정 금지
 
 세 에이전트는 각각 다른 세션(채팅) 에서 돌고,  
-`handoff/` 폴더의 파일을 통해서만 소통한다.  
-내 프로젝트에서는 이런 식으로 배치돼 있다.
+디스크에 저장되는 `.handoff/*.md` 파일을 통해서만 소통한다.  
+세션이 닫혀도 상태가 디스크에 남기 때문에  
+다음 세션이 그걸 읽고 이어서 일한다.
 
+처음엔 그냥 프로젝트마다 손으로 깔아두고 썼는데,  
+같은 셋업을 매번 다시 만들기가 귀찮아져서  
+<a href="https://github.com/WillowRyu/agent-handoff" target="_blank">agent-handoff</a> 라는 스킬로 묶어두고 쓰고 있다.
+
+### 4 개 스킬과 경계
+
+스킬은 4 개로 쪼개져 있고, 각자 읽고 쓸 수 있는 파일이 정해져 있다.
+
+| 스킬             | 시점                      | 읽기                 | 쓰기                           | 금지                       |
+| ---------------- | ------------------------- | -------------------- | ------------------------------ | -------------------------- |
+| `/setup-handoff` | 프로젝트당 1회            | manifests, 문서 트리 | `.handoff/config.md`           | 코드 수정, 빌드 명령       |
+| `/plan`          | 기능/수정 시작 전         | config, backlog      | `.handoff/plan.md`             | 코드 수정, 빌드 명령       |
+| `/execute`       | `/plan` 다음              | config, plan         | `.handoff/task.md` + 소스 코드 | 테스트, 린트, 계획 외 변경 |
+| `/verify`        | `/execute` 다음 (새 채팅) | config, plan, task   | `.handoff/review.md` + 정리    | 코드 수정                  |
+
+`/execute` 안에서는 `typecheck` 만 안전망으로 한 번 돌린다.  
+타입 에러를 verify 까지 끌고 가지 않고 한 단계 일찍 잡기 위함이다.  
+테스트 / 린트 / 계획 vs 코드 비교는 fresh context 에서 보는 게 핵심이라  
+`/verify` 의 몫으로 남겨둔다.
+
+### 흐름
+
+```bash
+/setup-handoff              # 프로젝트당 한 번
+/plan "<무엇을 할지>"
+/execute                    # 새 채팅에서
+/verify                     # 또 다른 새 채팅에서
 ```
-.claude/skills/pipeline/
-├── SKILL.md
-├── agents/
-│   ├── planner.md
-│   ├── executor.md
-│   └── verifier.md
-└── handoff/
-    ├── plan.md
-    ├── execution-log.md
-    └── verification.md
+
+`/setup-handoff` 가 처음 한 번 프로젝트를 스캔해서 `.handoff/config.md` 를 만든다.  
+응답 언어도 여기서 한 번 정해두면 이후 모든 `.handoff/*.md` 파일과 콘솔 메시지가 그 언어로 떨어진다.  
+한국어로 `plan.md` 가 떨어지면 검토할 때 훨씬 빠르다.
+
+`/verify` 가 통과하면 `.handoff/` 가 정리되고,  
+실패하면 `review.md` 가 그대로 남아 다음 cycle 의 `/plan` 입력이 된다.
+
+### 몇 가지 디테일
+
+- 모노레포 인식 — `pnpm-workspace.yaml`, `turbo.json`, cargo workspace 등을 자동 감지해서 패키지별로 `typecheck` 와 검증 명령을 따로 잡는다
+- 리스크 태그 — plan 의 변경 항목마다 `low / medium / high` 가 붙는다. high 는 항목별 컴파일 체크 + task.md 업데이트, low 는 마지막에 한 번만 (권한이 아니라 검증 세분도를 조절하는 용도다)
+- 멀티페이즈 plan — 하나의 plan 이 여러 cycle 에 걸쳐 돌 수 있다. verify 통과 시 phase 마커만 전진시키고 `plan.md` 는 마지막 phase 까지 들고 간다
+
+### Claude Code 외 다른 도구에서도
+
+<a href="https://github.com/vercel-labs/skills" target="_blank">vercel-labs/skills</a> 위에 얹어둬서  
+Cursor / Codex / Gemini CLI / Aider 등 50여 개 에이전트에서 같은 명령으로 깔린다.
+
+```bash
+npx skills@latest add WillowRyu/agent-handoff --skill '*'
 ```
 
-각 에이전트 지침에는 역할 제한을 명확히 박아둔다.
+Claude Code 라면 플러그인 마켓플레이스에서 바로 설치할 수도 있다.
 
-```markdown
-## 역할 제한 (Plan Agent Boundaries)
-
-- 코드 수정 금지: `.ts`, `.tsx`, `.css`, `.json` 등
-- 상태를 변경하는 명령 실행 금지 (`pnpm`, `git commit` 등)
-- 허용: 파일 읽기, 디렉토리 탐색, 웹 검색, handoff 파일 작성
+```bash
+/plugin marketplace add WillowRyu/agent-handoff
+/plugin install agent-handoff
 ```
-
-Verify 쪽도 비슷하게 `문제를 발견해도 코드를 고치지 말고 verification 파일에만 적어라` 를 강제한다.  
-재시도 루프가 돌 때 Plan 이 이 verification 파일을 읽고 계획을 새로 세운다.
 
 ### 장점
 
@@ -233,11 +266,31 @@ Verify 쪽도 비슷하게 `문제를 발견해도 코드를 고치지 말고 ve
   세션이 분리되면 컨텍스트가 깨끗한 상태에서 리뷰하게 된다.  
   앞서 말한 cross-model disagreement 의 단일 모델 버전이라고 봐도 된다.
 - 컨텍스트가 작게 유지된다. 각 세션은 자기 역할에 필요한 handoff 파일만 로드한다.
-- 재시도 루프가 깔끔하다. Verify 가 FAIL 이면 해당 `verification.md` 를 들고 Plan 을 다시 세우면 된다.
+
+- 토큰 사용량이 오히려 줄어든다.  
+  세션을 여러 개로 쪼개면 더 많이 쓸 것 같은데 실제로는 반대다.
+
+  한 세션을 길게 끌고 가면 매 응답마다 누적된 컨텍스트 전체가 입력 토큰으로 다시 들어가고,  
+  응답이 거듭될수록 그 누적량이 빠르게 불어난다.
+
+  처음에 30k 였던 컨텍스트가 다섯 번째 응답에선 60k, 100k 가 되어 매번 다시 청구되는 구조다.  
+  핸드오프는 각 세션이 fresh context 로 시작하기 때문에 누적이 발생하지 않는다.
+
+  Anthropic 의 <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching" target="_blank">prompt caching</a> 도 prefix 가 안정된 짧은 컨텍스트에서 더 잘 먹히고,  
+  한 세션 안에서 앞부분이 계속 변하면 캐시 hit ratio 가 떨어진다.
+
+- 파일 기반이라 어디서든 이어 일한다.  
+  `.handoff/*.md` 가 디스크에 그대로 있기 때문에  
+  컴퓨터를 껐다가 다음 날 다시 와도, 다른 머신에서 git pull 받아도,  
+  심지어 다른 에이전트 도구 (Cursor, Codex, Gemini CLI 등) 에서 열어도  
+  같은 plan / task / review 위에서 일을 이어간다.  
+  중간에 내가 직접 파일을 손으로 고쳐 끼워넣는 것도 가능하다.
+
+- 재시도 루프가 깔끔하다. Verify 가 FAIL 이면 `review.md` 를 들고 다시 `/plan` 을 돌리면 된다.
 
 ### 단점
 
-- 오버헤드가 크다. 세션을 여러 개 띄워야 하고, handoff 파일 관리가 필요하다.
+- 오버헤드가 크다. 세션을 여러 개 띄워야 하고, `.handoff/` 파일 관리가 필요하다.
 - 작은 작업엔 과하다. 오타 하나 고치려고 Plan / Execute / Verify 를 다 돌릴 이유는 없다.
 - 핸드오프 품질이 곧 결과 품질이다. `plan.md` 가 부실하면 Execute 가 엉뚱한 걸 만든다.  
   결국 `문서로 정확히 소통하는 능력` 이 이 방식의 병목이다.
@@ -273,6 +326,3 @@ Anthropic IPO 가 얼마 안남기도 했고. 🤡
 
 쨌든 AI 를 잘 쓰는 일이 결국 AI 를 어떻게 가둬둘 것인가의 문제라는게  
 써볼수록 점점 더 명확해진다. 🥹
-
-ps. 위에서 다룬 Plan / Execute / Verify 파이프라인을  
-<a href="https://github.com/WillowRyu/agent-handoff" target="_blank">agent-handoff</a> 라는 스킬로 직접 만들어서 공유한다.

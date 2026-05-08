@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Spoqa Han Sans Neo',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Spoqa Han Sans Neo',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.37087882f53630232b20.css" id="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}body{background-color:var(--theme);--theme:#1d1e20;--entry:#2e2e33;--pblue:#609fff;--primary:hsla(0,0%,100%,0.84);--secondary:hsla(0,0%,100%,0.56);--tertiary:hsla(0,0%,100%,0.16);--content:hsla(0,0%,100%,0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333;--gap:24px;--radius:8px}img{display:block;margin:0 auto}.link-post{margin-bottom:calc(var(--gap)*1.5)}.link-title{color:var(--primary)}.link-desc{color:var(--secondary);margin-bottom:0}a:link,a:visited{color:var(--pblue)}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;tab-size:4;-webkit-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=0f40eccc76f1834aab0a5215019710bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=0f40eccc76f1834aab0a5215019710bb"/><title data-react-helmet="true">MFE 로 프로젝트를 전환 | FE Factory</title><meta data-react-helmet="true" name="description" content="Module Federation &amp; TBD 와 함께 사용해보자"/><meta data-react-helmet="true" property="og:title" content="MFE 로 프로젝트를 전환"/><meta data-react-helmet="true" property="og:description" content="Module Federation &amp; TBD 와 함께 사용해보자"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="naver-site-verification" content="76f6ac32f3fb1d4edd76ca9e23147df017e84e1e"/><meta data-react-helmet="true" name="google-site-verification" content="xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k"/><link href="//fonts.googleapis.com/css?family=Noto+Serif+KR:400,700|Noto+Sans+KR:400,700" rel="stylesheet" type="text/css"/><link as="script" rel="preload" href="/webpack-runtime-6403a9343c4daea86c21.js"/><link as="script" rel="preload" href="/framework-643cd9d57cfac08fd2c4.js"/><link as="script" rel="preload" href="/styles-3c579c614835d628a567.js"/><link as="script" rel="preload" href="/app-e0eca157ef08c2086462.js"/><link as="script" rel="preload" href="/commons-4533d1fa39224d48c06a.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"/><link as="fetch" rel="preload" href="/page-data/2022-11-28/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3490846071.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;color:#1d1d1f"><header><h3 class="link-title" style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit;text-decoration:none" href="/">FE Factory</a></h3></header><main class="link-title"><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">MFE 로 프로젝트를 전환</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">November 28, 2022</p></header><section><p>이번에 회사에서 진행하던 프로젝트를 기존 모놀리식 에서 MFE 로 전환 하였다.<br>
+현재는 stable 한 상태가 되었기에 간단하게 프로젝트를 전환 할때의 경험과<br>
+필요한 부분을 적어본다.</p>
+<p>이 글은 <code class="language-text">react</code> 와 <code class="language-text">webpack</code> 을 이용한다는 가정하에 작성한다.<br>
+사실 다른 라이브러리도 크게 다르진 않을 것이다.<br>
+다만 <code class="language-text">module federation</code> 을 지원하지 않는 번들러 라면<br>
+차이가 있을 수 있다.</p>
+<h2>일단 전환을 해야 할까?</h2>
+<p>가장 먼저 생각해야 할 부분은 현재 프로젝트를 개발하면서 어떤 불편함이 있는지<br>
+먼저 생각해야 한다.</p>
+<p>현재 체계적으로 리뷰가 이루어지고, 컨벤션이 명확하며 CI/CD 를 구성하는데 있어서<br>
+큰 불편함이 없다고 생각 된다면, 굳이? 라고 말하고 싶다.</p>
+<p>왜냐하면 전환을 하기 위한 비용이 생각보다 많이 든다.<br>
+CI/CD 구축에 있어서 많은 시행착오가 있을수도 있다.<br>
+그리고 많이 복잡하며, 변경된 개발 방식이 낯설수도 있다.</p>
+<p>경험이 많은 구성원들이 많을수록 그나마 유리하며, 해당 방식에 익숙하지 않다면<br>
+반발이 있을수도 있다. (팀원들을 설득해야 한다.)<br>
+그 모든것을 감당하고 시간적 여유까지 있다면 전환 할 가치는 충분하다고 본다.</p>
+<p>본인은 현재 진행중인 프로젝트가 너무 커지고, 팀은 시니어가 부족한 상태 였으며<br>
+빌드에 많은 시간이 소요되고, 동시에 너무 많은 기능개발이 시작되면서<br>
+코드 병합에도 불편함을 느끼는 상태였다.</p>
+<p>시니어가 부족하다는 점 빼고는 전환 할 이유가 충분했다.<br>
+지금이 아니면 일정에 치여서 계속 늦춰질 것 같았다.<br>
+귀찮다고 힘들다고 현재에 만족하면 안된다.</p>
+<h2>monorepo</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c44c876a03eb21813371919b0ea9601d/97a96/1128-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.02702702702703%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACS0lEQVQozx3IW0/aAACG4f7C3cy4U6ZbopRDHB4oYFtoSwVFQKcI4lrBjVIRQTbDqRgISGupQMBMdDMgKtGxbC5GFy+2m3Umz8X7fUDb/+SUftwNDfxIQXcJ8A+n+cup7qP995FHv0N9J5Dnq3G1bWO7VKqzED/3JS6o1CEarCk9NbUXOFl4fuB6VX4LdT+M32yMfWORCwa7o/tvqb4b37O67l3NEKwjwc/22NFioulOCo5EYWwtp6LyGho4tb8skpDotH5fM106X4hWXZuavg1M/Jp7+nNukIf8hfGggEUOqdwxK8g4zy6jj21rAtsj74EzcqiNDfYWx66j7q5N0Zt6fbduu/bjPXLg0qrI6JmkPrJP5S8L1eamcBQRrgqVgjcfHl0Pa1mgg6g6sKqJjJ9ib87kJieOCegMVZ6jyjY6sgmF40Sy5BcacaEc2iuzYjVaytE8a9peHd0ETnRaQU9kkMWWhWihxh2DvWRxt2DjlwltE4LWDFuMJZtdFRvxCh+u7Iakxqdqmt4L4Gmv7iNQ18KiGjmecvQ21hsQXtZMdmm64/HV1PqK1rwMJ93oTnR5r85JWVbiGPEgK8nTjWTdMAfwaguvJEStbR928GqSVxEVeHbfOMMr8aLG6kJ3Zkz5ebIYWJKYlSqzUgt4pDmyaEdzs6Y8kAGdGdCVUjhTQ4406JI7PTSbHnZwoCOpnCfNBQznMXOJwPlpmygj8BJm3sWwkgyIKTz/gQ8eegv0xkDv1vBSBPQhmGDApUm8LDNgosyIy8rGh+cf9Ad3hINO+XwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="monorepo"
+        title="monorepo"
+        src="/static/c44c876a03eb21813371919b0ea9601d/fcda8/1128-1.png"
+        srcset="/static/c44c876a03eb21813371919b0ea9601d/12f09/1128-1.png 148w,
+/static/c44c876a03eb21813371919b0ea9601d/e4a3f/1128-1.png 295w,
+/static/c44c876a03eb21813371919b0ea9601d/fcda8/1128-1.png 590w,
+/static/c44c876a03eb21813371919b0ea9601d/efc66/1128-1.png 885w,
+/static/c44c876a03eb21813371919b0ea9601d/c83ae/1128-1.png 1180w,
+/static/c44c876a03eb21813371919b0ea9601d/97a96/1128-1.png 2400w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>MFE 의 목적은 한덩어리로 뭉쳐진 개발코드를 별도의 module 또는 package 로<br>
+분리하여 독립적으로 개발하도록 하는 것 이다.</p>
+<p>이렇게 되면 각각의 모듈은 빌드와 테스트, 개발에 있어서 완전히 독립적으로 진행되고<br>
+모듈 간의 의존성이 아주 얕아지기 때문에 충돌이 현저히 줄어든다.</p>
+<p>변경된 모듈의 빌드와 배포만 이루어지기 때문에,<br>
+한덩어리로 개발 할때와는 다르게 빌드,배포,TEST 등의 시간이 현저히 줄어든다.<br>
+내가 조그만 부분을 변경한다고 현재 프로젝트 전체를 다시 빌드 할 필요가 없는 것이다.</p>
+<p>여기서 monorepo 를 추천하는 이유는 공유 모듈과 설정을 사용하기 쉽고,<br>
+각각의 모듈을 한눈에 보기 편하다.</p>
+<p>아무리 모듈을 독립적으로 개발한다고 해도 분명히 공유해야 할 기능, 디자인,<br>
+assets, 그리고 각종 type, gql 을 사용한다면 fragment, schema 등<br>
+shared 한 부분이 생각보다 상당히 많다.</p>
+<p>그리고 monorepo 를 적극적으로 추천하는 또 한가지 큰 이유는 버전 관리 때문이다.<br>
+각각의 모듈은 각자의 package.json 즉 패키지 관리자를 가지고 있다.<br>
+여기서 어떤 모듈은 react v17 을 쓰고 어디는 react v18 을 쓰고 있다면?<br>
+만약 버전을 최신 버전으로 모두 올려주고 싶다면 모든 모듈에서 update 를 진행해야 한다?</p>
+<p>그러고 싶은 개발자는 없으리라 본다.<br>
+monorepo 가 정상적으로 돌아가기 위해선 package 의 버전 불일치를 해결하고,<br>
+<code class="language-text">single version policy</code> 를 최대한 준수 해야 한다.</p>
+<p>monorepo 의 루트 에서 모든 모듈이 공통으로 사용하는 패키지를 정의하고,<br>
+그 외엔 각각이 모듈이 각자 필요한 package 를 설치하면 된다.</p>
+<p>버전 불일치에 대한 걱정을 덜어내고, 그외 eslint, prettier, tsconig 등<br>
+개발 시 필요한 설정을 모든 모듈이 같은 규칙을 사용하도록 쉽게 공유 할 수 있다.<br>
+monorepo 를 택하지 않을 이유가 없다.</p>
+<p>monorepo 로 전환하기로 결정했다면 일단 기존의 npm, yarn 은 버리고<br>
+pnpm 으로 이동하는 걸 추천한다.<br>
+yarn berry pnp 는 아직 불안정하기 때문에 현재로선 추천하지 않는다.
+만약 본인이 고통을 즐기고 싶다면 도전해보면 된다.</p>
+<h2>Module federation</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b62373facaca54dc9e2100802b7478d9/e5166/1128-2.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.54054054054055%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/2gAMAwEAAhADEAAAAZ2o7edBhF//xAAZEAADAQEBAAAAAAAAAAAAAAAAAQIREBL/2gAIAQEAAQUClnomnkcS0//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/AYf/xAAWEAADAAAAAAAAAAAAAAAAAAAAIDH/2gAIAQEABj8CIv8A/8QAHBABAQAABwAAAAAAAAAAAAAAAQARITFBUbHB/9oACAEBAAE/IWJbuIWQlpL15chML//aAAwDAQACAAMAAAAQXy//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EE8Kf//EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQIBAT8QeiI//8QAHxABAAIBBAMBAAAAAAAAAAAAAQARITGBwfBBYZGh/9oACAEBAAE/ECCpqaDGUb+QOInouXOOqd/IlHXlxBDqFYd+a2n/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="federation"
+        title="federation"
+        src="/static/b62373facaca54dc9e2100802b7478d9/1c72d/1128-2.jpg"
+        srcset="/static/b62373facaca54dc9e2100802b7478d9/a80bd/1128-2.jpg 148w,
+/static/b62373facaca54dc9e2100802b7478d9/1c91a/1128-2.jpg 295w,
+/static/b62373facaca54dc9e2100802b7478d9/1c72d/1128-2.jpg 590w,
+/static/b62373facaca54dc9e2100802b7478d9/a8a14/1128-2.jpg 885w,
+/static/b62373facaca54dc9e2100802b7478d9/fbd2c/1128-2.jpg 1180w,
+/static/b62373facaca54dc9e2100802b7478d9/e5166/1128-2.jpg 1200w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>각각의 Module 을 개발한 뒤 host app 에서 이들을 workspace 형식으로<br>
+설치해서 개발 할 수 있다.<br>
+그렇게 해도 되지만 그러기엔 굉장히 불편한 점이 있다.</p>
+<p>monorepo 로 인해 각각의 모듈을 충돌없이 각자 개발할 수 있도록 변경했다.<br>
+하지만 내가 개발한 모듈을 host app 에서 적용 시키기 위해서는?</p>
+<p><strong>개발은 각각의 모듈이 따로 개발되지만, 실제로 변경사항이<br>
+host app에 적용되려면 host를 또 다시 빌드를 해줘야 한다.</strong></p>
+<p>여기서 host 를 다시 빌드 하지 않고, 변경된 모듈이 자동으로 적용될 수 있다면?<br>
+host 가 런타임일때 동적으로 변경된 모듈만 알아서 적용할 수 있도록 해주는 기능이<br>
+Module federation 이다.</p>
+<p>변경된 모듈만 빌드하고, 배포하고 적용하고 host 는 실시간으로 이런 변경사항을<br>
+가져올 수 있다.<br>
+module federation 은 webpack 에서 유명한 기능으로 알고 있지만,<br>
+vite.js 에서도 이를 지원하며, 심지어 서로 호환도 가능하다.</p>
+<h2>Nx, Turborepo</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/10443613606829b3490ccab4f4016811/07f3a/1128-4.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgAF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAP/2gAMAwEAAhADEAAAAc8irNRj/8QAGRAAAgMBAAAAAAAAAAAAAAAAAQIAEBEh/9oACAEBAAEFAlTVC7Dw3//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABsQAQABBQEAAAAAAAAAAAAAAAEAEiAyUWFx/9oACAEBAAY/AlqDkyD2bs//xAAbEAABBAMAAAAAAAAAAAAAAAABABEgQSExYf/aAAgBAQABPyED7ha0LdIGBx0If//aAAwDAQACAAMAAAAQ6C//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAdEAEAAgEFAQAAAAAAAAAAAAABACEREFFxkaGx/9oACAEBAAE/EF41bcIqzvyZil3J8JniQ4GOv//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="nxturborepo"
+        title="nxturborepo"
+        src="/static/10443613606829b3490ccab4f4016811/1c72d/1128-4.jpg"
+        srcset="/static/10443613606829b3490ccab4f4016811/a80bd/1128-4.jpg 148w,
+/static/10443613606829b3490ccab4f4016811/1c91a/1128-4.jpg 295w,
+/static/10443613606829b3490ccab4f4016811/1c72d/1128-4.jpg 590w,
+/static/10443613606829b3490ccab4f4016811/07f3a/1128-4.jpg 740w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>monorepo 와 module federation 을 적용한다면 이제 각각의 모듈을<br>
+독립적으로 개발할 준비가 되었다.<br>
+오 이제 체계적으로 모듈을 독립적으로 개발하고 빌드하고 배포하고 해피합니다 라고<br>
+말하기에는 아직 넘어야 할 산이 있다.</p>
+<p>그래서 빌드와 배포는 어떻게 할 것인가?<br>
+만약 모듈 A, 모둘 B, host 모듈 이렇게 3개의 모듈이 있을때<br>
+모듈 A 를 수정하고 빌드, 배포를 하고 싶다고 한다면 CI 를 어떻게 구축해야 할까?</p>
+<p>아니 그전에 CI 에서 내가 모듈 A만 변경했어요 라고 알수 있을까?<br>
+모듈별로 ci 를 만들어야 할까 아니면 커밋 메시지나 태그등 별도의 표시로<br>
+해당 모듈만 빌드하고 배포 할수 있도록 해야하나?</p>
+<p>다 불완전하고 좋지 않은 방법이다.<br>
+우리가 원하는 방법은 간단한 명령어만으로 특정 모듈의 변경을 감지하고<br>
+해당 모듈에 대해서만 명령을 실행하고<br>
+추가로 변경되지 않은 모듈은 빌드된 파일을 미리 캐시 해두고<br>
+불러올 수 있으면 좋을 것 같다.</p>
+<p>저런게 어딨냐고 할수 있겠지만, 이미 해당 기능을 장착한 라이브러리가 존재한다.<br>
+그 중 유명한 2개가 바로 Nx 와 Turborepo 이다.</p>
+<p>이 라이브러리들은 위에서 말한 기능을 전부 지원한다.<br>
+추가로 remote cache 까지 해주기 때문에 내가 어느 pc에서 작업한다고 해도<br>
+이전에 빌드 된 모듈이라면 빌드 된 파일을 아주 빠르게 불러올 수 있다.</p>
+<p>자세한 설정을 적기엔 너무 길기때문에 해당 도구들의 홈페이지에서 직접 살펴 보길 바란다.</p>
+<h2>MFE 환경 구축 완성?</h2>
+<p>이제 큰 틀은 잡혔다.<br>
+monorepo 로 손쉬운 버전관리와 공유모듈을 쉽게 사용할 수 있고,<br>
+module federation 이 합쳐지면서 모듈이 독립적으로 빌드,배포 되면서<br>
+작동 할 수 있도록 전환되었고,<br>
+turborepo, nx 로 ci 구축 시 변경된 모듈에서만 원하는 명령을 실행 할 수 있다.</p>
+<p>사실 말로는 쉽게 적었지만 위 환경을 구축하는데 수많은 시행착오가 있을 것이다.<br>
+env 의 설정과 각각 다른 stage 환경에 관한 배포 방법, 공유 모듈과 설정의 사용,<br>
+그리고 ci/cd 를 설정 할때 어떤 규칙을 적용할 것인지 등등</p>
+<p>이 수많은 문제는 팀원들과 충분히 논의하고 연구하여 각자의 팀에 맞는 환경을 구축하길 빈다.</p>
+<p>그럼 여기서 보너스로 사실 이정도 환경만 구축 해두어도 기본적인 MFE 환경을
+사용하는데 크게 무리는 없을 것이다.</p>
+<p>여기서 MFE 구축과 같이 추천하는 전략이 있는데 바로 <code class="language-text">TBD</code> 이다.</p>
+<h2>trunk based development</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b61ba0f327082712aa4e75364dba4629/f8067/1128-3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.67567567567568%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3ElEQVQoz1VSS4/SUBTuPxtBFxr9J+o8dOfG2epiEnDp3lk4yTiYEAMESAyQ2YA42F5a+hhKebQ8+qSF3tv6DcjCk9OT73xfz+k955ZLkhQWhuF0OjUP1u12O5026fctazabPfCOvRqPx+12GxLP87Zto4rD46zTiRUwukUjxhiYle1O5iGAMfO8IAJvmD7aQKWU7t95KP5+S7/+pOZyzRKKQ+zOkVrWoveHEIEQUZEVTZbVxcrbbDbpwdAOzv1SmGmjZJPsB/insblp6PeyNRsZuuo6yxStWZz+b9znH/TTTfDhi3VxZV9cOTsHWOW/+eDh+Ws3d+18vDQPkp0vxLmb+LbPuOfn26fvrMwxnz3tZ8/EzAl5/Gbw6HUve0oyx0L2TDp69TtzIhy97Dx5qwDAX5xHz95HuULMGfNYHLpDE9FTJ5FuUW260U0q6QFRHeDBaC0OfUgD3R+MAnUcjheYlGFMbjfilsah760AkEVhgJWmCQt8e7fYhG4DkLttxgD7bSPhlsuloqgDWZYVxTCM0cgQJQmppt0jqppGCOF54e6uhyiKEi4ZuiAQ3BwXRRFq8AO0Wq1isVitVpvNZqPRKBQK9Xq9XC5XKpVSqQRcq9WgAuBDkiS5rvsX71YDkZf0LNIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="tbd"
+        title="tbd"
+        src="/static/b61ba0f327082712aa4e75364dba4629/fcda8/1128-3.png"
+        srcset="/static/b61ba0f327082712aa4e75364dba4629/12f09/1128-3.png 148w,
+/static/b61ba0f327082712aa4e75364dba4629/e4a3f/1128-3.png 295w,
+/static/b61ba0f327082712aa4e75364dba4629/fcda8/1128-3.png 590w,
+/static/b61ba0f327082712aa4e75364dba4629/f8067/1128-3.png 726w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>들어본 사람도 있겠지만 google 에서 한다는 그 TBD 이다.<br>
+간단하게 별도의 기능 브랜치 생성이 아닌 하나의 main repo 로 운영하는 방법이다.<br>
+그리고 그 main repo 는 언제든지 릴리즈 할 준비가 되어 있어야 한다.</p>
+<p>TBD 운영에 있어서는 많은 원칙이 있지만<br>
+main 이 아닌 branch 의 수명이 짧아야 하고,<br>
+내가 개발중인 기능을 작게 조각내어 커밋을 자주 해야 한다.</p>
+<p>짧은 주기의 커밋은 컨플릭트의 발생을 없애고, 타 팀원들이 내 코드를<br>
+리뷰하기 쉬우며, 코드 실수의 위험성을 줄일 수 있다.</p>
+<p>그외 자세한 원칙은 <a href="https://trunkbaseddevelopment.com/">TBD</a> 여기서 확인해보자.<br>
+구글이 직접 적은 메뉴얼이다.</p>
+<p>그리고 언제든지 release 가 가능하도록 main repo 를 유지 해야 한다는게 가장<br>
+중요한데 이를 위해서는 현재 개발중인 기능과 배포 할 기능을 분리 할 필요가 있다.<br>
+그걸 위한 기능이 <code class="language-text">feature flag</code> 이다.</p>
+<p>말그대로 flag 를 이용하여 배포할 때 개발중인 기능을 숨기고 배포 할수 있도록 한다.<br>
+당연히 feature flag 를 운영에도 많은 원칙이 있다.<br>
+해당 부분도 위 TBD 메뉴얼에 있으니 꼭 함께 보길 추천한다.</p>
+<h2>모든 부분을 통과했다면?</h2>
+<p>축하한다. 이제는 빠른 CI/CD 와 더불어 컨플릭트 지옥에서 벗어나고,<br>
+각 모듈의 독립적인 개발로 충돌이 사라지고,<br>
+원하는대로 프로젝트를 안전하게 확장 할수있다.</p>
+<p>이상적으로 잘 진행되면 좋겠지만 여기서 내가 구축하며 생긴 의문들을 정리해본다.</p>
+<ul>
+<li>
+<p>각 모듈별로 다른 fe 프레임워크를 사용가능한가?</p>
+<blockquote>
+<p><strong>가능하다. 하지만 추천하지 않는다. 꼭 써야하는 상황에서만 추천한다.</strong></p>
+</blockquote>
+</li>
+<li>
+<p>공유 모듈은 federation 으로 하는게 좋을까? 아니면 workspace 방식이 좋을까?</p>
+<blockquote>
+<p><strong>이건 환경에 따라 다르지만, 개인적으로 디자인 시스템과 같은 공유 모듈은 workspace 방식으로 하는게 안정적이다. (자주 변경되지 않으니)</strong></p>
+</blockquote>
+</li>
+<li>
+<p>module 을 나누는 기준은 어떻게 되야 할까? page? 도메인? 기능?</p>
+<blockquote>
+<p><strong>이부분은 정확히 vertical 로 나눌지 horizontal 방식으로 할지 팀에서</strong><br>
+<strong>충분히 의논하고 결정해야 한다.</strong><br>
+<strong>기존에 react-router 나 next js 를 사용했다면 page 별로 나누는 것이</strong><br>
+<strong>익숙 할 것이다.</strong><br>
+<strong>하지만 당장은 힘들어도 큰 프로젝트를 생각하면 mfe 를 원한다면</strong><br>
+<strong>도메인 또는 기능 별로 나누는 걸 추천한다.</strong></p>
+</blockquote>
+</li>
+<li>
+<p>feature flag 의 구축은? 관련 lib 는?</p>
+<blockquote>
+<p><strong>feature flag 를 여유가 된다면 직접 구축 할 수 있지만</strong><br>
+<strong>lib 를 쓰는 것이 편하긴 하다. launch darkly 를 추천한다.</strong></p>
+</blockquote>
+</li>
+<li>
+<p>공유 설정 정의와 폴더 구조는?</p>
+<blockquote>
+<p><strong>eslint, prttier, test 관련 설정과 webpack, tsconfig 의 base 를</strong><br>
+<strong>기본적으로 만들고 추가로, tailwind 나 다른것을 추가하자.</strong><br>
+<strong>이건 뭐 lib 나 config 폴더를 만들어서 추가하면 된다.</strong></p>
+</blockquote>
+</li>
+<li>
+<p>module federation 에서 왜 hmr 이 작동하지 않는가?</p>
+<blockquote>
+<p><strong>module federation 을 처음 개발하면 아마 당황할 것이다.</strong><br>
+<strong>특히 react 로 진행 했었다면, hmr 이 작동하지 않는걸 볼수있다.</strong><br>
+<strong>정확히는 remote app 을 사용하는 host 에서는 작동하지 않는다.</strong><br>
+<strong>공식적으로는 그렇다.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>host app 은 설계를 잘한다면, 많이 수정되는 부분이 아니기 때문에</strong><br>
+<strong>상관 없을 수 있지만, 기존의 큰 코드베이스에서 전환하고 있다면</strong><br>
+<strong>이는 문제가 될 수있다.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>여기서 host 와 remote 모두 hmr 을 작동시키는 트릭이 존재한다.</strong><br>
+<strong>그 트릭은 설명하려면 조금 길어서 다음 글에 적어보려 한다.</strong><br>
+<strong>일단은 안된다면 host app 을 빈 shell 로 만들고 기존 코드 베이스를</strong><br>
+<strong>remote 로 만들어 개발을 시작하자</strong></p>
+</blockquote>
+</li>
+</ul>
+<p>그 외 style 관련 부분과 디자인 시스템, host app 과 연관되지 않는<br>
+모듈들의 배포 진행, ci/cd 의 구축방법 등등.
+설명해야할 부분이 아주 많다.<br>
+monorepo 나아가서 mfe 로의 전환은 쉽지 않은 일이다.</p>
+<p>특히나 TBD 까지 구축한다면 험난한 길이 될 수도 있다.<br>
+난 TBD 방식을 아주 좋아하지만, 현재 환경을 구축할 여유가 되지 않는다면,<br>
+TBD가 아니어도 상관없다.<br>
+TBD가 아니라도 충분히 MFE 의 이점을 누릴 수 있다.</p>
+<p>나머지 기술적인 부분은 당신의 팀이 충분히 설정하고 이겨낼 수 있으리라 생각한다.</p>
+<p>기회가 된다면 다음번에 federation 에서의 hmr 설정과<br>
+그외 실제로 사용한 팁이나 코드에 대하여 적어볼까 한다.</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFBv/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAZpq7M6napnO0lEwVf/EABwQAAICAgMAAAAAAAAAAAAAAAECAxEAIQQxNP/aAAgBAQABBQLk6XWBDUlEQUsbrESOm84Y5//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASH/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8BwjP/xAAaEAADAQEBAQAAAAAAAAAAAAABESEAECJx/9oACAEBAAY/ApQ9QdJwMNmDe0/vBz//xAAcEAEBAQEAAgMAAAAAAAAAAAABEQAhEDFBUXH/2gAIAQEAAT8hkh/hyUKF+s4sB+LNMAqeBGTdAEnG9BmiHEmR1e7/2gAMAwEAAgADAAAAEMzfPP/EABgRAAMBAQAAAAAAAAAAAAAAAAABEUFh/9oACAEDAQE/EEqy8NlZ/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERQWH/2gAIAQIBAT8QVCdMkR//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAhMUFhcZH/2gAIAQEAAT8QhYgVINHGRbDZ29uGEJSq+piFBHaEDAuN9po4t/cXByIQfMFQqV5fcVeiE6wNpTtSr6rn/9k=" alt="w.r" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg 1x,
+/static/a059584611001686ea16de6bad6c16b9/aba1d/whoami.jpg 1.5x,
+/static/a059584611001686ea16de6bad6c16b9/b315d/whoami.jpg 2x" src="/static/a059584611001686ea16de6bad6c16b9/99438/whoami.jpg" alt="w.r" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p class="link-title">Written by <strong>w.r</strong> <!-- -->Software enginner<br/><a href="mailto: stainer1004@gmail.com">Send Email</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2022-05-31/">← <!-- -->Rxjs in React</a></li><li><a rel="next" href="/2023-09-19/">Jotai 사용, 쉽고 빠른 Convention<!-- --> →</a></li></ul></nav><div id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-166907717-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2022-11-28/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-513da999c145725089ff.js"],"app":["/app-e0eca157ef08c2086462.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96a045a5dd84c95a551e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-c5cc7b36b26ee13ac8d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js"],"polyfills-dom":["/polyfills-dom-09a2ec672631c68af484.js"],"polyfills-core-js":["/polyfills-core-js-af16ac8aca11911e40aa.js"]};/*]]>*/</script><script src="/polyfill-513da999c145725089ff.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-575aaa1fccbb0c3ee048.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-e6e6efc05ff6d94c0fa4.js" async=""></script><script src="/commons-4533d1fa39224d48c06a.js" async=""></script><script src="/app-e0eca157ef08c2086462.js" async=""></script><script src="/styles-3c579c614835d628a567.js" async=""></script><script src="/framework-643cd9d57cfac08fd2c4.js" async=""></script><script src="/webpack-runtime-6403a9343c4daea86c21.js" async=""></script></body></html>

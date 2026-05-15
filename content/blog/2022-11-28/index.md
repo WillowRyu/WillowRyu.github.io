@@ -1,6 +1,7 @@
 ---
 title: "MFE 로 프로젝트를 전환"
 date: "2022-11-28"
+category: "후기"
 description: "Module Federation & TBD 와 함께 사용해보자"
 ---
 

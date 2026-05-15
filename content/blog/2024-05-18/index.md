@@ -1,6 +1,7 @@
 ---
 title: "The New Generation of JavaScript"
 date: "2024-05-18"
+category: "기술"
 description: "살아남아야 한다"
 ---
 

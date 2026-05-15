@@ -1,6 +1,7 @@
 ---
 title: 'Flutter Environments Setting'
 date: '2020-08-11'
+category: "기술"
 description: 'Flutter 에서 환경변수 설정'
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "JS Quiz"
 date: "2024-05-14"
+category: "잡담"
 description: "쉬어가는 시간"
 ---
 

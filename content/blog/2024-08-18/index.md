@@ -1,6 +1,7 @@
 ---
 title: "Upgrade Project"
 date: "2024-08-18"
+category: "후기"
 description: "Rspack, Federation runtime, 회고"
 ---
 

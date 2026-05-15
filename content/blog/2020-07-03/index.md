@@ -1,6 +1,7 @@
 ---
 title: 'Flutter Cupertino Date Picker'
 date: '2020-07-03 15:14'
+category: "기술"
 description: '간단한 Custom Cupertino Date Picker'
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "AI Agent, 엄마와 캥거루족 사이"
 date: "2026-01-17"
+category: "잡담"
 description: "AI 와의 관계에 대한 고찰"
 ---
 

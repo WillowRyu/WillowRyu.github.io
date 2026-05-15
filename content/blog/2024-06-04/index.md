@@ -1,6 +1,7 @@
 ---
 title: "기본 컴포넌트 설계 패턴"
 date: "2024-06-04"
+category: "기술"
 description: "알아두면 좋다"
 ---
 

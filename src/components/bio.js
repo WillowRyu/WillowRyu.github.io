@@ -7,20 +7,13 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/whoami.jpeg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
@@ -41,27 +34,29 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
+        alignItems: `center`,
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
+      <StaticImage
+        src="../../content/assets/whoami.jpeg"
         alt={author.name}
+        layout="fixed"
+        width={50}
+        height={50}
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
+          flexShrink: 0,
+          borderRadius: `50%`,
         }}
         imgStyle={{
           borderRadius: `50%`,
         }}
       />
 
-      <p className="link-title">
-        Written by <strong>{author.name}</strong> {author.summary}
-        <br />
-        <a href={`mailto: ${author.email}`}>Send Email</a>
+      <p className="link-title" style={{ marginBottom: 0 }}>
+        <a href={`mailto:${author.email}`}>Send Email</a>
       </p>
     </div>
   )

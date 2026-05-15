@@ -1,6 +1,7 @@
 ---
 title: "FLIP 방식의 Animation 처리"
 date: "2021-04-22"
+category: "기술"
 description: "Animation 처리 시 60fps 효율적으로 유지"
 ---
 

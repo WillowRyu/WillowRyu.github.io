@@ -1,6 +1,7 @@
 ---
 title: "Frame Timing"
 date: "2022-01-09"
+category: "기술"
 description: "HTTP 203 Season 1 EP3"
 ---
 

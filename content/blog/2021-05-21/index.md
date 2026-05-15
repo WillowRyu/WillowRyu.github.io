@@ -1,6 +1,7 @@
 ---
 title: "함수의 색상"
 date: "2021-05-21"
+category: "기술"
 description: "지금 쓰는 함수의 색상은 무엇일까"
 ---
 

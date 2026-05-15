@@ -1,6 +1,7 @@
 ---
 title: "Jotai 사용, 쉽고 빠른 Convention"
 date: "2023-09-19"
+category: "기술"
 description: "Jotai 를 이제 도입한다면?"
 ---
 

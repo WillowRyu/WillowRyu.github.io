@@ -1,6 +1,7 @@
 ---
 title: "Knip 와 함께 dead code 정리"
 date: "2025-05-15"
+category: "기술"
 description: "방이 이게 뭐니 청소좀 해라 청소좀"
 ---
 

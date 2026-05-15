@@ -1,6 +1,7 @@
 ---
 title: "Rxjs in React"
 date: "2022-05-31"
+category: "기술"
 description: "왜 사용하지 않는가"
 ---
 

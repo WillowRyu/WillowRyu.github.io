@@ -1,6 +1,7 @@
 ---
 title: 'react web 클린하게 시작하기'
 date: '2021-01-02'
+category: "기술"
 description: '최소한의 패키지로 시작하자'
 ---
 

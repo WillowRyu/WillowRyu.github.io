@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
@@ -7,16 +7,46 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+const ALL = "전체"
+const CATEGORIES = [ALL, "기술", "잡담", "후기"]
+const TAG_CLASS = {
+  기술: "tag-tech",
+  잡담: "tag-talk",
+  후기: "tag-review",
+}
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const [selected, setSelected] = useState(ALL)
   deckDeckGoHighlightElement()
+
+  const filteredPosts =
+    selected === ALL
+      ? posts
+      : posts.filter(({ node }) => node.frontmatter.category === selected)
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      {posts.map(({ node }) => {
+      <nav className="category-filter">
+        {CATEGORIES.map(category => (
+          <button
+            key={category}
+            type="button"
+            className={
+              selected === category
+                ? "category-button is-active"
+                : "category-button"
+            }
+            onClick={() => setSelected(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </nav>
+      {filteredPosts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug} className="link-post">
@@ -38,7 +68,17 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small className="link-desc">{node.frontmatter.date}</small>
+              <small className="link-desc post-meta">
+                {node.frontmatter.category && (
+                  <span
+                    className={`post-tag ${TAG_CLASS[node.frontmatter.category] ||
+                      ""}`}
+                  >
+                    {node.frontmatter.category}
+                  </span>
+                )}
+                {node.frontmatter.date}
+              </small>
             </header>
             <section>
               <p
@@ -64,7 +104,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           excerpt
@@ -75,6 +115,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            category
           }
         }
       }

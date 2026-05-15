@@ -1,6 +1,7 @@
 ---
 title: 'Flutter Multi Device Debugging'
 date: '2020-07-02 13:00'
+category: "기술"
 description: '다양한 플랫폼의 기기를 동시에 디버깅 해보자'
 ---
 

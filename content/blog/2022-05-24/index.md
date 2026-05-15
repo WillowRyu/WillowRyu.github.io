@@ -1,6 +1,7 @@
 ---
 title: "SPA 는 죽어가는가"
 date: "2022-05-24"
+category: "잡담"
 description: "그만 멈춰"
 ---
 

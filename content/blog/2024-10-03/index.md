@@ -1,6 +1,7 @@
 ---
 title: "Unmanaged Language"
 date: "2024-10-03"
+category: "기술"
 description: "feat: Rust"
 ---
 

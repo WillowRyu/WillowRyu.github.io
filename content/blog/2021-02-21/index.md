@@ -1,6 +1,7 @@
 ---
 title: "react lazyload => preload"
 date: "2021-02-21"
+category: "기술"
 description: "lazy, pre load 를 이용하여 서비스 속도를 높이고 데이터 최적화를 하자"
 ---
 

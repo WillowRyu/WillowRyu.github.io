@@ -1,6 +1,7 @@
 ---
 title: 'React Native Android 개발 후기'
 date: '2020-05-07'
+category: "후기"
 description: 'React Native를 사용하며 겪었던 고충, 그리고 버그들과 해결했던 방법에 대한 공유'
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Passkey.io"
 date: "2024-12-12"
+category: "기술"
 description: "Rust 와 함께"
 ---
 

@@ -41,3 +41,64 @@ a:visited,
 a:link {
   color: var(--pblue);
 }
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--gap);
+}
+
+.category-button {
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background-color: var(--entry);
+  color: var(--secondary);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.category-button:hover {
+  color: var(--primary);
+  border-color: var(--pblue);
+}
+
+.category-button.is-active {
+  color: #fff;
+  background-color: var(--pblue);
+  border-color: var(--pblue);
+}
+
+.post-meta {
+  display: inline-flex;
+  align-items: center;
+}
+
+.post-tag {
+  margin-right: 8px;
+  padding: 1px 9px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background-color: var(--entry);
+  color: var(--pblue);
+  font-size: 0.72rem;
+}
+
+.post-tag.tag-tech {
+  color: #609fff;
+  border-color: rgba(96, 159, 255, 0.5);
+}
+
+.post-tag.tag-talk {
+  color: #5ec98a;
+  border-color: rgba(94, 201, 138, 0.5);
+}
+
+.post-tag.tag-review {
+  color: #e0a35e;
+  border-color: rgba(224, 163, 94, 0.5);
+}

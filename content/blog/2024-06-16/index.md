@@ -1,6 +1,7 @@
 ---
 title: "The Programmer's Brain"
 date: "2024-06-16"
+category: "후기"
 description: "독후감"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "SPA 에서 사용하는 Hot Remote Module Replacement 실험"
 date: "2024-12-01"
+category: "기술"
 description: "feat: Module Federation"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Tailwindcss with MFA"
 date: "2023-11-26"
+category: "기술"
 description: "feat.Module Federation"
 ---
 

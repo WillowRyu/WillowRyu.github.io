@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://willowryu.github.io/sitemap.xml
+Sitemap: https://willowryu.github.io/sitemap-index.xml
 Host: https://willowryu.github.io

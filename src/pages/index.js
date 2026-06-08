@@ -104,7 +104,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      filter: { fields: { collection: { eq: "blog" } } }
+      sort: { frontmatter: { date: DESC } }
+    ) {
       edges {
         node {
           excerpt

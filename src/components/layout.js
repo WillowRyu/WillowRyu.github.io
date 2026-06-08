@@ -62,7 +62,12 @@ const Layout = ({ location, title, children, style }) => {
         color: `#1d1d1f`,
       }}
     >
-      <header>{header}</header>
+      <header>
+        {header}
+        <nav className="site-nav" aria-label="사이트 메뉴">
+          <Link to="/news/">뉴스</Link>
+        </nav>
+      </header>
       <main className="link-title">{children}</main>
     </div>
   )

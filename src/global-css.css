@@ -102,3 +102,19 @@ a:link {
   color: #e0a35e;
   border-color: rgba(224, 163, 94, 0.5);
 }
+
+.site-nav {
+  margin-bottom: var(--gap);
+  font-size: 0.85rem;
+}
+
+.site-nav a,
+.site-nav a:link,
+.site-nav a:visited {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--pblue);
+}

@@ -105,16 +105,17 @@ a:link {
 
 .site-nav {
   margin-bottom: var(--gap);
-  font-size: 0.85rem;
 }
 
 .site-nav a,
 .site-nav a:link,
 .site-nav a:visited {
-  color: var(--secondary);
+  color: var(--pblue);
+  font-size: 1.05rem;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .site-nav a:hover {
-  color: var(--pblue);
+  text-decoration: underline;
 }

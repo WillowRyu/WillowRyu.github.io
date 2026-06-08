@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const newsPost = path.resolve(`./src/templates/news-post.js`)
   const result = await graphql(
     `
       {
@@ -16,6 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               fields {
                 slug
+                collection
               }
               frontmatter {
                 title
@@ -31,12 +33,17 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
+  const allPosts = result.data.allMarkdownRemark.edges
 
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+  // Blog posts: 이전/다음은 블로그 글끼리만 연결.
+  const blogPosts = allPosts.filter(
+    ({ node }) => node.fields.collection === `blog`
+  )
+
+  blogPosts.forEach((post, index) => {
+    const previous =
+      index === blogPosts.length - 1 ? null : blogPosts[index + 1].node
+    const next = index === 0 ? null : blogPosts[index - 1].node
 
     createPage({
       path: post.node.fields.slug,
@@ -45,6 +52,21 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
+      },
+    })
+  })
+
+  // News posts: 이전/다음 네비 없음.
+  const newsPosts = allPosts.filter(
+    ({ node }) => node.fields.collection === `news`
+  )
+
+  newsPosts.forEach(post => {
+    createPage({
+      path: post.node.fields.slug,
+      component: newsPost,
+      context: {
+        slug: post.node.fields.slug,
       },
     })
   })

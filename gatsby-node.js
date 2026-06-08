@@ -54,11 +54,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const fileNode = getNode(node.parent)
+    if (!fileNode || fileNode.internal.type !== `File`) return
+
+    const collection = fileNode.sourceInstanceName
+
+    createNodeField({
+      name: `collection`,
+      node,
+      value: collection,
+    })
+
+    const filePath = createFilePath({ node, getNode })
+    // Only the news collection gets a path prefix; blog slugs stay at root.
+    const slug = collection === `news` ? `/news${filePath}` : filePath
+
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: slug,
     })
   }
 }

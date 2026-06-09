@@ -2,6 +2,7 @@ import { test } from "node:test"
 import assert from "node:assert/strict"
 import { kstDateString } from "./news-lib.mjs"
 import { buildMarkdown } from "./news-lib.mjs"
+import { parseDigest } from "./news-lib.mjs"
 
 test("kstDateString: UTC 자정 → KST 같은 날(09:00)", () => {
   assert.equal(kstDateString(new Date("2026-06-09T00:00:00Z")), "2026-06-09")
@@ -27,4 +28,26 @@ test("buildMarkdown: frontmatter·번호항목·출처·고지 한 줄 포함", 
   assert.match(md, /### 2\. 연구 Y/)
   assert.ok(md.includes("이 글은 Gemini가 자동 요약했습니다"))
   assert.ok(md.endsWith("\n"))
+})
+
+const okItem = { title: "t", body: "b", url: "https://e.com/a" }
+
+test("parseDigest: 순수 JSON 파싱", () => {
+  const out = parseDigest(JSON.stringify({ summary: "s", items: [okItem] }))
+  assert.equal(out.summary, "s")
+  assert.equal(out.items.length, 1)
+})
+
+test("parseDigest: 코드펜스·산문에 둘러싸여도 추출", () => {
+  const text = "다음은 결과입니다:\n```json\n" + JSON.stringify({ summary: "s", items: [okItem] }) + "\n```\n끝."
+  assert.equal(parseDigest(text).items[0].url, "https://e.com/a")
+})
+
+test("parseDigest: URL 없는 항목은 거부", () => {
+  const bad = JSON.stringify({ summary: "s", items: [{ title: "t", body: "b", url: "ftp://x" }] })
+  assert.throws(() => parseDigest(bad), /url/)
+})
+
+test("parseDigest: JSON 없으면 거부", () => {
+  assert.throws(() => parseDigest("뉴스가 없습니다"), /JSON/)
 })

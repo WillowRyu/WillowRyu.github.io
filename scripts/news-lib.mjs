@@ -30,3 +30,22 @@ export function buildMarkdown({ date, summary, items }) {
   const footer = `*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*`
   return `${front}\n\n${body}\n\n---\n${footer}\n`
 }
+
+// 모델 텍스트에서 첫 번째 JSON 오브젝트를 추출·검증한다.
+export function parseDigest(text) {
+  const start = text.indexOf("{")
+  const end = text.lastIndexOf("}")
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error("모델 응답에서 JSON 오브젝트를 찾지 못함")
+  }
+  const obj = JSON.parse(text.slice(start, end + 1))
+  if (!obj || !Array.isArray(obj.items) || obj.items.length < 1) {
+    throw new Error("digest에 items가 없음")
+  }
+  for (const it of obj.items) {
+    if (!it || !it.title || !it.body || !/^https?:\/\//.test(it.url || "")) {
+      throw new Error("digest 항목에 title/body/url(http) 누락")
+    }
+  }
+  return { summary: typeof obj.summary === "string" ? obj.summary : "", items: obj.items }
+}

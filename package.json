@@ -62,6 +62,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "test:news": "node --test scripts/"
+    "test:news": "node --test scripts/news-lib.test.mjs"
   }
 }

@@ -13,7 +13,11 @@ export function kstDateString(date) {
 
 // YAML 큰따옴표 문자열용: 따옴표 이스케이프 + 공백/개행 1줄화
 function yamlInline(s) {
-  return String(s).replace(/\s+/g, " ").trim().replace(/"/g, '\\"')
+  return String(s)
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\\/g, "\\\\")
+    .replace(/"/g, '\\"')
 }
 
 // items: [{ title, body, url }]
@@ -25,17 +29,45 @@ export function buildMarkdown({ date, summary, items }) {
     `description: "${yamlInline(summary)}"\n` +
     `---`
   const body = items
-    .map((it, i) => `### ${i + 1}. ${it.title.trim()}\n${it.body.trim()} ([출처](${it.url}))`)
+    .map(
+      (it, i) =>
+        `### ${i + 1}. ${it.title.trim()}\n${it.body.trim()} ([출처](${
+          it.url
+        }))`
+    )
     .join("\n\n")
   const footer = `*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*`
   return `${front}\n\n${body}\n\n---\n${footer}\n`
 }
 
+// 첫 '{'부터 문자열 인식 균형 스캔으로 매칭되는 '}'의 인덱스를 찾는다(없으면 -1).
+function findJsonEnd(text, start) {
+  let depth = 0
+  let inStr = false
+  let escaped = false
+  for (let i = start; i < text.length; i++) {
+    const ch = text[i]
+    if (inStr) {
+      if (escaped) escaped = false
+      else if (ch === "\\") escaped = true
+      else if (ch === '"') inStr = false
+      continue
+    }
+    if (ch === '"') inStr = true
+    else if (ch === "{") depth++
+    else if (ch === "}") {
+      depth--
+      if (depth === 0) return i
+    }
+  }
+  return -1
+}
+
 // 모델 텍스트에서 첫 번째 JSON 오브젝트를 추출·검증한다.
 export function parseDigest(text) {
   const start = text.indexOf("{")
-  const end = text.lastIndexOf("}")
-  if (start === -1 || end === -1 || end < start) {
+  const end = start === -1 ? -1 : findJsonEnd(text, start)
+  if (start === -1 || end === -1) {
     throw new Error("모델 응답에서 JSON 오브젝트를 찾지 못함")
   }
   const obj = JSON.parse(text.slice(start, end + 1))
@@ -47,7 +79,10 @@ export function parseDigest(text) {
       throw new Error("digest 항목에 title/body/url(http) 누락")
     }
   }
-  return { summary: typeof obj.summary === "string" ? obj.summary : "", items: obj.items }
+  return {
+    summary: typeof obj.summary === "string" ? obj.summary : "",
+    items: obj.items,
+  }
 }
 
 // newsDir 하위 날짜 폴더의 index.md에서 title을 최신순으로 최대 limit개 수집.
@@ -59,8 +94,8 @@ export async function recentTitles(newsDir, limit = 10) {
     return []
   }
   const dirs = entries
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
+    .filter(e => e.isDirectory())
+    .map(e => e.name)
     .sort()
     .reverse()
     .slice(0, limit)

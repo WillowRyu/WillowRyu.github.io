@@ -5,7 +5,7 @@ import {
   buildMarkdown,
   parseDigest,
   recentTitles,
-  parseRssItems,
+  parseFeed,
 } from "./news-lib.mjs"
 import { mkdtemp, mkdir, writeFile } from "node:fs/promises"
 import { tmpdir } from "node:os"
@@ -114,43 +114,41 @@ test("recentTitles: 최신 날짜 폴더부터 title 반환, 없으면 빈 배�
   assert.deepEqual(await recentTitles(path.join(base, "nope"), 10), [])
 })
 
-const SAMPLE_RSS = `<?xml version="1.0"?>
-<rss version="2.0"><channel>
-<title>feed</title>
-<item>
-<title>OpenAI, 새 모델 공개 &amp; 가격 인하 - 한국경제</title>
-<link>https://news.google.com/rss/articles/CBMiabc123?oc=5</link>
-<guid isPermaLink="false">CBMiabc123</guid>
-<pubDate>Mon, 09 Jun 2026 01:23:45 GMT</pubDate>
-<description>&lt;a href="x"&gt;OpenAI&lt;/a&gt;</description>
-<source url="https://www.hankyung.com">한국경제</source>
-</item>
-<item>
-<title>구글 제미나이 업데이트 - ZDNet Korea</title>
-<link>https://news.google.com/rss/articles/CBMixyz789?oc=5</link>
-<pubDate>Sun, 08 Jun 2026 22:00:00 GMT</pubDate>
-<source url="https://zdnet.co.kr">ZDNet Korea</source>
-</item>
-<item>
-<title>잘못된 항목(링크 없음)</title>
-<link>not-a-url</link>
-</item>
+test("parseFeed(RSS): item 파싱 — 엔티티/CDATA·excerpt·source, 비http 링크 제외", () => {
+  const rss = `<rss><channel>
+<item><title>OpenAI 새 모델 &amp; 가격 인하</title>
+<link>https://techcrunch.com/2026/06/09/openai-new/</link>
+<pubDate>Tue, 09 Jun 2026 01:00:00 +0000</pubDate>
+<description><![CDATA[<p>OpenAI <b>launched</b> a new model.</p>]]></description></item>
+<item><title>링크 없음</title><link>not-a-url</link></item>
 </channel></rss>`
-
-test("parseRssItems: item 파싱(엔티티 디코드·source·pubDate), 잘못된 링크는 제외", () => {
-  const items = parseRssItems(SAMPLE_RSS)
-  assert.equal(items.length, 2)
-  assert.equal(items[0].title, "OpenAI, 새 모델 공개 & 가격 인하 - 한국경제")
-  assert.equal(
-    items[0].url,
-    "https://news.google.com/rss/articles/CBMiabc123?oc=5"
-  )
-  assert.equal(items[0].source, "한국경제")
-  assert.ok(items[0].pubDate.startsWith("Mon, 09 Jun 2026"))
-  assert.equal(items[1].source, "ZDNet Korea")
+  const items = parseFeed(rss, "TechCrunch")
+  assert.equal(items.length, 1)
+  assert.equal(items[0].title, "OpenAI 새 모델 & 가격 인하")
+  assert.equal(items[0].url, "https://techcrunch.com/2026/06/09/openai-new/")
+  assert.equal(items[0].source, "TechCrunch")
+  assert.ok(items[0].pubDate.startsWith("Tue, 09 Jun 2026"))
+  assert.equal(items[0].excerpt, "OpenAI launched a new model.")
 })
 
-test("parseRssItems: 빈/비XML은 빈 배열", () => {
-  assert.deepEqual(parseRssItems(""), [])
-  assert.deepEqual(parseRssItems("<rss></rss>"), [])
+test("parseFeed(Atom): entry 파싱 — link rel=alternate href·summary", () => {
+  const atom = `<feed xmlns="http://www.w3.org/2005/Atom">
+<entry><title>Apple AI update</title>
+<link rel="edit" href="https://example.com/edit"/>
+<link rel="alternate" href="https://www.theverge.com/tech/123/apple-ai"/>
+<published>2026-06-08T18:40:37-04:00</published>
+<summary>Apple is using AI to fix Safari extensions.</summary></entry>
+</feed>`
+  const items = parseFeed(atom, "The Verge")
+  assert.equal(items.length, 1)
+  assert.equal(items[0].url, "https://www.theverge.com/tech/123/apple-ai")
+  assert.equal(items[0].source, "The Verge")
+  assert.equal(items[0].excerpt, "Apple is using AI to fix Safari extensions.")
+})
+
+test("parseFeed: excerpt는 300자로 절단, 빈 입력은 빈 배열", () => {
+  const long = "x".repeat(500)
+  const rss = `<rss><channel><item><title>t</title><link>https://e.com/a</link><description>${long}</description></item></channel></rss>`
+  assert.equal(parseFeed(rss, "S")[0].excerpt.length, 300)
+  assert.deepEqual(parseFeed("", "S"), [])
 })

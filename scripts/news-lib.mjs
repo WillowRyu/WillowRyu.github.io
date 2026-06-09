@@ -97,25 +97,58 @@ function decodeEntities(s) {
     .replace(/&amp;/g, "&")
 }
 
-// Google 뉴스 RSS XML에서 기사 항목 파싱. 반환: [{ title, url, source, pubDate }]
-export function parseRssItems(xml) {
+function cleanText(s) {
+  return decodeEntities(
+    String(s)
+      .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+      .replace(/<[^>]+>/g, " ")
+  )
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+function pickTag(block, tag) {
+  const m = block.match(
+    new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i")
+  )
+  return m ? m[1] : ""
+}
+
+// RSS <item> 또는 Atom <entry> 피드 파싱 → [{ title, url, source, pubDate, excerpt }]
+export function parseFeed(xml, source = "") {
+  const s = String(xml)
+  const isAtom = /<feed[\s>]/.test(s) && /<entry[\s>]/.test(s)
+  const blocks =
+    s.match(
+      isAtom ? /<entry\b[\s\S]*?<\/entry>/g : /<item\b[\s\S]*?<\/item>/g
+    ) || []
   const items = []
-  const blocks = String(xml).match(/<item\b[\s\S]*?<\/item>/g) || []
   for (const block of blocks) {
-    const pick = tag => {
-      const m = block.match(
-        new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)<\\/${tag}>`)
+    const title = cleanText(pickTag(block, "title"))
+    let url = ""
+    if (isAtom) {
+      const alt = block.match(
+        /<link\b[^>]*\brel="alternate"[^>]*\bhref="([^"]+)"/i
       )
-      return m ? m[1] : ""
+      const any = block.match(/<link\b[^>]*\bhref="([^"]+)"/i)
+      url = (alt && alt[1]) || (any && any[1]) || ""
+    } else {
+      url = cleanText(pickTag(block, "link"))
     }
-    const clean = s =>
-      decodeEntities(s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")).trim()
-    const title = clean(pick("title"))
-    const url = clean(pick("link"))
-    const pubDate = clean(pick("pubDate"))
-    const source = clean(pick("source"))
+    const pubDate = cleanText(
+      pickTag(block, "pubDate") ||
+        pickTag(block, "published") ||
+        pickTag(block, "updated") ||
+        pickTag(block, "dc:date")
+    )
+    const rawExcerpt =
+      pickTag(block, "description") ||
+      pickTag(block, "content:encoded") ||
+      pickTag(block, "summary") ||
+      pickTag(block, "content")
+    const excerpt = cleanText(rawExcerpt).slice(0, 300)
     if (title && /^https?:\/\//.test(url)) {
-      items.push({ title, url, source, pubDate })
+      items.push({ title, url, source, pubDate, excerpt })
     }
   }
   return items

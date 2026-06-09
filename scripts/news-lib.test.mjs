@@ -3,6 +3,10 @@ import assert from "node:assert/strict"
 import { kstDateString } from "./news-lib.mjs"
 import { buildMarkdown } from "./news-lib.mjs"
 import { parseDigest } from "./news-lib.mjs"
+import { recentTitles } from "./news-lib.mjs"
+import { mkdtemp, mkdir, writeFile } from "node:fs/promises"
+import { tmpdir } from "node:os"
+import path from "node:path"
 
 test("kstDateString: UTC 자정 → KST 같은 날(09:00)", () => {
   assert.equal(kstDateString(new Date("2026-06-09T00:00:00Z")), "2026-06-09")
@@ -50,4 +54,19 @@ test("parseDigest: URL 없는 항목은 거부", () => {
 
 test("parseDigest: JSON 없으면 거부", () => {
   assert.throws(() => parseDigest("뉴스가 없습니다"), /JSON/)
+})
+
+test("recentTitles: 최신 날짜 폴더부터 title 반환, 없으면 빈 배열", async () => {
+  const base = await mkdtemp(path.join(tmpdir(), "news-"))
+  for (const [dir, title] of [
+    ["2026-06-03-ai-digest", "오래된 글"],
+    ["2026-06-06-ai-digest", "최신 글"],
+  ]) {
+    await mkdir(path.join(base, dir), { recursive: true })
+    await writeFile(path.join(base, dir, "index.md"), `---\ntitle: "${title}"\ndate: "x"\n---\n본문`, "utf8")
+  }
+  const titles = await recentTitles(base, 10)
+  assert.deepEqual(titles, ["최신 글", "오래된 글"])
+
+  assert.deepEqual(await recentTitles(path.join(base, "nope"), 10), [])
 })

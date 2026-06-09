@@ -49,3 +49,30 @@ export function parseDigest(text) {
   }
   return { summary: typeof obj.summary === "string" ? obj.summary : "", items: obj.items }
 }
+
+// newsDir 하위 날짜 폴더의 index.md에서 title을 최신순으로 최대 limit개 수집.
+export async function recentTitles(newsDir, limit = 10) {
+  let entries
+  try {
+    entries = await readdir(newsDir, { withFileTypes: true })
+  } catch {
+    return []
+  }
+  const dirs = entries
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .sort()
+    .reverse()
+    .slice(0, limit)
+  const titles = []
+  for (const d of dirs) {
+    try {
+      const md = await readFile(path.join(newsDir, d, "index.md"), "utf8")
+      const m = md.match(/^title:\s*"?(.+?)"?\s*$/m)
+      if (m) titles.push(m[1])
+    } catch {
+      // 폴더에 index.md가 없으면 건너뜀
+    }
+  }
+  return titles
+}

@@ -146,6 +146,18 @@ test("parseFeed(Atom): entry 파싱 — link rel=alternate href·summary", () =>
   assert.equal(items[0].excerpt, "Apple is using AI to fix Safari extensions.")
 })
 
+test("parseFeed(Atom): href가 rel보다 먼저·작은따옴표여도 alternate 링크 추출", () => {
+  const atom = `<feed xmlns="http://www.w3.org/2005/Atom">
+<entry><title>t</title>
+<link rel="self" href="https://site.com/self"/>
+<link href='https://site.com/a' rel='alternate'/>
+<summary>x</summary></entry>
+</feed>`
+  const items = parseFeed(atom, "S")
+  assert.equal(items.length, 1)
+  assert.equal(items[0].url, "https://site.com/a")
+})
+
 test("parseFeed: excerpt는 300자로 절단, 빈 입력은 빈 배열", () => {
   const long = "x".repeat(500)
   const rss = `<rss><channel><item><title>t</title><link>https://e.com/a</link><description>${long}</description></item></channel></rss>`

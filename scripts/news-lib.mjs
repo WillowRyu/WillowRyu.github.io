@@ -127,10 +127,11 @@ export function parseFeed(xml, source = "") {
     const title = cleanText(pickTag(block, "title"))
     let url = ""
     if (isAtom) {
+      // rel="alternate" 링크 우선(속성 순서·따옴표 무관), 없으면 첫 href
       const alt = block.match(
-        /<link\b[^>]*\brel="alternate"[^>]*\bhref="([^"]+)"/i
+        /<link\b(?=[^>]*\brel=["']alternate["'])[^>]*\bhref=["']([^"']+)["']/i
       )
-      const any = block.match(/<link\b[^>]*\bhref="([^"]+)"/i)
+      const any = block.match(/<link\b[^>]*\bhref=["']([^"']+)["']/i)
       url = (alt && alt[1]) || (any && any[1]) || ""
     } else {
       url = cleanText(pickTag(block, "link"))

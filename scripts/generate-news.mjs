@@ -41,7 +41,9 @@ async function main() {
     config: { tools: [{ googleSearch: {} }], temperature: 0.4 },
   })
 
-  const digest = parseDigest(response.text)
+  const text = response.text
+  if (!text) throw new Error("모델이 텍스트를 반환하지 않음 (필터/빈 응답)")
+  const digest = parseDigest(text)
   const md = buildMarkdown({
     date: today,
     summary: digest.summary,

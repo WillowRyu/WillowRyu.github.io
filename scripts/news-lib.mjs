@@ -85,6 +85,42 @@ export function parseDigest(text) {
   }
 }
 
+// 간단한 HTML 엔티티 디코드(피드 제목/소스용). &amp;는 반드시 마지막에.
+function decodeEntities(s) {
+  return String(s)
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#0*39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&amp;/g, "&")
+}
+
+// Google 뉴스 RSS XML에서 기사 항목 파싱. 반환: [{ title, url, source, pubDate }]
+export function parseRssItems(xml) {
+  const items = []
+  const blocks = String(xml).match(/<item\b[\s\S]*?<\/item>/g) || []
+  for (const block of blocks) {
+    const pick = tag => {
+      const m = block.match(
+        new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)<\\/${tag}>`)
+      )
+      return m ? m[1] : ""
+    }
+    const clean = s =>
+      decodeEntities(s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")).trim()
+    const title = clean(pick("title"))
+    const url = clean(pick("link"))
+    const pubDate = clean(pick("pubDate"))
+    const source = clean(pick("source"))
+    if (title && /^https?:\/\//.test(url)) {
+      items.push({ title, url, source, pubDate })
+    }
+  }
+  return items
+}
+
 // newsDir 하위 날짜 폴더의 index.md에서 title을 최신순으로 최대 limit개 수집.
 export async function recentTitles(newsDir, limit = 10) {
   let entries

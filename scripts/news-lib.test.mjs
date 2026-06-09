@@ -5,6 +5,7 @@ import {
   buildMarkdown,
   parseDigest,
   recentTitles,
+  parseRssItems,
 } from "./news-lib.mjs"
 import { mkdtemp, mkdir, writeFile } from "node:fs/promises"
 import { tmpdir } from "node:os"
@@ -111,4 +112,45 @@ test("recentTitles: 최신 날짜 폴더부터 title 반환, 없으면 빈 배�
   assert.deepEqual(titles, ["최신 글", "오래된 글"])
 
   assert.deepEqual(await recentTitles(path.join(base, "nope"), 10), [])
+})
+
+const SAMPLE_RSS = `<?xml version="1.0"?>
+<rss version="2.0"><channel>
+<title>feed</title>
+<item>
+<title>OpenAI, 새 모델 공개 &amp; 가격 인하 - 한국경제</title>
+<link>https://news.google.com/rss/articles/CBMiabc123?oc=5</link>
+<guid isPermaLink="false">CBMiabc123</guid>
+<pubDate>Mon, 09 Jun 2026 01:23:45 GMT</pubDate>
+<description>&lt;a href="x"&gt;OpenAI&lt;/a&gt;</description>
+<source url="https://www.hankyung.com">한국경제</source>
+</item>
+<item>
+<title>구글 제미나이 업데이트 - ZDNet Korea</title>
+<link>https://news.google.com/rss/articles/CBMixyz789?oc=5</link>
+<pubDate>Sun, 08 Jun 2026 22:00:00 GMT</pubDate>
+<source url="https://zdnet.co.kr">ZDNet Korea</source>
+</item>
+<item>
+<title>잘못된 항목(링크 없음)</title>
+<link>not-a-url</link>
+</item>
+</channel></rss>`
+
+test("parseRssItems: item 파싱(엔티티 디코드·source·pubDate), 잘못된 링크는 제외", () => {
+  const items = parseRssItems(SAMPLE_RSS)
+  assert.equal(items.length, 2)
+  assert.equal(items[0].title, "OpenAI, 새 모델 공개 & 가격 인하 - 한국경제")
+  assert.equal(
+    items[0].url,
+    "https://news.google.com/rss/articles/CBMiabc123?oc=5"
+  )
+  assert.equal(items[0].source, "한국경제")
+  assert.ok(items[0].pubDate.startsWith("Mon, 09 Jun 2026"))
+  assert.equal(items[1].source, "ZDNet Korea")
+})
+
+test("parseRssItems: 빈/비XML은 빈 배열", () => {
+  assert.deepEqual(parseRssItems(""), [])
+  assert.deepEqual(parseRssItems("<rss></rss>"), [])
 })

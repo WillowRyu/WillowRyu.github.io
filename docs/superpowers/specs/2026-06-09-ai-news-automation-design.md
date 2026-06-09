@@ -236,11 +236,12 @@ description: "<3일간 핵심을 한 줄로>"
 
 1. **뉴스 수집: Google 검색 그라운딩 → Google 뉴스 RSS + 무료 요약.**
    그라운딩은 무료(무결제) 티어에서 첫 호출부터 `429 RESOURCE_EXHAUSTED`였다(그라운딩
-   쿼터가 결제 연결 Tier 1에서만 열림). 대신 `scripts/generate-news.mjs`가 Google 뉴스
-   RSS(`q=AI when:7d`, ko/KR)에서 최근 기사를 가져와(`parseRssItems`) 그 목록을
-   `gemini-3.1-flash-lite`의 **plain 호출**(tools 없음)로 골라 요약한다. 무료 티어로
-   동작·결제 불필요·실비용 $0. 단, 출처 링크는 Google 뉴스 리다이렉트 URL(동작하지만 김),
-   요약은 헤드라인 기반(본문 미수집).
+   쿼터가 결제 연결 Tier 1에서만 열림). 대신 `scripts/generate-news.mjs`가 여러 매체의
+   RSS/Atom 피드(AI타임스·TechCrunch·The Verge·MIT Tech Review)에서 최근 기사를
+   가져와(`parseFeed`) 병합·중복제거·최근필터한 뒤, `gemini-3.1-flash-lite`의 **plain
+   호출**(tools 없음)로 AI 관련 기사만 골라 요약한다. 무료 티어로 동작·결제 불필요·실비용
+   $0. 출처는 **원문 기사 URL**(클린), 요약은 **피드 발췌(excerpt) 근거**. 멀티피드 수집은
+   fail-soft(일부 피드 실패해도 나머지로 진행).
 2. **전제(필수): 기본 브랜치 = `develop`.**
    GitHub의 `schedule`·`workflow_dispatch`는 **기본 브랜치의 워크플로만** 실행한다. 배포
    결과 브랜치였던 `master` 대신 소스 브랜치 `develop`을 기본 브랜치로 변경(적용 완료).
@@ -249,7 +250,8 @@ description: "<3일간 핵심을 한 줄로>"
    `WillowRyu`) → 배포 → `/news/2026-06-09-ai-digest/` 렌더까지 확인. 그라운딩 시도 시의
    실패 케이스에서 fail-safe(커밋 생략, 깨진 글 미발행)도 실측 확인.
 
-### 향후 개선 후보(이번 변경에서 파생)
-- 출처 URL 정리(리다이렉트 → 원문) 또는 publisher 직접 RSS 혼합으로 링크 품질 개선.
-- 기사 본문 일부 수집 후 요약(헤드라인 기반 → 근거 기반)으로 요약 깊이 향상.
-- 모델이 목록 밖 URL을 반환하지 않도록 화이트리스트 검증 추가.
+### 개선 적용됨 / 향후 후보
+- ✅ 적용(2026-06-09): 원문 URL(publisher RSS/Atom 혼합), 발췌(excerpt) 근거 요약,
+  한+영 멀티피드, 매체 다양성·한국 소식 소프트 유도. Atom link 파싱은 속성순서·따옴표 무관.
+- 향후: 모델이 후보 목록 밖 URL을 반환하지 않도록 화이트리스트 검증; 기사 본문 전체
+  수집(발췌→본문)으로 더 깊은 요약; 정확한 72시간 간격(매일+상태파일).

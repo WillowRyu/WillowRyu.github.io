@@ -68,7 +68,7 @@ async function gatherArticles() {
   const merged = dedupe(recentOnly(lists.flat()))
   if (merged.length === 0)
     throw new Error("모든 뉴스 피드에서 기사를 가져오지 못함")
-  return merged.slice(0, 30)
+  return merged.slice(0, 40)
 }
 
 function buildPrompt(recent, articles) {
@@ -87,7 +87,7 @@ function buildPrompt(recent, articles) {
     : ""
   return (
     `너는 한국어 IT 뉴스 큐레이터다. 아래는 여러 매체의 최근 기사 목록(번호. [매체] 제목 (날짜) / 발췌 / URL)이다.\n` +
-    `이 중 AI·인공지능과 직접 관련된 가장 중요하고 서로 다른 3~5개를 골라 한국어로 요약하라.\n\n` +
+    `이 중 AI·인공지능과 직접 관련된 가장 중요하고 서로 다른 8~10개를 골라 한국어로 요약하라.\n\n` +
     `기사 목록:\n${list}\n\n` +
     `규칙:\n` +
     `- AI와 무관한 기사(일반 사회·지역·비AI 비즈니스 등)는 반드시 제외.\n` +

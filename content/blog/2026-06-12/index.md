@@ -56,6 +56,18 @@ description: "Fable 5 를 CTO 로 모시고 차리는 1인 + N봇 회사"
 (인턴 Haiku 는 사실 요즘 안 쓰고 있다...지금의 취업시장과 비슷해지고 있다.)  
 사람 조직이 시니어/주니어를 나누는 이유랑 정확히 같다.
 
+비용도 체감이 된다.  
+<a href="https://www.cloudzero.com/blog/claude-code-agents/" target="_blank">CloudZero 의 분석</a>에 따르면  
+Opus 오케스트레이터 1 + Sonnet 워커 4 구성이  
+Opus 5대 풀구성 대비 대략 40% 저렴하다고 한다.
+
+여기서 오케스트레이터만 Fable 5 로 올리는 게 요즘 얘기되는  
+<a href="https://www.developersdigest.tech/blog/fable-5-orchestrator-model-playbook" target="_blank">`스마트한 한 명 + 저렴한 일꾼들`</a> 패턴이다.
+
+Fable 5 가 CTO 자리에 특히 어울리는 이유도 있는데,  
+병렬 subagent 를 디스패치하고 **오래 도는 에이전트들과의 통신을 유지하는 능력**이  
+이전 모델 대비 눈에 띄게 안정적이라고 한다.
+
 이전 글에서 쓴 Plan / Execute / Verify 핸드오프도 결국 역할 분리였는데,  
 그 분리를 이제 세션 단위가 아니라 모델 티어 단위로 내릴 수 있게 된 셈이다.
 

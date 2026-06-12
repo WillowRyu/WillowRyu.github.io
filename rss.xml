@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FE Factory RSS Feed]]></title><description><![CDATA[tip, info and study case of FE enginner]]></description><link>https://willowryu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Jun 2026 03:20:25 GMT</lastBuildDate><item><title><![CDATA[새로운 CTO 님이 오셨다]]></title><description><![CDATA[지난 글 말미에 Anthropic 의 Mythos 얘기를 하면서  고 적었었다. 그런데 6월 9일, 진짜로 나왔다. Claude Fable 5. 일반 공개를 안 한다던 Mythos…]]></description><link>https://willowryu.github.io/2026-06-12/</link><guid isPermaLink="false">https://willowryu.github.io/2026-06-12/</guid><pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;지난 글 말미에 Anthropic 의 Mythos 얘기를 하면서&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FE Factory RSS Feed]]></title><description><![CDATA[tip, info and study case of FE enginner]]></description><link>https://willowryu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Jun 2026 03:24:29 GMT</lastBuildDate><item><title><![CDATA[새로운 CTO 님이 오셨다]]></title><description><![CDATA[지난 글 말미에 Anthropic 의 Mythos 얘기를 하면서  고 적었었다. 그런데 6월 9일, 진짜로 나왔다. Claude Fable 5. 일반 공개를 안 한다던 Mythos…]]></description><link>https://willowryu.github.io/2026-06-12/</link><guid isPermaLink="false">https://willowryu.github.io/2026-06-12/</guid><pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;지난 글 말미에 Anthropic 의 Mythos 얘기를 하면서&lt;br&gt;
 &lt;code class=&quot;language-text&quot;&gt;공포 마케팅을 너무 많이 봐서 아직은 믿음이 안 간다&lt;/code&gt; 고 적었었다.&lt;/p&gt;
 &lt;p&gt;그런데 6월 9일, 진짜로 나왔다.&lt;br&gt;
 &lt;a href=&quot;https://www.anthropic.com/news/claude-fable-5-mythos-5&quot; target=&quot;_blank&quot;&gt;Claude Fable 5&lt;/a&gt;.&lt;br&gt;
@@ -66,6 +66,15 @@
 계획만 정확하면 실행은 거기 적힌 대로 하면 되니까 구현은 주니어에게.&lt;br&gt;
 (인턴 Haiku 는 사실 요즘 안 쓰고 있다…지금의 취업시장과 비슷해지고 있다.)&lt;br&gt;
 사람 조직이 시니어/주니어를 나누는 이유랑 정확히 같다.&lt;/p&gt;
+&lt;p&gt;비용도 체감이 된다.&lt;br&gt;
+&lt;a href=&quot;https://www.cloudzero.com/blog/claude-code-agents/&quot; target=&quot;_blank&quot;&gt;CloudZero 의 분석&lt;/a&gt;에 따르면&lt;br&gt;
+Opus 오케스트레이터 1 + Sonnet 워커 4 구성이&lt;br&gt;
+Opus 5대 풀구성 대비 대략 40% 저렴하다고 한다.&lt;/p&gt;
+&lt;p&gt;여기서 오케스트레이터만 Fable 5 로 올리는 게 요즘 얘기되는&lt;br&gt;
+&lt;a href=&quot;https://www.developersdigest.tech/blog/fable-5-orchestrator-model-playbook&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;스마트한 한 명 + 저렴한 일꾼들&lt;/code&gt;&lt;/a&gt; 패턴이다.&lt;/p&gt;
+&lt;p&gt;Fable 5 가 CTO 자리에 특히 어울리는 이유도 있는데,&lt;br&gt;
+병렬 subagent 를 디스패치하고 &lt;strong&gt;오래 도는 에이전트들과의 통신을 유지하는 능력&lt;/strong&gt;이&lt;br&gt;
+이전 모델 대비 눈에 띄게 안정적이라고 한다.&lt;/p&gt;
 &lt;p&gt;이전 글에서 쓴 Plan / Execute / Verify 핸드오프도 결국 역할 분리였는데,&lt;br&gt;
 그 분리를 이제 세션 단위가 아니라 모델 티어 단위로 내릴 수 있게 된 셈이다.&lt;/p&gt;
 &lt;h2&gt;어 점점 인간을 닮아간다&lt;/h2&gt;

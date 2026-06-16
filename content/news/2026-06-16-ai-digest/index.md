@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-06-16"
+date: "2026-06-16"
+description: "미 정부의 앤트로픽 모델 수출 통제와 AI 주권 논란, 그리고 기업들의 AI 에이전트 도입 및 서비스 확장 소식이 주를 이룬 3일간의 주요 AI 뉴스입니다."
+---
+
+### 1. 미 정부, 앤트로픽 최신 AI 모델 수출 통제 및 접근 차단
+미국 정부가 국가 안보를 이유로 앤트로픽의 최신 모델인 '페이블 5'와 '미소스 5'에 대한 외국인 접근을 전면 차단했습니다. 이번 조치는 중국의 접근 가능성 우려와 아마존의 사이버 보안 연구 결과가 반영된 것으로, 기술 주권과 소버린 AI에 대한 국제적 논의를 촉발하고 있습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=211727))
+
+### 2. 메타, 페이스북 내 AI 모드 도입 및 서비스 확대
+메타가 페이스북 이용자의 공개 게시물을 학습 데이터로 활용하는 새로운 'AI 모드' 기능을 출시했습니다. 이는 AI 경쟁에서 뒤처지지 않고 플랫폼 내 사용자 참여를 극대화하려는 메타의 전략적 행보로 풀이됩니다. ([출처](https://www.theverge.com/tech/950264/meta-ai-mode-search-facebook))
+
+### 3. 세일즈포스, AI 고객 서비스 플랫폼 '핀(Fin)' 36억 달러에 인수
+세일즈포스가 기업용 AI 에이전트 구축 플랫폼인 '에이전트포스(Agentforce)'를 강화하기 위해 AI 고객 서비스 기업 핀을 36억 달러에 인수했습니다. 이번 인수를 통해 세일즈포스는 업무 자동화를 위한 맞춤형 AI 에이전트 역량을 한층 높일 계획입니다. ([출처](https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/))
+
+### 4. 인도 AI 스타트업 '사르밤(Sarvam)', 2억 3,400만 달러 투자 유치
+인도의 AI 스타트업 사르밤이 HCL테크 주도로 2억 3,400만 달러의 투자를 유치하며 유니콘 기업으로 등극했습니다. 이는 미국 AI 기업 의존도에서 벗어나 자체적인 AI 역량을 강화하려는 인도의 기술 자립 의지를 보여줍니다. ([출처](https://techcrunch.com/2026/06/15/sarvam-becomes-indias-newest-ai-unicorn-with-234-million-funding-round-led-by-hcltech/))
+
+### 5. AI 에이전트 관리 플랫폼 '뉴코어(NewCore)', 6,600만 달러 투자 유치
+기업 내 AI 에이전트가 직원처럼 업무를 수행함에 따라, 이들의 신원을 관리하고 보안을 책임지는 스타트업 뉴코어가 6,600만 달러의 자금을 확보했습니다. 향후 기업 보안의 핵심 과제가 사람 관리를 넘어 AI 에이전트 관리로 이동할 것이라는 전망이 제기됩니다. ([출처](https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/))
+
+### 6. 구글 딥마인드, AI 에이전트 간 상호작용 위험성 연구
+구글 딥마인드가 수백만 개의 AI 에이전트가 온라인상에서 서로 상호작용할 때 발생할 수 있는 잠재적 위험을 연구하기 위해 자금을 지원하고 있습니다. 인간의 개입 없이 스스로 작업을 수행하는 에이전트가 급증함에 따라 발생할 수 있는 부작용을 사전에 방지하려는 목적입니다. ([출처](https://www.technologyreview.com/2026/06/11/1138794/google-deepmind-is-worried-about-what-happens-when-millions-of-agents-start-to-interact/))
+
+### 7. 애플, iOS 27에 새로운 AI 사진 편집 도구 도입
+애플이 iOS 27 업데이트를 통해 사진 편집을 위한 새로운 AI 도구를 선보였습니다. 구글 픽셀폰의 기능에 비하면 다소 제한적이지만, 애플의 생태계 내에서 본격적인 AI 사진 편집 시대가 열렸음을 시사합니다. ([출처](https://www.theverge.com/tech/949360/apple-ai-photo-edit-reframe-extend-clean-up-hands-on))
+
+### 8. 위성, AI를 통한 자율적 탐색 기능 구현
+지구 관측 위성이 처음으로 인간의 지시 없이 스스로 특정 대상을 탐색하고 식별하는 데 성공했습니다. 이는 우주 산업에서 AI의 자율성이 비약적으로 발전했음을 보여주는 사례로 평가받고 있습니다. ([출처](https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

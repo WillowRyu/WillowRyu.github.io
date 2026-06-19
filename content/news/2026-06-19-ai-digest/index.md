@@ -1,0 +1,38 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-06-19"
+date: "2026-06-19"
+description: "G7 정상회의의 AI 의제 부상과 미국 정부의 수출 규제, 기업들의 AI 인프라 및 서비스 확장 경쟁이 가속화되고 있습니다."
+---
+
+### 1. G7 정상회의, 반도체 넘어 AI 모델을 핵심 의제로 채택
+프랑스 G7 정상회의에서 미국을 비롯한 주요국 정상들이 AI 모델 자체를 핵심 안보 및 경제 의제로 논의했습니다. 트럼프 대통령은 주요 AI 기업 경영진을 동반해 AI 접근권과 정책을 직접 챙기며 기술 패권 경쟁의 중심이 AI 모델로 이동했음을 보여주었습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=211859))
+
+### 2. 앤스로픽, 미 정부의 갑작스러운 수출 규제로 모델 접근 차단
+트럼프 행정부가 외국인 대상 AI 모델 접근을 제한하는 수출 규제를 시행함에 따라 앤스로픽이 자사 모델인 'Fable 5'와 'Mythos 5'의 서비스를 일시 중단했습니다. 이 조치로 인해 미국 내 외국인 및 해외 사용자의 접근이 차단되며 업계에 큰 혼란이 발생했습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/951703/anthropic-shutdown-export-controls))
+
+### 3. 오픈AI, IPO 앞두고 구글 딥마인드 핵심 인재 영입
+오픈AI가 기업공개(IPO)를 앞두고 구글 딥마인드의 트랜스포머 공동 개발자 노암 샤지어 등 업계 최고 수준의 인재를 대거 영입했습니다. 이는 IPO를 대비해 기술 경쟁력을 강화하고 정책 대응 능력을 높이려는 전략으로 풀이됩니다. ([출처](https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo/))
+
+### 4. 아마존, 엔비디아 대항해 자체 AI 칩 외부 판매 추진
+아마존 웹서비스(AWS)가 자사 AI 칩을 외부 데이터 센터에 판매하기 위한 협상을 진행 중입니다. 앤디 재시 CEO는 이를 통해 약 500억 달러 규모의 새로운 시장 기회를 창출할 수 있을 것으로 기대하고 있습니다. ([출처](https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/))
+
+### 5. 미 연방에너지규제위원회(FERC), AI 데이터 센터 전력망 연결 가속화
+FERC가 AI 데이터 센터의 전력망 연결을 위한 신속 처리 절차를 도입했습니다. 다만 이번 조치는 연결 속도 향상에 초점을 맞췄을 뿐, 근본적인 전력 공급 부족 문제에 대한 해결책은 제시하지 못했다는 지적을 받고 있습니다. ([출처](https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/))
+
+### 6. 어도비, 크리에이티브 클라우드 전반에 AI 어시스턴트 도입
+어도비가 포토샵, 프리미어, 일러스트레이터 등 주요 디자인 앱에 맞춤형 AI 어시스턴트를 탑재한 베타 서비스를 시작했습니다. 또한 새로운 AI 스튜디오를 통해 작업 맥락을 기억하고 자산을 재사용할 수 있는 기능을 강화했습니다. ([출처](https://www.theverge.com/tech/952099/adobe-ai-assistants-photoshop-premiere-illustrator-beta-launch))
+
+### 7. 미드저니, 이미지 생성 넘어 의료용 초음파 스캐너 시장 진출
+AI 이미지 생성으로 유명한 미드저니가 첫 하드웨어 제품인 '미드저니 스캐너'를 공개했습니다. 이 제품은 초음파 기술을 활용한 전신 스캔 장비로, 기존의 디지털 이미지 생성 분야를 넘어 의료 AI 하드웨어 시장으로 사업을 확장하고 있습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan))
+
+### 8. 미국인 63%, AI 기술 발전 속도 너무 빠르다고 우려
+퓨 리서치 센터의 최신 설문조사에 따르면 미국인의 63%가 AI 기술이 너무 빠르게 발전하고 있다고 응답했습니다. 챗봇 사용률은 2024년 대비 크게 증가했으나, 기술의 사회적 영향에 대한 대중의 불안감도 동시에 커지고 있습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/951653/pew-research-ai-chatbot-usage-advancing-too-quickly))
+
+### 9. 베이셋텐(Baseten), AI 추론 시장 급성장에 15억 달러 투자 유치
+AI 추론 스타트업 베이셋텐이 15억 달러 규모의 추가 투자 유치를 추진 중이며, 기업 가치는 130억 달러로 평가받고 있습니다. 이는 최근 AI 서비스 확산에 따른 추론 인프라 수요가 폭발적으로 증가하고 있음을 보여줍니다. ([출처](https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/))
+
+### 10. 제너럴 인튜이션, 20억 달러 가치로 3억 달러 투자 유치 추진
+체화된 AI(Embodied AI)와 세계 모델을 훈련하는 스타트업 제너럴 인튜이션이 3억 달러 규모의 투자 유치를 진행 중입니다. 이들은 매달 1,000만 명의 사용자가 생성하는 20억 개의 비디오 데이터를 학습에 활용하고 있습니다. ([출처](https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

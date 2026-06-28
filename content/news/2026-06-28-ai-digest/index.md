@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-06-28"
+date: "2026-06-28"
+description: "미국 정부의 규제와 기업들의 독자 칩 개발, 그리고 AI 모델의 글로벌 확산이 돋보인 3일간의 AI 주요 소식입니다."
+---
+
+### 1. OpenAI, 미 정부 요청에 따른 GPT-5.6 단계적 출시
+미국 정부가 보안 우려를 이유로 요청함에 따라 OpenAI가 차세대 모델인 GPT-5.6의 출시를 제한적으로 진행하기로 했습니다. OpenAI는 이러한 정부의 개입이 장기적인 표준이 되어서는 안 된다며 우려를 표했습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview))
+
+### 2. Anthropic 'Mythos 5', 정부 협상 끝에 일부 기업 대상 재개
+미국 정부와의 2주간 협상 끝에 Anthropic의 Mythos 5 모델이 일부 승인된 기업과 기관을 대상으로 다시 사용 가능해졌습니다. 미 행정부는 100개 이상의 기업 및 기관에 해당 모델의 사용을 허가했습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/958458/anthropic-mythos-5-is-back-trump-negotiations))
+
+### 3. OpenAI, 엔비디아 의존 탈피 위한 자체 칩 '할라피뇨' 공개
+OpenAI가 엔비디아에 대한 의존도를 낮추기 위해 브로드컴과 협력하여 자체 추론 칩인 '할라피뇨'를 개발 중이라고 밝혔습니다. 이는 구글, 애플, 테슬라 등 빅테크 기업들이 독자적인 AI 인프라를 구축하는 흐름의 일환입니다. ([출처](https://www.theverge.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/))
+
+### 4. 애플 비전 프로 핵심 임원, OpenAI 하드웨어 팀으로 이적
+애플의 비전 프로 헤드셋 개발을 총괄하던 폴 미드 부사장이 OpenAI로 자리를 옮길 예정입니다. 그는 OpenAI의 하드웨어 팀에 합류하여 관련 기술 개발을 이끌 것으로 보입니다. ([출처](https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/))
+
+### 5. 메타, 페이스북 크리에이터 스튜디오를 AI 동반자 앱으로 재출시
+메타가 기존의 페이스북 크리에이터 스튜디오를 AI 기반의 동반자 앱으로 새롭게 개편했습니다. 이 앱은 크리에이터가 오디언스와 소통하고 채널 성장을 최적화할 수 있도록 돕는 AI 도구를 제공합니다. ([출처](https://www.theverge.com/tech/956668/meta-facebook-creator-studio-ai-app-relaunch))
+
+### 6. 마거릿 애트우드, AI의 근본적 문제로 '데이터 품질' 지적
+유명 작가 마거릿 애트우드가 AI의 문제점으로 '쓰레기가 들어가면 쓰레기가 나온다(Garbage in, garbage out)'는 점을 꼽았습니다. 데이터 품질이 AI 결과물의 신뢰성을 결정짓는 핵심 요소임을 강조한 발언입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/958715/margaret-atwood-ai-problem-garbage-in-garbage-out))
+
+### 7. 아시아 AI 스타트업, 수출 규제 우회하는 자체 모델 출시
+미국의 Anthropic 수출 규제가 장기화되면서, 아시아 지역 스타트업들이 규제 영향권에서 벗어난 독자적인 고성능 AI 모델을 출시하고 있습니다. 미국 AI 연구소들이 아시아 시장 주도권을 잃을 수 있다는 분석이 나옵니다. ([출처](https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/))
+
+### 8. 포드, 자동화 시스템 오류 해결 위해 엔지니어 재고용
+포드가 생산 및 설계 과정에서 도입했던 자동화 시스템의 오류를 수정하기 위해 과거 퇴사했던 엔지니어들을 다시 채용했습니다. 자동화 기술의 한계를 인정하고 품질 개선을 위한 조치로 풀이됩니다. ([출처](https://www.theverge.com/transportation/956316/ford-quality-jd-power-ranking-ai-automated-mistakes))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

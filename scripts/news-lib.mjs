@@ -85,6 +85,27 @@ export function parseDigest(text) {
   }
 }
 
+// generate: async (attempt) => 모델 텍스트. 빈 응답·파싱 실패 시 tries회까지
+// 재시도한다(모델이 간헐적으로 JSON 포맷을 어기는 경우 대비). 전부 실패하면
+// 마지막 오류를 던진다. onRetry(attempt, tries, err)는 진단 로그용(선택).
+export async function generateDigestWithRetry(
+  generate,
+  { tries = 3, onRetry } = {}
+) {
+  let lastErr
+  for (let attempt = 1; attempt <= tries; attempt++) {
+    try {
+      const text = await generate(attempt)
+      if (!text) throw new Error("모델이 텍스트를 반환하지 않음 (필터/빈 응답)")
+      return parseDigest(text)
+    } catch (e) {
+      lastErr = e
+      if (onRetry) onRetry(attempt, tries, e)
+    }
+  }
+  throw lastErr
+}
+
 // 간단한 HTML 엔티티 디코드(피드 제목/소스용). &amp;는 반드시 마지막에.
 function decodeEntities(s) {
   return String(s)

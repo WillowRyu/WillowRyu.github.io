@@ -1,10 +1,10 @@
-import { GoogleGenAI } from "@google/genai"
+import { GoogleGenAI, Type } from "@google/genai"
 import { mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
 import {
   kstDateString,
   buildMarkdown,
-  parseDigest,
+  generateDigestWithRetry,
   recentTitles,
   parseFeed,
 } from "./news-lib.mjs"
@@ -13,6 +13,28 @@ const NEWS_DIR = path.resolve("content/news")
 const MODEL = "gemini-3.1-flash-lite"
 const MAX_AGE_DAYS = 5
 const PER_FEED = 12
+const MAX_TRIES = 3
+
+// 모델이 정확한 JSON 스키마로만 응답하도록 강제(프롬프트 지시만 의존하지 않음).
+const DIGEST_SCHEMA = {
+  type: Type.OBJECT,
+  properties: {
+    summary: { type: Type.STRING },
+    items: {
+      type: Type.ARRAY,
+      items: {
+        type: Type.OBJECT,
+        properties: {
+          title: { type: Type.STRING },
+          body: { type: Type.STRING },
+          url: { type: Type.STRING },
+        },
+        required: ["title", "body", "url"],
+      },
+    },
+  },
+  required: ["summary", "items"],
+}
 
 const FEEDS = [
   { name: "AI타임스", url: "https://www.aitimes.com/rss/allArticle.xml" },
@@ -110,15 +132,26 @@ async function main() {
   const articles = await gatherArticles()
 
   const ai = new GoogleGenAI({ apiKey })
-  const response = await ai.models.generateContent({
-    model: MODEL,
-    contents: buildPrompt(recent, articles),
-    config: { temperature: 0.4 },
-  })
-
-  const text = response.text
-  if (!text) throw new Error("모델이 텍스트를 반환하지 않음 (필터/빈 응답)")
-  const digest = parseDigest(text)
+  const prompt = buildPrompt(recent, articles)
+  const digest = await generateDigestWithRetry(
+    async () => {
+      const response = await ai.models.generateContent({
+        model: MODEL,
+        contents: prompt,
+        config: {
+          temperature: 0.4,
+          responseMimeType: "application/json",
+          responseSchema: DIGEST_SCHEMA,
+        },
+      })
+      return response.text
+    },
+    {
+      tries: MAX_TRIES,
+      onRetry: (attempt, tries, e) =>
+        console.warn(`모델 응답 시도 ${attempt}/${tries} 실패: ${e.message}`),
+    }
+  )
   const md = buildMarkdown({
     date: today,
     summary: digest.summary,

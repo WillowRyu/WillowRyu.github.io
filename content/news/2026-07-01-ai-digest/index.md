@@ -1,0 +1,38 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-07-01"
+date: "2026-07-01"
+description: "AI 에이전트의 실무 도입 가속화와 산업별 특화 모델 및 하드웨어 혁신이 두드러진 3일간의 AI 동향"
+---
+
+### 1. AI 루프 시대의 도래와 인간의 역할 변화
+AI가 스스로 코드를 작성하고 검토하는 'AI 루프' 시스템이 본격화되면서 인간의 역할이 직접 구현에서 전체 과정을 감독하는 관리자로 이동하고 있습니다. 이제 인간의 경쟁력은 AI가 생성한 결과물 중 최적의 선택을 내리는 능력에 달려 있습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=212264))
+
+### 2. Anthropic, 과학 연구 특화 'Claude Science' 출시
+Anthropic이 연구원들이 데이터베이스와 파이프라인을 오갈 필요 없이 통합된 환경에서 연구를 수행할 수 있는 'Claude Science'를 공개했습니다. 이 도구는 소프트웨어 엔지니어링을 지원하는 'Claude Code'와 유사하게 과학적 워크플로우를 자동화하는 데 중점을 둡니다. ([출처](https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/))
+
+### 3. Anthropic, 효율성 높인 'Claude Sonnet 5' 공개
+Anthropic이 더 강력한 에이전트 기능과 개선된 안전성을 갖춘 'Claude Sonnet 5'를 출시했습니다. 기존 모델 대비 가격 경쟁력을 높여 GPT-5.5 및 Gemini Pro의 대안으로 자리매김할 것으로 보입니다. ([출처](https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/))
+
+### 4. Nvidia 경쟁사 Etched, AI 칩 분야 50억 달러 가치 평가
+AI 칩 스타트업 Etched가 추론 시스템용 칩 계약으로 10억 달러의 매출을 확보하며 50억 달러의 기업 가치를 인정받았습니다. 이는 Nvidia가 주도하는 AI 하드웨어 시장에서 강력한 경쟁자로 부상하고 있음을 의미합니다. ([출처](https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/))
+
+### 5. 스마트폰 키보드에 탑재된 AI 에이전트 'Acti'
+스타트업 Acti가 iOS와 안드로이드 키보드에 직접 통합되는 AI 에이전트를 선보였습니다. 사용자는 자연어를 통해 앱 간 연동이 가능한 맞춤형 AI 단축키를 생성하여 스마트폰 활용 효율을 높일 수 있습니다. ([출처](https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/))
+
+### 6. Google, NotebookLM에 숏폼 AI 영상 생성 기능 추가
+Google의 NotebookLM이 사용자가 업로드한 소스를 바탕으로 60초 분량의 틱톡 스타일 AI 영상을 생성하는 기능을 도입했습니다. 이 기능은 AI Ultra 및 Pro 구독자를 대상으로 제공되어 연구 내용을 요약하는 새로운 방식을 제시합니다. ([출처](https://www.theverge.com/tech/959778/google-notebooklm-ai-clips))
+
+### 7. OpenAI, 코딩 도구 'Codex' 전용 하드웨어 티징
+OpenAI가 7월 15일 공개를 목표로 코딩 도구 'Codex'와 연동되는 새로운 하드웨어 기기를 예고했습니다. 공개된 영상 속 기기는 버튼이 달린 사각형 형태로, Codex 단축키 활용을 극대화하는 기능을 제공할 것으로 예상됩니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/959174/openai-codex-hardware-work-louder))
+
+### 8. Tidal, AI 생성 음악에 대한 레이블링 정책 도입
+음악 스트리밍 플랫폼 Tidal이 7월 15일부터 AI가 100% 생성한 트랙에 별도의 아이콘을 표시하는 정책을 시행합니다. AI 생성 음악에 대한 로열티 지급은 중단하지만, 플랫폼 내 콘텐츠를 완전히 금지하지는 않는 방향을 택했습니다. ([출처](https://www.theverge.com/tech/959211/tidal-ai-music-policy-demonetizingdetect-label))
+
+### 9. 미 의회, AI 기업의 건강 데이터 판매 금지 추진
+미국 상·하원 의원들이 챗봇 등 AI 서비스에 입력된 개인의 건강 및 위치 정보를 데이터 브로커에게 판매하는 것을 금지하는 법안을 발의할 예정입니다. 이는 AI 모델 학습 과정에서 수집된 민감한 개인정보 보호를 강화하기 위한 조치입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/959033/health-location-data-protection-act-ai-warren-scanlon))
+
+### 10. 중국 Zhipu AI, 사이버 보안 분야서 성능 격차 좁혀
+중국 Zhipu AI가 공개한 'GLM-5.2' 모델이 특정 사이버 보안 및 버그 탐지 시나리오에서 Mythos 모델과 대등한 성능을 보인다는 평가가 나왔습니다. 일반적인 작업에서는 여전히 격차가 존재하지만, 특정 기술 분야에서의 추격 속도가 매우 빠르다는 분석입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/958804/chinas-z-ai-glm-52-mythos-cybersecurity))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

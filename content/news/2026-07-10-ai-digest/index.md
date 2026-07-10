@@ -1,0 +1,35 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-07-10"
+date: "2026-07-10"
+description: "최근 3일간 OpenAI의 GPT-5.6 공개와 기업용 서비스 확대, 메타의 코딩 AI 경쟁 합류, 그리고 AI 기술의 투명성 및 규제 관련 이슈가 주요하게 다뤄졌습니다."
+---
+
+### 1. OpenAI, GPT-5.6 공개 및 기업용 'ChatGPT Work' 출시
+OpenAI가 정부 승인을 거쳐 최신 모델인 GPT-5.6을 대중에게 공개했습니다. 또한 기업 생산성을 높이기 위한 전용 서비스인 'ChatGPT Work'를 새롭게 선보이며 비즈니스 시장 공략을 강화합니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work))
+
+### 2. 메타, 코딩 특화 AI 모델 'Muse Spark 1.1' 발표
+메타가 대규모 에이전트 작업과 코드 마이그레이션, 버그 수정에 최적화된 코딩 AI 모델 'Muse Spark 1.1'을 공개했습니다. 개발자들이 API를 통해 자사 소프트웨어에 이를 통합할 수 있도록 지원하며 코딩 AI 시장 경쟁에 본격적으로 뛰어들었습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api))
+
+### 3. 앤스로픽, Claude의 내부 추론 과정 시각화 기술 개발
+앤스로픽 연구진이 대규모 언어 모델이 질문에 답하거나 작업을 수행할 때 내부적으로 개념을 어떻게 처리하는지 들여다볼 수 있는 새로운 기술을 개발했습니다. 이를 통해 모델의 복잡한 사고 과정을 보다 명확하게 파악할 수 있게 되었습니다. ([출처](https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/))
+
+### 4. 구글, AI 생성 광고에 대한 의무 표기 도입
+구글이 검색, 디스커버, 유튜브 등 자사 플랫폼에 노출되는 광고 중 AI를 활용해 제작하거나 편집한 콘텐츠에 대해 의무적으로 표기를 도입합니다. 이는 사용자가 광고의 생성 방식을 투명하게 확인할 수 있도록 돕기 위한 조치입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label))
+
+### 5. AI 에이전트 스타트업 Lyzr, 자체 AI 활용 1억 달러 투자 유치
+기업용 AI 에이전트를 개발하는 스타트업 Lyzr가 자사의 AI 에이전트를 직접 활용해 1억 달러 규모의 투자 유치 과정을 성공적으로 수행했습니다. 이는 자사 제품의 실질적인 성능과 효용성을 입증한 사례로 평가받습니다. ([출처](https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/))
+
+### 6. 뉴욕타임스, OpenAI가 저작권 재판 증거를 은폐했다고 주장
+뉴욕타임스가 OpenAI가 챗GPT 출력물 내 저작권 보호 대상 콘텐츠를 식별할 수 있는 도구와 데이터셋을 의도적으로 숨겼다고 주장하며 제재를 요청했습니다. 양측의 저작권 소송이 증거 은폐 논란으로 더욱 격화되는 양상입니다. ([출처](https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/))
+
+### 7. 프랑스 AI 음성 스타트업 Gradium, 엔비디아 투자 유치
+파리 기반의 AI 음성 스타트업 Gradium이 엔비디아의 지원을 받아 1억 달러 규모의 시드 투자를 유치했습니다. 이들은 확보한 자금을 바탕으로 미국 베이 지역에 사무소를 열고 글로벌 AI 인재 확보에 나설 계획입니다. ([출처](https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/))
+
+### 8. 기업의 AI 전환(AX) 성공을 위한 'AI 챔피언'의 중요성
+많은 기업이 AI 투자를 단행하고 있으나 실질적인 가치 창출에는 어려움을 겪고 있습니다. 전문가들은 단순한 도구 도입을 넘어, 동료들 사이에서 AI 활용을 독려하고 실무에 적용하도록 돕는 'AI 챔피언'의 역할이 성공적인 AI 전환의 핵심이라고 강조합니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=212566))
+
+### 9. 앤스로픽, Claude 사용자 데이터 분석 기능 'Reflect' 출시
+앤스로픽이 사용자의 지난 AI 활용 데이터를 분석해 보여주는 'Reflect' 기능을 Claude에 추가했습니다. 스포티파이의 'Wrapped'와 유사한 형태의 이 기능은 사용자가 자신의 AI 사용 패턴을 되돌아볼 수 있도록 돕습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

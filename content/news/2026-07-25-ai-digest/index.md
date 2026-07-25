@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-07-25"
+date: "2026-07-25"
+description: "최근 3일간 AI 업계는 오픈웨이트 모델 규제 논란, 주요 기업의 신규 모델 출시, 그리고 AI 보조 기능 강화 및 정책적 움직임이 활발했습니다."
+---
+
+### 1. 엔비디아·MS 등 주요 기술 기업, 오픈웨이트 AI 규제 반대 공동 서한
+엔비디아, MS, 메타 등 주요 기술 기업들이 미국 정부에 오픈웨이트 AI 모델에 대한 광범위한 규제를 자제할 것을 촉구했습니다. 이들은 미국의 AI 경쟁력 유지를 위해 폐쇄형 모델뿐만 아니라 개방형 생태계 육성이 필수적이라고 주장했습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=213165))
+
+### 2. 앤스로픽, 고성능 AI 모델 'Opus 5' 출시
+앤스로픽이 기존 모델보다 비용 효율적이고 제약이 적은 최신 AI 모델 'Opus 5'를 공개했습니다. 이 모델은 이전 버전인 Fable 5에 근접한 성능을 제공하며 다양한 활용 사례에서 유용하게 쓰일 것으로 기대됩니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release))
+
+### 3. 메타 AI, 생산성 기능 강화로 경쟁력 확보
+메타가 자사 AI 챗봇에 일정 관리 및 이벤트 계획, 심층 연구 지원 등 생산성 기능을 대폭 업데이트했습니다. 이는 챗GPT, 클로드 등 경쟁 서비스와의 격차를 줄이기 위한 전략적 행보입니다. ([출처](https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update))
+
+### 4. 미국 의회, AI '킬 스위치' 법안 도입 추진
+미국 의원들이 국토안보부의 명령에 따라 AI 시스템을 즉시 중단하거나 제한할 수 있도록 하는 'AI 킬 스위치 법안' 도입을 준비 중입니다. 이는 AI 기술의 잠재적 위험을 통제하기 위한 규제 움직임의 일환입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal))
+
+### 5. 오픈AI, ChatGPT 데스크톱 앱에 음성 모드 도입
+오픈AI가 ChatGPT 데스크톱 앱에 새로운 음성 모드를 추가하여 업무 효율성을 높였습니다. 이 기능은 ChatGPT Work 및 Codex와 연동되어 작업을 수행하고 에이전트를 제어하는 데 활용될 수 있습니다. ([출처](https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/))
+
+### 6. 미드저니, 점성술 앱 'Co-Star' 인수
+이미지 및 비디오 생성 AI로 유명한 미드저니가 개인화된 점성술 앱인 Co-Star를 인수했습니다. 이번 인수를 통해 미드저니는 기존 생성형 AI 영역을 넘어 서비스 범위를 확장하고 있습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/970894/midjourney-co-star-acquisition))
+
+### 7. 아마존, 알렉사 플러스에 AI 업데이트 적용
+아마존이 알렉사 플러스에 복잡한 지시 사항을 처리할 수 있는 AI 업데이트를 적용했습니다. 이를 통해 다양한 스마트 홈 기기와의 연동성이 강화되고 자동화 기능이 개선되었습니다. ([출처](https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices))
+
+### 8. 오픈AI, 미국 내 'ChatGPT Health' 서비스 확대
+오픈AI가 미국 전역에 의료 기록과 건강 데이터를 챗봇에 연결할 수 있는 'ChatGPT Health'를 출시했습니다. 회사는 자사 모델이 의료 데이터를 분석하고 처리하는 데 뛰어난 능력을 갖추고 있다고 설명했습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

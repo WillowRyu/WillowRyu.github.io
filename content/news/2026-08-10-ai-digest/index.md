@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-08-10"
+date: "2026-08-10"
+description: "최근 3일간 AI 업계는 모델 보안 강화와 환경적 책임, 그리고 기업들의 AI 도입 가속화 및 전략적 투자에 집중하고 있습니다."
+---
+
+### 1. 가트너: 2027년 중국 AI 모델 점유율 50% 전망
+중국 AI 모델이 강력한 가성비와 기술력을 바탕으로 2027년 전 세계 기업 도입률 50%를 기록할 것으로 예측되었습니다. 가트너는 특정 국가에 대한 과도한 기술 의존이 글로벌 공급망의 치명적인 리스크가 될 수 있다고 경고했습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=213719))
+
+### 2. OpenAI, 보안 우려로 차세대 모델 '아스트라' 개발 일시 중단
+OpenAI는 개발 중인 AI 모델 아스트라가 사이버 공격을 수행할 수 있는 위험을 확인하고 보안 기준을 충족하기 위해 개발 속도를 늦췄습니다. 이는 AI 모델의 강력한 기능이 실질적인 보안 위협이 될 수 있다는 우려를 반영한 조치입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities))
+
+### 3. 아마존 데이터 센터, 환경 오염 논란
+아마존이 텍사스에 건설 중인 데이터 센터를 위해 전용 발전소를 구축하고 있으나, 이 발전소가 미국 내 최대 온실가스 배출원이 될 수 있다는 비판이 제기되었습니다. AI 인프라 확장에 따른 막대한 에너지 소비와 환경적 책임이 다시금 도마 위에 올랐습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/977124/amazon-data-center-worst-polluting-power-plant))
+
+### 4. Anthropic, 클로드 코드 '자동 모드' 기본 활성화
+Anthropic은 프로그래밍 도구인 클로드 코드의 자동 모드를 기본값으로 설정하여 인간의 개입을 최소화하고 개발 효율성을 높였습니다. 이는 AI가 스스로 코딩 작업을 수행하는 영역이 점차 확대되고 있음을 보여줍니다. ([출처](https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/))
+
+### 5. 클라우드플레어, AI 에이전트 전용 브라우저 '카이트서프' 출시
+클라우드플레어가 인간이 아닌 AI 에이전트의 자동화 작업을 위해 설계된 클라우드 호스팅 브라우저 카이트서프를 공개했습니다. 기존 브라우저 대비 컴퓨팅 자원을 적게 사용하여 효율적인 AI 기반 웹 자동화를 지원합니다. ([출처](https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/))
+
+### 6. OpenAI, 프레젠테이션 스타트업 '넥스트슬라이드' 인수
+OpenAI가 프레젠테이션 제작 자동화 스타트업인 넥스트슬라이드를 인수했습니다. 해당 팀은 현재 챗GPT의 기능 고도화를 위한 작업에 합류한 것으로 알려졌습니다. ([출처](https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/))
+
+### 7. 리플링, 기업 내 AI 지출 관리 도구 출시
+리플링은 기업 내에서 무분별하게 지출되는 AI 비용을 추적하고 ROI를 분석할 수 있는 'AI 스펜드 콘솔'을 공개했습니다. 기업들이 AI 도입에 따른 비용 효율성을 검증하려는 움직임이 본격화되고 있습니다. ([출처](https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/))
+
+### 8. 수노(Suno), AI 음악 스팸 방지 위한 워터마크 도입
+AI 음악 생성 플랫폼 수노가 무분별한 스팸성 AI 트랙 확산을 막기 위해 워터마크 기술을 도입하고 다운로드 정책을 강화합니다. 이는 AI 생성 콘텐츠의 투명성을 높이고 플랫폼의 신뢰도를 확보하기 위한 조치입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/976289/suno-ai-music-spam-watermark))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

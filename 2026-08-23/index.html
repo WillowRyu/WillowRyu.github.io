@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Spoqa Han Sans Neo',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Spoqa Han Sans Neo',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Spoqa Han Sans Neo',sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><meta name="generator" content="Gatsby 5.16.1"/><meta name="theme-color" content="#ffffff"/><meta data-react-helmet="true" name="description" content="에러보다 나쁜 건 끝없는 기다림"/><meta data-react-helmet="true" property="og:title" content="&quot;모른다&quot;를 표현하는 법"/><meta data-react-helmet="true" property="og:description" content="에러보다 나쁜 건 끝없는 기다림"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="naver-site-verification" content="76f6ac32f3fb1d4edd76ca9e23147df017e84e1e"/><meta data-react-helmet="true" name="google-site-verification" content="xpWaxIvUUroKZmiqn47I1cdGg6BlValEeeZUZIBOl-k"/><style data-href="/styles.6830571efd052b62ed6b.css" data-identity="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}body{--theme:#1d1e20;--entry:#2e2e33;--pblue:#609fff;--primary:hsla(0,0%,100%,.84);--secondary:hsla(0,0%,100%,.56);--tertiary:hsla(0,0%,100%,.16);--content:hsla(0,0%,100%,.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333;--gap:24px;--radius:8px;background-color:var(--theme)}img{display:block;margin:0 auto}.link-post{margin-bottom:calc(var(--gap)*1.5)}.link-title{color:var(--primary)}.link-desc{color:var(--secondary);margin-bottom:0}a:link,a:visited{color:var(--pblue)}.category-filter{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--gap)}.category-button{background-color:var(--entry);border:1px solid var(--border);border-radius:999px;color:var(--secondary);cursor:pointer;font-size:.78rem;line-height:1.5;padding:3px 10px;transition:color .15s ease,border-color .15s ease,background-color .15s ease}.category-button:hover{border-color:var(--pblue);color:var(--primary)}.category-button.is-active{background-color:var(--pblue);border-color:var(--pblue);color:#fff}.post-meta{align-items:center;display:inline-flex}.post-tag{background-color:var(--entry);border:1px solid var(--border);border-radius:999px;color:var(--pblue);font-size:.72rem;margin-right:8px;padding:1px 9px}.post-tag.tag-tech{border-color:rgba(96,159,255,.5);color:#609fff}.post-tag.tag-talk{border-color:rgba(94,201,138,.5);color:#5ec98a}.post-tag.tag-review{border-color:rgba(224,163,94,.5);color:#e0a35e}.site-nav{margin-bottom:var(--gap)}.site-nav a,.site-nav a:link,.site-nav a:visited{color:var(--pblue);font-size:1.05rem;font-weight:700;text-decoration:none}.site-nav a:hover{text-decoration:underline}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/><link rel="alternate" type="application/rss+xml" title="FE Factory RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=0f40eccc76f1834aab0a5215019710bb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=0f40eccc76f1834aab0a5215019710bb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=0f40eccc76f1834aab0a5215019710bb"/><title data-react-helmet="true">&quot;모른다&quot;를 표현하는 법 | FE Factory</title><link href="//fonts.googleapis.com/css?family=Noto+Serif+KR:400,700|Noto+Sans+KR:400,700" rel="stylesheet" type="text/css"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;color:#1d1d1f"><header><h3 class="link-title" style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit;text-decoration:none" href="/">FE Factory</a></h3><nav class="site-nav" aria-label="사이트 메뉴"><a href="/news/">뉴스</a></nav></header><main class="link-title"><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">&quot;모른다&quot;를 표현하는 법</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">August 23, 2026</p></header><section><p>인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.</p>
+<p><code class="language-text">이 기능은 있을 수도 있고 없을 수도 있다</code> 를 어떻게 적어둘 것인가.</p>
+<p>브라우저마다 지원하는 API 가 다르고, 서버 버전이 제각각이고,<br>
+통신 방식도 어떤 건 연결이 끊긴 걸 바로 알 수 있고 어떤 건 알 수가 없다.<br>
+이런 걸 옵셔널한 능력(optional capability) 이라고 부르는데,<br>
+이름만 거창하지 결국 있을 수도 있고 없을 수도 있는 기능이라는 뜻이다.</p>
+<p>처음엔 이게 별 문제가 아니라고 생각했다.<br>
+없으면 없는 대로 에러가 나겠지 싶었는데, 그게 아니었다.</p>
+<p>에러가 나면 그나마 낫다. 로그도 남고 어디서 터졌는지도 보인다.<br>
+근데 이건 에러가 안 난다. 아무 일도 일어나지 않는다.<br>
+호출은 했는데 답이 안 오고, 화면은 그대로 멈춰 있다.</p>
+<p>정리하다 보니 결국 세 갈래로 나뉘더라.<br>
+어떻게 물어볼 것인가, 답이 없을 때 무슨 일이 생기는가, 그 답을 어디에 둘 것인가.</p>
+<p>하나씩 적어본다.</p>
+<h2>감지하는 것과, 없어도 굴러가게 만드는 것</h2>
+<p>feature detection 과 graceful degradation.<br>
+들어본 사람 있는가? 솔직히 슥 보고 지나갔다가 최근에 다시 보는데<br>
+일단 이 단어들을 뜯어 보기로 했다.</p>
+<p>앞은 방법이다. 실행 중에 “이거 되나?” 하고 한 번 물어보는 것.<br>
+뒤는 그 답이 뭐가 나오든 없으면 없는 대로 굴러가게 만들어두는 걸 말한다.</p>
+<p>번역어가 딱히 안 와닿아서 이 글에서는 그냥 감지랑 대비라고 부르겠다.</p>
+<p>감지는 if 문 한 줄이면 된다.<br>
+대비는 그 if 문의 양쪽 갈래가 같은 약속을 지키게 만드는 일이다.<br>
+품이 훨씬 많이 든다.</p>
+<p>둘 중 하나만 있는 경우가 생각보다 흔한데, 대부분 그게 버그의 원인이 된다.</p>
+<p>감지만 하고 대비를 안 해두면 흔히 보는 “지원하지 않는 브라우저입니다” 화면이 나온다.<br>
+감지 결과를 갈래를 나누는 데 쓰지 않고 막는 데 써버린 경우다.</p>
+<p>반대로 대비만 있고 감지가 없는 경우도 있는데, 플랫폼이 알아서 무시해줄 때가 그렇다.<br>
+바로 다음에 나올 CSS 가 그런 경우다.</p>
+<p>둘 다 있으면 제대로 된 옵셔널 기능이 되고,<br>
+둘 다 없으면 응답이 안 온 채로 화면이 멈춘다. 뒤에서 얘기할 그 문제다.</p>
+<h3>웹은 이걸 어떻게 풀었나</h3>
+<p>웹에서 이걸 제일 잘 푼 건 아마 CSS 의 해석 규칙일 거다.<br>
+브라우저가 모르는 선언은 그냥 조용히 버려진다.</p>
+<deckgo-highlight-code language="css"  >
+          <code slot="code">.grid {
+  display: flex; /* 모든 브라우저가 이해 — 바닥 */
+  display: grid; /* 이해하면 덮어씀, 모르면 이 줄이 사라짐 */
+}</code>
+        </deckgo-highlight-code>
+<p>감지 코드가 한 줄도 없다.<br>
+언어 자체가 “모르는 건 버린다” 로 설계돼 있어서 대비가 공짜로 따라온다.<br>
+설계 하나로 전 세계 개발자가 안 써도 될 코드를 없애버렸다. 🥹</p>
+<p>HTML 도 비슷하다.<br>
+모르는 속성은 그냥 무시된다.<br>
+img 의 <code class="language-text">loading="lazy"</code> 를 모르는 브라우저는 그 속성만 건너뛰고 이미지는 멀쩡히 띄운다.<br>
+<code class="language-text">&lt;input type="date"></code> 도 모르면 그냥 텍스트 입력창이 된다. 달력은 못 띄워도 날짜는 받을 수 있다.</p>
+<p>여기서 한 발 더 나간 것도 있는데, <code class="language-text">&lt;video></code> 나 <code class="language-text">&lt;canvas></code> 는 태그 안에 넣어둔 내용이 폴백이 된다.</p>
+<deckgo-highlight-code language="html"  >
+          <code slot="code">&lt;video controls src=&quot;movie.mp4&quot;&gt;
+  &lt;!-- video 를 아는 브라우저는 이 안쪽을 아예 안 보여준다 --&gt;
+  &lt;a href=&quot;movie.mp4&quot;&gt;영상 다운로드&lt;/a&gt;
+&lt;/video&gt;</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">&lt;video></code> 를 아는 브라우저는 영상을 재생하고 안쪽 내용은 감춘다.<br>
+모르는 브라우저는 <code class="language-text">&lt;video></code> 라는 태그를 무시해버리니까, 남은 자식 요소를 그냥 그린다.<br>
+영상은 못 봐도 다운로드 링크는 보게 된다.</p>
+<p>요즘 브라우저는 다 <code class="language-text">&lt;video></code> 를 아니까 저 안쪽이 실제로 보일 일은 거의 없다.<br>
+그래도 폴백을 문법 안에 넣어둔 발상 자체는 꽤 영리하다고 생각한다.</p>
+<p>근데 이걸로 안 되는 경우가 있다.<br>
+갈래를 나눠야 할 때가 그렇다.<br>
+그래서 나중에 대놓고 감지하는 방법이 추가됐다.</p>
+<deckgo-highlight-code language="css"  >
+          <code slot="code">/* CSS 안에서 감지하기 */
+@supports (display: grid) {
+  .grid {
+    display: grid;
+  }
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code language="js"  >
+          <code slot="code">// JS 는 속성이 있는지 확인한다
+if (&quot;serviceWorker&quot; in navigator) { ... }
+if (&quot;supportedEntryTypes&quot; in PerformanceObserver) { ... }</code>
+        </deckgo-highlight-code>
+<h3>공유 버튼으로 보면</h3>
+<p>흔한 예제로 보는 게 빠르겠다.<br>
+공유하기 버튼을 만든다고 해보자.</p>
+<deckgo-highlight-code language="js"  >
+          <code slot="code">// ✕ 누구인지를 묻는다
+if (isIOS() &amp;&amp; getIOSVersion() &gt;= 12) {
+  navigator.share({ url })
+} else {
+  copyToClipboard(url)
+}</code>
+        </deckgo-highlight-code>
+<p>브라우저 종류랑 버전을 보고 기능을 짐작하는 방식이다.<br>
+당장은 잘 돌아간다. 근데 새 브라우저가 나오거나 다른 브라우저가 이 기능을 지원하기 시작하면 바로 어긋난다.</p>
+<deckgo-highlight-code language="js"  >
+          <code slot="code">// ✓ 뭘 할 수 있는지를 묻는다
+async function share(url) {
+  if (navigator.share) {
+    await navigator.share({ url }) // 네이티브 공유 시트
+    return
+  }
+
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(url) // 클립보드 복사
+    toast(&quot;링크를 복사했어요&quot;)
+    return
+  }
+
+  showUrlInput(url) // 최후 폴백: 그냥 보여주고 직접 복사하게
+}</code>
+        </deckgo-highlight-code>
+<p>세 갈래 중 어디로 가든 사용자는 결국 링크를 얻는다.<br>
+경험은 아래로 갈수록 나빠지지만 약속은 깨지지 않는다.</p>
+<p>이게 대비고, 위의 <code class="language-text">if</code> 두 개가 감지다.</p>
+<p>반대로 아래처럼 짜면 감지는 했는데 대비가 없는 경우가 된다.</p>
+<deckgo-highlight-code language="jsx"  >
+          <code slot="code">// 감지를 &quot;막는 데&quot; 써버린 경우
+if (!navigator.share) {
+  return &lt;p&gt;이 브라우저에서는 공유를 지원하지 않습니다&lt;/p&gt;
+}</code>
+        </deckgo-highlight-code>
+<p>링크 복사만 시켜주면 되는 일인데 기능을 통째로 꺼버렸다.<br>
+감지는 갈래를 나누는 데 쓰는 거지 막는 데 쓰는 게 아니다.</p>
+<h3>그 유명한 UA 문자열</h3>
+<p>위 예제의 ✕ 쪽이 흔히 말하는 UA 스니핑이다.<br>
+브라우저가 누구인지를 보고 뭘 할 수 있는지를 짐작하는 것.</p>
+<p>이 짐작은 반드시 어긋난다.<br>
+새 브라우저가 나오고, 버전이 오르고, 기능이 추가되니까.</p>
+<p>그 결과가 오늘날의 UA 문자열이다.</p>
+<deckgo-highlight-code   >
+          <code slot="code">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36</code>
+        </deckgo-highlight-code>
+<p>Chrome 이 Mozilla 이자 Safari 이자 KHTML 인 척하고 있다.<br>
+다들 누구인지를 보고 기능을 판단하니까, 브라우저들이 서로를 흉내내기 시작한 결과다.<br>
+처음부터 뭘 할 수 있는지를 물었으면 안 생겼을 화석이다. 🙃</p>
+<h3>감지를 어느 층에 둘 것인가</h3>
+<p>이게 제일 중요한 판단인 것 같다.</p>
+<p>감지 코드를 앱 곳곳에 뿌려두면 갈래가 계속 늘어난다.<br>
+버튼마다 화면마다 <code class="language-text">이 브라우저 되나?</code> 를 묻고 있으면 관리가 안 된다.</p>
+<p>반대로 가장 아래층에서 한 번 감지하고 흡수해버리면<br>
+그 위의 코드는 이런 갈래가 있다는 사실조차 모른다.</p>
+<p>위 예제의 <code class="language-text">share(url)</code> 이 그런 경우다.<br>
+버튼을 만드는 쪽은 그냥 <code class="language-text">share(url)</code> 을 부르면 되고,<br>
+이 브라우저가 뭘 지원하는지는 알 필요가 없다.</p>
+<p>감지는 이런 갈래를 숨길 수 있는 가장 아래층에 두는 게 좋더라.</p>
+<h2>아무 말도 없는 콜백</h2>
+<p>알려주겠다고 해놓고 어떤 상황에서는 안 알려주는 API 가 있다.<br>
+받는 쪽에서는 아직 안 온 것인지, 앞으로도 안 올 것인지 구별할 방법이 없다.</p>
+<p><strong>끝나지 않는 상태는 에러보다 나쁘다.</strong></p>
+<p>에러에는 그래도 처리할 자리가 있다.<br>
+<code class="language-text">catch</code> 가 돌고 <code class="language-text">finally</code> 가 돌고, 사용자에게 뭐라도 보여줄 수 있다.</p>
+<p>근데 끝나지 않는 상태에는 아무것도 없다.<br>
+catch 도 안 돌고 finally 도 안 돌고, 화면은 계속 그대로다.<br>
+재현하기도 어렵다. 특정 네트워크 상황에서만 나타나니까.</p>
+<p>QA 에서는 안 잡히고 운영에서만 터지는 종류다. 개인적으로 제일 싫어한다. 🫠</p>
+<h3>웹에서 실제로 겪는 것들</h3>
+<p>찾아보니 웹 플랫폼이 이 문제로 꽤 오래 고생한 기록이 있더라.</p>
+<p><code class="language-text">fetch()</code> 는 연결이 끊겼는데 살아있는 것처럼 보이면 프로미스가 영원히 안 끝난다.<br>
+기본 타임아웃이 아예 없었다.<br>
+2022년에 <code class="language-text">AbortSignal.timeout()</code> 이 나왔다.<br>
+프로미스에도 시계가 필요하다는 걸 뒤늦게 인정한 거다.</p>
+<p><code class="language-text">WebSocket</code> 은 네트워크가 죽어도 소켓이 “열림” 으로 보인다.<br>
+OS 타임아웃이 걸릴 때까지 수 분이 걸리기도 한다.<br>
+그래서 RFC 6455 에 <code class="language-text">ping/pong</code> 프레임이 들어가 있다.<br>
+열려 보인다고 상대가 살아있다는 뜻은 아니라는 얘기.</p>
+<p><code class="language-text">beforeunload</code> 와 <code class="language-text">unload</code> 는 iOS 사파리에서 백그라운드로 넘어가거나 탭이 정리될 때 안 불린다.<br>
+여기에 저장 로직을 넣어뒀다면 통째로 유실된다.<br>
+지금은 <code class="language-text">visibilitychange</code> 나 <code class="language-text">freeze</code>/<code class="language-text">resume</code> 를 쓰는 게 맞다.</p>
+<p><code class="language-text">img.onerror</code> 는 다른 출처의 이미지일 때 보안상 자세한 이유를 주지 못한다.<br>
+게다가 일부 차단 경로에서는 <code class="language-text">onload</code> 도 <code class="language-text">onerror</code> 도 안 온다.<br>
+그래서 이미지 로딩은 관행적으로 타임아웃을 항상 같이 건다.</p>
+<p><code class="language-text">getUserMedia()</code> 는 사용자가 권한 창을 그냥 무시하면 성공도 실패도 아닌 채로 대기한다.<br>
+이건 아직 정해진 답이 없어서, 부르는 쪽이 직접 시계를 걸어야 한다.</p>
+<p>찾다 보니 답이 다 똑같더라.<br>
+<code class="language-text">기다림에는 시계를 붙인다.</code><br>
+여기까지 오는 데 20년쯤 걸린 거다. 🤔</p>
+<h3>그리고 제일 흔한 실수</h3>
+<p>남의 API 얘기만 할 게 아니다. 우리가 직접 만드는 경우도 많다.</p>
+<deckgo-highlight-code language="js"  >
+          <code slot="code">new Promise((resolve, reject) =&gt; {
+  doThing((err, value) =&gt; {
+    if (err) {
+      logger.warn(err)
+      return // ← 여기. 영원히 안 끝난다
+    }
+    resolve(value)
+  })
+})</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">return</code> 하나 때문에 이 프로미스는 끝나지 않는다.<br>
+게다가 로그는 남아서 더 헷갈린다.<br>
+<code class="language-text">에러는 찍혔는데 왜 화면이 안 넘어가지?</code></p>
+<p>이게 리뷰에서도 잘 안 잡힌다.<br>
+에러 처리를 안 한 게 아니라 처리는 했는데 끝을 안 낸 거라서, 언뜻 보면 멀쩡해 보인다. 🫠</p>
+<h3>일단 시계는 붙이고 보자</h3>
+<p>제일 기본적인 방어다.</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">function withDeadline&lt;T&gt;(
+  promise: Promise&lt;T&gt;,
+  ms: number,
+  label: string
+): Promise&lt;T&gt; {
+  let timer: ReturnType&lt;typeof setTimeout&gt; | undefined
+
+  const clock = new Promise&lt;never&gt;((_, reject) =&gt; {
+    timer = setTimeout(
+      () =&gt; reject(new Error(`${label}: ${ms}ms 안에 끝나지 않음`)),
+      ms
+    )
+  })
+
+  return Promise.race([promise, clock]).finally(() =&gt; clearTimeout(timer))
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">// 이제 최소한 &quot;언젠가는 끝난다&quot; 가 보장된다
+const profile = await withDeadline(fetchProfile(userId), 5000, &quot;fetchProfile&quot;)</code>
+        </deckgo-highlight-code>
+<p>다만 이건 부르는 쪽의 프로미스만 끝내는 거고,<br>
+안에서 돌던 작업은 그대로 돌고 있다는 걸 알고 써야 한다.<br>
+여기에 재시도까지 붙으면 요청이 두 배로 나간다. 🤡</p>
+<p>작업 자체를 취소해야 한다면 그에 맞는 수단을 써야 한다.</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">// fetch 는 이렇게. 실제로 요청이 취소된다
+await fetch(url, { signal: AbortSignal.timeout(5000) })</code>
+        </deckgo-highlight-code>
+<h3>근데 시계는 임시방편이다</h3>
+<p>진짜 해결은 이쪽이다.<br>
+통신 계층 인터페이스를 만든다고 해보자.</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">// ✕ 없는 능력을 있는 것처럼 만든다
+interface Transport {
+  onDisconnect(cb: () =&gt; void): void
+}
+
+class PollingTransport implements Transport {
+  onDisconnect(cb: () =&gt; void) {
+    // 폴링 방식이라 끊김을 감지할 방법이 없다.
+    // 일단 인터페이스는 맞춰야 하니 받아만 둔다
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>이 <code class="language-text">일단 받아만 둔다</code> 가 문제의 시작이다.</p>
+<p>부르는 쪽은 <code class="language-text">등록했으니 끊기면 알려주겠지</code> 라고 믿게 된다.<br>
+그 잘못된 믿음 때문에 타임아웃조차 걸어두지 않는다.<br>
+그리고 영원히 기다린다.</p>
+<p>인터페이스 맞추려고 넣은 빈 메서드 하나가, 저 멀리 호출부에서 멈춘 화면으로 돌아온다.</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">// ✓ 없으면 없다고 말한다
+interface Transport {
+  onDisconnect?(cb: () =&gt; void): void // 옵셔널
+}
+
+// 부르는 쪽
+if (transport.onDisconnect) {
+  transport.onDisconnect(() =&gt; settle(&quot;disconnected&quot;))
+}
+
+// 있든 없든 이 시계는 항상 건다
+const result = await withDeadline(request, 30_000, &quot;request&quot;)</code>
+        </deckgo-highlight-code>
+<p>차이는 부르는 쪽이 뭘 믿게 되냐에 있다.</p>
+<p>앞의 코드에서는 아직 연결돼 있다고 믿는다. 틀린 믿음이다.<br>
+뒤의 코드에서는 이 통신 방식이 감지를 못 한다는 걸 안다. 이건 맞다.</p>
+<p><code class="language-text">모른다를 괜찮다로 보고하지 말자.</code><br>
+없다고 말하는 건 그래도 정직하다. 아무 말 없는 콜백은 그냥 거짓말이고.</p>
+<p>그리고 이게 앞에서 한 얘기랑 이어진다.<br>
+<code class="language-text">onDisconnect</code> 가 있으면 즉시 통보를 받고, 없으면 못 받는다. 이게 감지.<br>
+있든 없든 30초 안에는 반드시 끝난다. 이게 대비.<br>
+있으면 빨라질 뿐, 약속 자체는 바뀌지 않는다.</p>
+<h3>테스트로 잡는 방법</h3>
+<p>아무 일도 일어나지 않는 걸 테스트하기는 애매한데, 방법이 있긴 하다.</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">it(&quot;연결이 끊기면 타임아웃을 기다리지 않고 즉시 끝난다&quot;, async () =&gt; {
+  useFakeTimers() // 가짜 시계를 세워둔다. 이 테스트에서 1ms 도 움직이지 않는다
+  const pending = client.request(&quot;getUser&quot;, { id: 1 })
+
+  transport.emitDisconnect() // 끊김 발생
+
+  await expect(pending).rejects.toThrow(DisconnectedError)
+})</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">가짜 시계를 전혀 움직이지 않고</code> 끝나는지를 본다.<br>
+시계를 돌려버리면 타임아웃 때문에 끝난 건지, 제대로 처리돼서 끝난 건지 구별할 수 없다.</p>
+<h2>있는지 없는지를 어디에 둘 것인가</h2>
+<p>마지막은 이 기능이 있는지 없는지를 어디에 적어둘 거냐는 문제다.</p>
+<p>크게 세 가지고 비용이 다 다르다.<br>
+그리고 필요한 것보다 위를 고르면 그만큼 부담으로 남는다.<br>
+나도 예전엔 필요도 없는데 위를 고르곤 했다. 뭔가 튼튼해 보이니까. 🤡</p>
+<h3>그냥 있어도 되고 없어도 된다고 적기</h3>
+<p>스펙에서 MAY 라고 부르는 것이다.<br>
+있어도 되고 없어도 된다고 적어두고 끝. 쓰는 쪽에서 직접 확인해서 판단한다.</p>
+<p>있는지 없는지를 그 자리에서 확인할 수 있을 때만 쓸 수 있다.<br>
+같은 프로세스 안의 객체 같은 것.<br>
+앞에서 본 <code class="language-text">onDisconnect?</code> 나 CSS 의 <code class="language-text">@supports</code>, <code class="language-text">"x" in obj</code> 가 다 여기 해당한다.</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">interface UploaderOptions {
+  onProgress?: (loaded: number, total: number) =&gt; void
+}</code>
+        </deckgo-highlight-code>
+<p>제일 싸다. 문서 한 줄과 물음표 하나면 끝난다.<br>
+그 자리에서 확인할 수 있는 거라면 여기서 멈추는 게 맞다.</p>
+<h3>할 수 있는 걸 목록으로 알려주기</h3>
+<p>한쪽이 다른 쪽에게 “나는 이런 걸 할 수 있다” 를 목록으로 알려준다.<br>
+보통 연결을 맺을 때 한 번 주고받는다.</p>
+<p>상대가 다른 프로세스나 다른 기기에 있어서 직접 들여다볼 수 없을 때 쓴다.<br>
+HTTP 의 <code class="language-text">Allow</code> 헤더나 언어 서버가 쓰는 <code class="language-text">ServerCapabilities</code> 같은 것들이 이 방식이다.</p>
+<p>파일 업로드 서버라면 이런 모양이 된다.</p>
+<p><code class="language-text">GET /upload/capabilities</code></p>
+<deckgo-highlight-code language="json"  >
+          <code slot="code">{
+  &quot;maxBytes&quot;: 104857600,
+  &quot;formats&quot;: [&quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/webp&quot;],
+  &quot;resumable&quot;: true,
+  &quot;checksums&quot;: [&quot;sha256&quot;]
+}</code>
+        </deckgo-highlight-code>
+<p>클라이언트는 이걸 보고 화면을 조정한다.<br>
+100MB 넘는 파일은 고르는 단계에서 막고,<br>
+<code class="language-text">resumable</code> 이 false 면 이어올리기 버튼을 아예 안 그리고,<br>
+webp 를 못 받으면 보내기 전에 변환한다.</p>
+<p>업로드 눌러놓고 한참 기다린 다음에 413(용량 초과) 받는 것보단 낫다.</p>
+<h3>서로 맞춰가기</h3>
+<p>양쪽이 각자 할 수 있는 걸 내놓고, 둘 다 되는 걸로 맞추거나 정해진 방식으로 실패한다.<br>
+흔히 협상이라고 부른다.</p>
+<p>양쪽이 따로따로 배포되고 각자 발전할 때 필요하다.<br>
+TLS 에서 암호화 방식을 고르거나, HTTP 에서 압축 방식을 고르는 게 이렇게 돌아간다.</p>
+<deckgo-highlight-code   >
+          <code slot="code"># 클라이언트가 할 수 있는 것들을 내민다
+Accept-Encoding: br, gzip
+
+# 서버가 하나를 고른다 — 맞춰짐
+Content-Encoding: br</code>
+        </deckgo-highlight-code>
+<p>버전을 맞추는 거라면 이렇게 된다.</p>
+<deckgo-highlight-code   >
+          <code slot="code">클라이언트: &quot;나는 v2, v1 을 할 수 있다&quot;
+서버:       &quot;그럼 v1 로 하자&quot;           ← 맞춰짐
+서버:       &quot;나는 v3 만 된다&quot;            ← 실패. 426 Upgrade Required</code>
+        </deckgo-highlight-code>
+<p>협상이라고 부르려면 맞추는 규칙과 실패했을 때의 처리가 둘 다 있어야 한다.<br>
+겹치는 게 하나도 없으면 어떻게 되냐는 질문에 답을 못 하면<br>
+그건 협상이 아니라 그냥 운에 맡기는 거다.</p>
+<h3>그래서 뭘 고를까</h3>
+<p>순서대로 물어보면 대체로 답이 나오더라.</p>
+<ul>
+<li>
+<p>상대가 뭘 할 수 있는지 그 자리에서 확인할 수 있나?<br>
+확인할 수 있으면 MAY 로 충분하다. 아니면 다음 질문으로.</p>
+</li>
+<li>
+<p>상대가 다른 프로세스나 다른 기기에 있나?<br>
+그렇다면 목록으로 알려주는 게 필요하다. 아니라면 MAY 로 돌아가면 된다.</p>
+</li>
+<li>
+<p>양쪽 다 따로 배포되고 각자 발전하나?<br>
+둘 다 그렇다면 협상까지 가야 한다. 한쪽만 그렇다면 목록으로 충분하다.</p>
+</li>
+<li>
+<p>연결이 유지되는 동안 능력이 바뀌지 않나?<br>
+안 바뀐다면 연결할 때 한 번 주고받고 끝이다.<br>
+바뀔 수 있다면 실행 중에 다시 물어야 하는데, 그 전에 설계를 다시 보는 게 낫다.</p>
+</li>
+</ul>
+<p>마지막 질문이 좀 까다롭다.<br>
+연결 도중에 능력이 바뀔 수 있다는 걸 인정하는 순간<br>
+한 번으로 끝나지 않고, 이미 받아둔 정보를 언제 버릴지가 새로운 문제가 된다.</p>
+<p>그래서 대부분의 프로토콜은 능력이 연결 중에 바뀌지 않는다는 걸 아예 못 박아둔다.</p>
+<h3>목록이 거짓말을 하기 시작할 때</h3>
+<p>능력 목록은 손으로 관리하는 순간 반드시 실제 동작과 어긋난다.<br>
+시간 문제일 뿐이다.</p>
+<p>메서드를 추가하고 목록에 안 넣거나, 지웠는데 목록에는 남아 있거나.<br>
+그러면 이도 저도 아니게 된다.<br>
+목록을 믿었더니 없고, 안 믿을 거면 목록을 왜 만들었나 싶고. 🤔</p>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">// ✕ 나란한 두 목록 — 반드시 어긋난다
+const handlers = {
+  &quot;file/upload&quot;: handleUpload,
+  &quot;file/delete&quot;: handleDelete,
+}
+
+const CAPABILITIES = [&quot;file/upload&quot;, &quot;file/delete&quot;, &quot;file/move&quot;]
+//                                                   ^^^^^^^^^^^
+//                                        3개월 전에 지운 메서드</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code language="ts"  >
+          <code slot="code">// ✓ 실제 처리하는 곳에서 만들어 낸다
+const handlers = {
+  &quot;file/upload&quot;: handleUpload,
+  &quot;file/delete&quot;: handleDelete,
+} as const
+
+const CAPABILITIES = Object.keys(handlers)
+// 등록하면 자동으로 나타나고, 지우면 자동으로 사라진다</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">능력 목록은 실제 처리하는 곳에서 만들어 낸다.</code><br>
+따로 관리하는 목록은 두지 않는다.</p>
+<p>지금 당장 목록이 필요 없어도 이렇게 해두면 좋은데,<br>
+나중에 필요해졌을 때 기준이 되는 곳이 이미 하나 있어서 그냥 내보내기만 하면 되기 때문이다.</p>
+<h2>정리</h2>
+<p>쓰다 보니 세 얘기가 결국 같은 말을 하고 있었다.</p>
+<p><code class="language-text">모르는 것을 모른다고 말할 수 있게 만들자.</code></p>
+<ul>
+<li>아무 말 없는 걸 괜찮은 걸로 넘기고</li>
+<li>없는 걸 지원 안 하는 걸로 넘기고</li>
+<li>시계도 없이 언젠가 오겠지로 넘기고</li>
+</ul>
+<p>모르는 걸 아는 걸로 넘기는 순간, 그게 버그가 된다.</p>
+<p>요즘은 인터페이스 하나 만들 때마다 이걸 물어보려고 한다.</p>
+<p><code class="language-text">이 인터페이스는 "모른다" 를 말할 수 있나?</code></p>
+<p>말할 수 없다면 언젠가 잘못된 신호를 보내게 되더라.<br>
+그리고 그 신호는 대부분 멈춰 있는 화면으로 돌아온다. 🥲</p>
+<p>비단 개발 작업만이 아니라 인생사에도 똑같이 적용되는 얘기다.<br>
+<code class="language-text">모른다</code> 는 솔직한 답이다.<br>
+다들 자기가 모른다는 건 알고 있고, 그걸 메우려고 죽을 때까지 노력하는 게 아닐까.</p>
+<p>요즘은 AI 덕분에 이 모른다가 정말 빠르게 해결되고 있다.<br>
+근데 착각하면 안 되는 게 있다.<br>
+내 모른다를 해결하는 게 중요하지, 그걸 통째로 맡겨버리면 점점 바보가 된다.</p>
+<p>그러니 잘 쓰자 AI. 🤡</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;align-items:center;margin-bottom:4.375rem"><div data-gatsby-image-wrapper="" style="width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;flex-shrink:0;border-radius:50%" class="gatsby-image-wrapper"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#382828;width:50px;height:50px;position:relative"></div><picture><source type="image/webp" data-srcset="/static/a059584611001686ea16de6bad6c16b9/dbc4a/whoami.webp 50w,/static/a059584611001686ea16de6bad6c16b9/d8057/whoami.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="border-radius:50%;opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/a059584611001686ea16de6bad6c16b9/6ac16/whoami.jpg" data-srcset="/static/a059584611001686ea16de6bad6c16b9/6ac16/whoami.jpg 50w,/static/a059584611001686ea16de6bad6c16b9/e07e1/whoami.jpg 100w" alt="w.r"/></picture><noscript><picture><source type="image/webp" srcSet="/static/a059584611001686ea16de6bad6c16b9/dbc4a/whoami.webp 50w,/static/a059584611001686ea16de6bad6c16b9/d8057/whoami.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="border-radius:50%;opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/a059584611001686ea16de6bad6c16b9/6ac16/whoami.jpg" srcSet="/static/a059584611001686ea16de6bad6c16b9/6ac16/whoami.jpg 50w,/static/a059584611001686ea16de6bad6c16b9/e07e1/whoami.jpg 100w" alt="w.r"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p class="link-title" style="margin-bottom:0"><a href="mailto:stainer1004@gmail.com">Send Email</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2026-06-22/">← <!-- -->모든 걸 AFK 하면 안 된다</a></li><li></li></ul></nav><div id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-166907717-1"></script><script>
+      
+      
+      if(true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166907717-1', {"send_page_view":false});
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2026-08-23/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-d5cead549dbe42ffb40f.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-cb352902fdc6a98fd70b.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-accab014ae43ea3e70d0.js\"],\"component---src-pages-news-js\":[\"/component---src-pages-news-js-a48bb170fd0bf385579a.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-ec3e78e77bf26362b4dd.js\"],\"component---src-templates-news-post-js\":[\"/component---src-templates-news-post-js-13eaf0ec6a7c2d8f15e1.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="7cbb53da33c3e89c213c";</script><script src="/webpack-runtime-7741d520ad573d37856c.js" async></script><script src="/framework-647153102893cffe9a5c.js" async></script><script src="/app-d5cead549dbe42ffb40f.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

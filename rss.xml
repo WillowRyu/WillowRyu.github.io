@@ -1,4 +1,417 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FE Factory RSS Feed]]></title><description><![CDATA[tip, info and study case of FE enginner]]></description><link>https://willowryu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Aug 2026 00:29:42 GMT</lastBuildDate><item><title><![CDATA[모든 걸 AFK 하면 안 된다]]></title><description><![CDATA[게임에서 (Away From Keyboard…]]></description><link>https://willowryu.github.io/2026-06-22/</link><guid isPermaLink="false">https://willowryu.github.io/2026-06-22/</guid><pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;게임에서 &lt;code class=&quot;language-text&quot;&gt;AFK&lt;/code&gt;(Away From Keyboard)는 키보드 앞을 떠나 캐릭터를 오토에 맡겨두는 걸 말한다.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FE Factory RSS Feed]]></title><description><![CDATA[tip, info and study case of FE enginner]]></description><link>https://willowryu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 23 Aug 2026 09:55:26 GMT</lastBuildDate><item><title><![CDATA["모른다"를 표현하는 법]]></title><description><![CDATA[인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.  를 어떻게 적어둘 것인가. 브라우저마다 지원하는 API…]]></description><link>https://willowryu.github.io/2026-08-23/</link><guid isPermaLink="false">https://willowryu.github.io/2026-08-23/</guid><pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;이 기능은 있을 수도 있고 없을 수도 있다&lt;/code&gt; 를 어떻게 적어둘 것인가.&lt;/p&gt;
+&lt;p&gt;브라우저마다 지원하는 API 가 다르고, 서버 버전이 제각각이고,&lt;br&gt;
+통신 방식도 어떤 건 연결이 끊긴 걸 바로 알 수 있고 어떤 건 알 수가 없다.&lt;br&gt;
+이런 걸 옵셔널한 능력(optional capability) 이라고 부르는데,&lt;br&gt;
+이름만 거창하지 결국 있을 수도 있고 없을 수도 있는 기능이라는 뜻이다.&lt;/p&gt;
+&lt;p&gt;처음엔 이게 별 문제가 아니라고 생각했다.&lt;br&gt;
+없으면 없는 대로 에러가 나겠지 싶었는데, 그게 아니었다.&lt;/p&gt;
+&lt;p&gt;에러가 나면 그나마 낫다. 로그도 남고 어디서 터졌는지도 보인다.&lt;br&gt;
+근데 이건 에러가 안 난다. 아무 일도 일어나지 않는다.&lt;br&gt;
+호출은 했는데 답이 안 오고, 화면은 그대로 멈춰 있다.&lt;/p&gt;
+&lt;p&gt;정리하다 보니 결국 세 갈래로 나뉘더라.&lt;br&gt;
+어떻게 물어볼 것인가, 답이 없을 때 무슨 일이 생기는가, 그 답을 어디에 둘 것인가.&lt;/p&gt;
+&lt;p&gt;하나씩 적어본다.&lt;/p&gt;
+&lt;h2&gt;감지하는 것과, 없어도 굴러가게 만드는 것&lt;/h2&gt;
+&lt;p&gt;feature detection 과 graceful degradation.&lt;br&gt;
+들어본 사람 있는가? 솔직히 슥 보고 지나갔다가 최근에 다시 보는데&lt;br&gt;
+일단 이 단어들을 뜯어 보기로 했다.&lt;/p&gt;
+&lt;p&gt;앞은 방법이다. 실행 중에 “이거 되나?” 하고 한 번 물어보는 것.&lt;br&gt;
+뒤는 그 답이 뭐가 나오든 없으면 없는 대로 굴러가게 만들어두는 걸 말한다.&lt;/p&gt;
+&lt;p&gt;번역어가 딱히 안 와닿아서 이 글에서는 그냥 감지랑 대비라고 부르겠다.&lt;/p&gt;
+&lt;p&gt;감지는 if 문 한 줄이면 된다.&lt;br&gt;
+대비는 그 if 문의 양쪽 갈래가 같은 약속을 지키게 만드는 일이다.&lt;br&gt;
+품이 훨씬 많이 든다.&lt;/p&gt;
+&lt;p&gt;둘 중 하나만 있는 경우가 생각보다 흔한데, 대부분 그게 버그의 원인이 된다.&lt;/p&gt;
+&lt;p&gt;감지만 하고 대비를 안 해두면 흔히 보는 “지원하지 않는 브라우저입니다” 화면이 나온다.&lt;br&gt;
+감지 결과를 갈래를 나누는 데 쓰지 않고 막는 데 써버린 경우다.&lt;/p&gt;
+&lt;p&gt;반대로 대비만 있고 감지가 없는 경우도 있는데, 플랫폼이 알아서 무시해줄 때가 그렇다.&lt;br&gt;
+바로 다음에 나올 CSS 가 그런 경우다.&lt;/p&gt;
+&lt;p&gt;둘 다 있으면 제대로 된 옵셔널 기능이 되고,&lt;br&gt;
+둘 다 없으면 응답이 안 온 채로 화면이 멈춘다. 뒤에서 얘기할 그 문제다.&lt;/p&gt;
+&lt;h3&gt;웹은 이걸 어떻게 풀었나&lt;/h3&gt;
+&lt;p&gt;웹에서 이걸 제일 잘 푼 건 아마 CSS 의 해석 규칙일 거다.&lt;br&gt;
+브라우저가 모르는 선언은 그냥 조용히 버려진다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.grid {
+  display: flex; /* 모든 브라우저가 이해 — 바닥 */
+  display: grid; /* 이해하면 덮어씀, 모르면 이 줄이 사라짐 */
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;감지 코드가 한 줄도 없다.&lt;br&gt;
+언어 자체가 “모르는 건 버린다” 로 설계돼 있어서 대비가 공짜로 따라온다.&lt;br&gt;
+설계 하나로 전 세계 개발자가 안 써도 될 코드를 없애버렸다. 🥹&lt;/p&gt;
+&lt;p&gt;HTML 도 비슷하다.&lt;br&gt;
+모르는 속성은 그냥 무시된다.&lt;br&gt;
+img 의 &lt;code class=&quot;language-text&quot;&gt;loading=&quot;lazy&quot;&lt;/code&gt; 를 모르는 브라우저는 그 속성만 건너뛰고 이미지는 멀쩡히 띄운다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;&amp;lt;input type=&quot;date&quot;&gt;&lt;/code&gt; 도 모르면 그냥 텍스트 입력창이 된다. 달력은 못 띄워도 날짜는 받을 수 있다.&lt;/p&gt;
+&lt;p&gt;여기서 한 발 더 나간 것도 있는데, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;video&gt;&lt;/code&gt; 나 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;canvas&gt;&lt;/code&gt; 는 태그 안에 넣어둔 내용이 폴백이 된다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;html&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;&amp;lt;video controls src=&amp;quot;movie.mp4&amp;quot;&amp;gt;
+  &amp;lt;!-- video 를 아는 브라우저는 이 안쪽을 아예 안 보여준다 --&amp;gt;
+  &amp;lt;a href=&amp;quot;movie.mp4&amp;quot;&amp;gt;영상 다운로드&amp;lt;/a&amp;gt;
+&amp;lt;/video&amp;gt;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;video&gt;&lt;/code&gt; 를 아는 브라우저는 영상을 재생하고 안쪽 내용은 감춘다.&lt;br&gt;
+모르는 브라우저는 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;video&gt;&lt;/code&gt; 라는 태그를 무시해버리니까, 남은 자식 요소를 그냥 그린다.&lt;br&gt;
+영상은 못 봐도 다운로드 링크는 보게 된다.&lt;/p&gt;
+&lt;p&gt;요즘 브라우저는 다 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;video&gt;&lt;/code&gt; 를 아니까 저 안쪽이 실제로 보일 일은 거의 없다.&lt;br&gt;
+그래도 폴백을 문법 안에 넣어둔 발상 자체는 꽤 영리하다고 생각한다.&lt;/p&gt;
+&lt;p&gt;근데 이걸로 안 되는 경우가 있다.&lt;br&gt;
+갈래를 나눠야 할 때가 그렇다.&lt;br&gt;
+그래서 나중에 대놓고 감지하는 방법이 추가됐다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;/* CSS 안에서 감지하기 */
+@supports (display: grid) {
+  .grid {
+    display: grid;
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;js&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// JS 는 속성이 있는지 확인한다
+if (&amp;quot;serviceWorker&amp;quot; in navigator) { ... }
+if (&amp;quot;supportedEntryTypes&amp;quot; in PerformanceObserver) { ... }&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3&gt;공유 버튼으로 보면&lt;/h3&gt;
+&lt;p&gt;흔한 예제로 보는 게 빠르겠다.&lt;br&gt;
+공유하기 버튼을 만든다고 해보자.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;js&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ✕ 누구인지를 묻는다
+if (isIOS() &amp;amp;&amp;amp; getIOSVersion() &amp;gt;= 12) {
+  navigator.share({ url })
+} else {
+  copyToClipboard(url)
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;브라우저 종류랑 버전을 보고 기능을 짐작하는 방식이다.&lt;br&gt;
+당장은 잘 돌아간다. 근데 새 브라우저가 나오거나 다른 브라우저가 이 기능을 지원하기 시작하면 바로 어긋난다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;js&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ✓ 뭘 할 수 있는지를 묻는다
+async function share(url) {
+  if (navigator.share) {
+    await navigator.share({ url }) // 네이티브 공유 시트
+    return
+  }
+
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(url) // 클립보드 복사
+    toast(&amp;quot;링크를 복사했어요&amp;quot;)
+    return
+  }
+
+  showUrlInput(url) // 최후 폴백: 그냥 보여주고 직접 복사하게
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;세 갈래 중 어디로 가든 사용자는 결국 링크를 얻는다.&lt;br&gt;
+경험은 아래로 갈수록 나빠지지만 약속은 깨지지 않는다.&lt;/p&gt;
+&lt;p&gt;이게 대비고, 위의 &lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt; 두 개가 감지다.&lt;/p&gt;
+&lt;p&gt;반대로 아래처럼 짜면 감지는 했는데 대비가 없는 경우가 된다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;jsx&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 감지를 &amp;quot;막는 데&amp;quot; 써버린 경우
+if (!navigator.share) {
+  return &amp;lt;p&amp;gt;이 브라우저에서는 공유를 지원하지 않습니다&amp;lt;/p&amp;gt;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;링크 복사만 시켜주면 되는 일인데 기능을 통째로 꺼버렸다.&lt;br&gt;
+감지는 갈래를 나누는 데 쓰는 거지 막는 데 쓰는 게 아니다.&lt;/p&gt;
+&lt;h3&gt;그 유명한 UA 문자열&lt;/h3&gt;
+&lt;p&gt;위 예제의 ✕ 쪽이 흔히 말하는 UA 스니핑이다.&lt;br&gt;
+브라우저가 누구인지를 보고 뭘 할 수 있는지를 짐작하는 것.&lt;/p&gt;
+&lt;p&gt;이 짐작은 반드시 어긋난다.&lt;br&gt;
+새 브라우저가 나오고, 버전이 오르고, 기능이 추가되니까.&lt;/p&gt;
+&lt;p&gt;그 결과가 오늘날의 UA 문자열이다.&lt;/p&gt;
+&lt;deckgo-highlight-code   &gt;
+          &lt;code slot=&quot;code&quot;&gt;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;Chrome 이 Mozilla 이자 Safari 이자 KHTML 인 척하고 있다.&lt;br&gt;
+다들 누구인지를 보고 기능을 판단하니까, 브라우저들이 서로를 흉내내기 시작한 결과다.&lt;br&gt;
+처음부터 뭘 할 수 있는지를 물었으면 안 생겼을 화석이다. 🙃&lt;/p&gt;
+&lt;h3&gt;감지를 어느 층에 둘 것인가&lt;/h3&gt;
+&lt;p&gt;이게 제일 중요한 판단인 것 같다.&lt;/p&gt;
+&lt;p&gt;감지 코드를 앱 곳곳에 뿌려두면 갈래가 계속 늘어난다.&lt;br&gt;
+버튼마다 화면마다 &lt;code class=&quot;language-text&quot;&gt;이 브라우저 되나?&lt;/code&gt; 를 묻고 있으면 관리가 안 된다.&lt;/p&gt;
+&lt;p&gt;반대로 가장 아래층에서 한 번 감지하고 흡수해버리면&lt;br&gt;
+그 위의 코드는 이런 갈래가 있다는 사실조차 모른다.&lt;/p&gt;
+&lt;p&gt;위 예제의 &lt;code class=&quot;language-text&quot;&gt;share(url)&lt;/code&gt; 이 그런 경우다.&lt;br&gt;
+버튼을 만드는 쪽은 그냥 &lt;code class=&quot;language-text&quot;&gt;share(url)&lt;/code&gt; 을 부르면 되고,&lt;br&gt;
+이 브라우저가 뭘 지원하는지는 알 필요가 없다.&lt;/p&gt;
+&lt;p&gt;감지는 이런 갈래를 숨길 수 있는 가장 아래층에 두는 게 좋더라.&lt;/p&gt;
+&lt;h2&gt;아무 말도 없는 콜백&lt;/h2&gt;
+&lt;p&gt;알려주겠다고 해놓고 어떤 상황에서는 안 알려주는 API 가 있다.&lt;br&gt;
+받는 쪽에서는 아직 안 온 것인지, 앞으로도 안 올 것인지 구별할 방법이 없다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;끝나지 않는 상태는 에러보다 나쁘다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;에러에는 그래도 처리할 자리가 있다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;catch&lt;/code&gt; 가 돌고 &lt;code class=&quot;language-text&quot;&gt;finally&lt;/code&gt; 가 돌고, 사용자에게 뭐라도 보여줄 수 있다.&lt;/p&gt;
+&lt;p&gt;근데 끝나지 않는 상태에는 아무것도 없다.&lt;br&gt;
+catch 도 안 돌고 finally 도 안 돌고, 화면은 계속 그대로다.&lt;br&gt;
+재현하기도 어렵다. 특정 네트워크 상황에서만 나타나니까.&lt;/p&gt;
+&lt;p&gt;QA 에서는 안 잡히고 운영에서만 터지는 종류다. 개인적으로 제일 싫어한다. 🫠&lt;/p&gt;
+&lt;h3&gt;웹에서 실제로 겪는 것들&lt;/h3&gt;
+&lt;p&gt;찾아보니 웹 플랫폼이 이 문제로 꽤 오래 고생한 기록이 있더라.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;fetch()&lt;/code&gt; 는 연결이 끊겼는데 살아있는 것처럼 보이면 프로미스가 영원히 안 끝난다.&lt;br&gt;
+기본 타임아웃이 아예 없었다.&lt;br&gt;
+2022년에 &lt;code class=&quot;language-text&quot;&gt;AbortSignal.timeout()&lt;/code&gt; 이 나왔다.&lt;br&gt;
+프로미스에도 시계가 필요하다는 걸 뒤늦게 인정한 거다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;WebSocket&lt;/code&gt; 은 네트워크가 죽어도 소켓이 “열림” 으로 보인다.&lt;br&gt;
+OS 타임아웃이 걸릴 때까지 수 분이 걸리기도 한다.&lt;br&gt;
+그래서 RFC 6455 에 &lt;code class=&quot;language-text&quot;&gt;ping/pong&lt;/code&gt; 프레임이 들어가 있다.&lt;br&gt;
+열려 보인다고 상대가 살아있다는 뜻은 아니라는 얘기.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;beforeunload&lt;/code&gt; 와 &lt;code class=&quot;language-text&quot;&gt;unload&lt;/code&gt; 는 iOS 사파리에서 백그라운드로 넘어가거나 탭이 정리될 때 안 불린다.&lt;br&gt;
+여기에 저장 로직을 넣어뒀다면 통째로 유실된다.&lt;br&gt;
+지금은 &lt;code class=&quot;language-text&quot;&gt;visibilitychange&lt;/code&gt; 나 &lt;code class=&quot;language-text&quot;&gt;freeze&lt;/code&gt;/&lt;code class=&quot;language-text&quot;&gt;resume&lt;/code&gt; 를 쓰는 게 맞다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;img.onerror&lt;/code&gt; 는 다른 출처의 이미지일 때 보안상 자세한 이유를 주지 못한다.&lt;br&gt;
+게다가 일부 차단 경로에서는 &lt;code class=&quot;language-text&quot;&gt;onload&lt;/code&gt; 도 &lt;code class=&quot;language-text&quot;&gt;onerror&lt;/code&gt; 도 안 온다.&lt;br&gt;
+그래서 이미지 로딩은 관행적으로 타임아웃을 항상 같이 건다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;getUserMedia()&lt;/code&gt; 는 사용자가 권한 창을 그냥 무시하면 성공도 실패도 아닌 채로 대기한다.&lt;br&gt;
+이건 아직 정해진 답이 없어서, 부르는 쪽이 직접 시계를 걸어야 한다.&lt;/p&gt;
+&lt;p&gt;찾다 보니 답이 다 똑같더라.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;기다림에는 시계를 붙인다.&lt;/code&gt;&lt;br&gt;
+여기까지 오는 데 20년쯤 걸린 거다. 🤔&lt;/p&gt;
+&lt;h3&gt;그리고 제일 흔한 실수&lt;/h3&gt;
+&lt;p&gt;남의 API 얘기만 할 게 아니다. 우리가 직접 만드는 경우도 많다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;js&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;new Promise((resolve, reject) =&amp;gt; {
+  doThing((err, value) =&amp;gt; {
+    if (err) {
+      logger.warn(err)
+      return // ← 여기. 영원히 안 끝난다
+    }
+    resolve(value)
+  })
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;return&lt;/code&gt; 하나 때문에 이 프로미스는 끝나지 않는다.&lt;br&gt;
+게다가 로그는 남아서 더 헷갈린다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;에러는 찍혔는데 왜 화면이 안 넘어가지?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;이게 리뷰에서도 잘 안 잡힌다.&lt;br&gt;
+에러 처리를 안 한 게 아니라 처리는 했는데 끝을 안 낸 거라서, 언뜻 보면 멀쩡해 보인다. 🫠&lt;/p&gt;
+&lt;h3&gt;일단 시계는 붙이고 보자&lt;/h3&gt;
+&lt;p&gt;제일 기본적인 방어다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function withDeadline&amp;lt;T&amp;gt;(
+  promise: Promise&amp;lt;T&amp;gt;,
+  ms: number,
+  label: string
+): Promise&amp;lt;T&amp;gt; {
+  let timer: ReturnType&amp;lt;typeof setTimeout&amp;gt; | undefined
+
+  const clock = new Promise&amp;lt;never&amp;gt;((_, reject) =&amp;gt; {
+    timer = setTimeout(
+      () =&amp;gt; reject(new Error(`${label}: ${ms}ms 안에 끝나지 않음`)),
+      ms
+    )
+  })
+
+  return Promise.race([promise, clock]).finally(() =&amp;gt; clearTimeout(timer))
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 이제 최소한 &amp;quot;언젠가는 끝난다&amp;quot; 가 보장된다
+const profile = await withDeadline(fetchProfile(userId), 5000, &amp;quot;fetchProfile&amp;quot;)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;다만 이건 부르는 쪽의 프로미스만 끝내는 거고,&lt;br&gt;
+안에서 돌던 작업은 그대로 돌고 있다는 걸 알고 써야 한다.&lt;br&gt;
+여기에 재시도까지 붙으면 요청이 두 배로 나간다. 🤡&lt;/p&gt;
+&lt;p&gt;작업 자체를 취소해야 한다면 그에 맞는 수단을 써야 한다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// fetch 는 이렇게. 실제로 요청이 취소된다
+await fetch(url, { signal: AbortSignal.timeout(5000) })&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3&gt;근데 시계는 임시방편이다&lt;/h3&gt;
+&lt;p&gt;진짜 해결은 이쪽이다.&lt;br&gt;
+통신 계층 인터페이스를 만든다고 해보자.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ✕ 없는 능력을 있는 것처럼 만든다
+interface Transport {
+  onDisconnect(cb: () =&amp;gt; void): void
+}
+
+class PollingTransport implements Transport {
+  onDisconnect(cb: () =&amp;gt; void) {
+    // 폴링 방식이라 끊김을 감지할 방법이 없다.
+    // 일단 인터페이스는 맞춰야 하니 받아만 둔다
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이 &lt;code class=&quot;language-text&quot;&gt;일단 받아만 둔다&lt;/code&gt; 가 문제의 시작이다.&lt;/p&gt;
+&lt;p&gt;부르는 쪽은 &lt;code class=&quot;language-text&quot;&gt;등록했으니 끊기면 알려주겠지&lt;/code&gt; 라고 믿게 된다.&lt;br&gt;
+그 잘못된 믿음 때문에 타임아웃조차 걸어두지 않는다.&lt;br&gt;
+그리고 영원히 기다린다.&lt;/p&gt;
+&lt;p&gt;인터페이스 맞추려고 넣은 빈 메서드 하나가, 저 멀리 호출부에서 멈춘 화면으로 돌아온다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ✓ 없으면 없다고 말한다
+interface Transport {
+  onDisconnect?(cb: () =&amp;gt; void): void // 옵셔널
+}
+
+// 부르는 쪽
+if (transport.onDisconnect) {
+  transport.onDisconnect(() =&amp;gt; settle(&amp;quot;disconnected&amp;quot;))
+}
+
+// 있든 없든 이 시계는 항상 건다
+const result = await withDeadline(request, 30_000, &amp;quot;request&amp;quot;)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;차이는 부르는 쪽이 뭘 믿게 되냐에 있다.&lt;/p&gt;
+&lt;p&gt;앞의 코드에서는 아직 연결돼 있다고 믿는다. 틀린 믿음이다.&lt;br&gt;
+뒤의 코드에서는 이 통신 방식이 감지를 못 한다는 걸 안다. 이건 맞다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;모른다를 괜찮다로 보고하지 말자.&lt;/code&gt;&lt;br&gt;
+없다고 말하는 건 그래도 정직하다. 아무 말 없는 콜백은 그냥 거짓말이고.&lt;/p&gt;
+&lt;p&gt;그리고 이게 앞에서 한 얘기랑 이어진다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;onDisconnect&lt;/code&gt; 가 있으면 즉시 통보를 받고, 없으면 못 받는다. 이게 감지.&lt;br&gt;
+있든 없든 30초 안에는 반드시 끝난다. 이게 대비.&lt;br&gt;
+있으면 빨라질 뿐, 약속 자체는 바뀌지 않는다.&lt;/p&gt;
+&lt;h3&gt;테스트로 잡는 방법&lt;/h3&gt;
+&lt;p&gt;아무 일도 일어나지 않는 걸 테스트하기는 애매한데, 방법이 있긴 하다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;it(&amp;quot;연결이 끊기면 타임아웃을 기다리지 않고 즉시 끝난다&amp;quot;, async () =&amp;gt; {
+  useFakeTimers() // 가짜 시계를 세워둔다. 이 테스트에서 1ms 도 움직이지 않는다
+  const pending = client.request(&amp;quot;getUser&amp;quot;, { id: 1 })
+
+  transport.emitDisconnect() // 끊김 발생
+
+  await expect(pending).rejects.toThrow(DisconnectedError)
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;가짜 시계를 전혀 움직이지 않고&lt;/code&gt; 끝나는지를 본다.&lt;br&gt;
+시계를 돌려버리면 타임아웃 때문에 끝난 건지, 제대로 처리돼서 끝난 건지 구별할 수 없다.&lt;/p&gt;
+&lt;h2&gt;있는지 없는지를 어디에 둘 것인가&lt;/h2&gt;
+&lt;p&gt;마지막은 이 기능이 있는지 없는지를 어디에 적어둘 거냐는 문제다.&lt;/p&gt;
+&lt;p&gt;크게 세 가지고 비용이 다 다르다.&lt;br&gt;
+그리고 필요한 것보다 위를 고르면 그만큼 부담으로 남는다.&lt;br&gt;
+나도 예전엔 필요도 없는데 위를 고르곤 했다. 뭔가 튼튼해 보이니까. 🤡&lt;/p&gt;
+&lt;h3&gt;그냥 있어도 되고 없어도 된다고 적기&lt;/h3&gt;
+&lt;p&gt;스펙에서 MAY 라고 부르는 것이다.&lt;br&gt;
+있어도 되고 없어도 된다고 적어두고 끝. 쓰는 쪽에서 직접 확인해서 판단한다.&lt;/p&gt;
+&lt;p&gt;있는지 없는지를 그 자리에서 확인할 수 있을 때만 쓸 수 있다.&lt;br&gt;
+같은 프로세스 안의 객체 같은 것.&lt;br&gt;
+앞에서 본 &lt;code class=&quot;language-text&quot;&gt;onDisconnect?&lt;/code&gt; 나 CSS 의 &lt;code class=&quot;language-text&quot;&gt;@supports&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;&quot;x&quot; in obj&lt;/code&gt; 가 다 여기 해당한다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;interface UploaderOptions {
+  onProgress?: (loaded: number, total: number) =&amp;gt; void
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;제일 싸다. 문서 한 줄과 물음표 하나면 끝난다.&lt;br&gt;
+그 자리에서 확인할 수 있는 거라면 여기서 멈추는 게 맞다.&lt;/p&gt;
+&lt;h3&gt;할 수 있는 걸 목록으로 알려주기&lt;/h3&gt;
+&lt;p&gt;한쪽이 다른 쪽에게 “나는 이런 걸 할 수 있다” 를 목록으로 알려준다.&lt;br&gt;
+보통 연결을 맺을 때 한 번 주고받는다.&lt;/p&gt;
+&lt;p&gt;상대가 다른 프로세스나 다른 기기에 있어서 직접 들여다볼 수 없을 때 쓴다.&lt;br&gt;
+HTTP 의 &lt;code class=&quot;language-text&quot;&gt;Allow&lt;/code&gt; 헤더나 언어 서버가 쓰는 &lt;code class=&quot;language-text&quot;&gt;ServerCapabilities&lt;/code&gt; 같은 것들이 이 방식이다.&lt;/p&gt;
+&lt;p&gt;파일 업로드 서버라면 이런 모양이 된다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;GET /upload/capabilities&lt;/code&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;{
+  &amp;quot;maxBytes&amp;quot;: 104857600,
+  &amp;quot;formats&amp;quot;: [&amp;quot;image/jpeg&amp;quot;, &amp;quot;image/png&amp;quot;, &amp;quot;image/webp&amp;quot;],
+  &amp;quot;resumable&amp;quot;: true,
+  &amp;quot;checksums&amp;quot;: [&amp;quot;sha256&amp;quot;]
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;클라이언트는 이걸 보고 화면을 조정한다.&lt;br&gt;
+100MB 넘는 파일은 고르는 단계에서 막고,&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;resumable&lt;/code&gt; 이 false 면 이어올리기 버튼을 아예 안 그리고,&lt;br&gt;
+webp 를 못 받으면 보내기 전에 변환한다.&lt;/p&gt;
+&lt;p&gt;업로드 눌러놓고 한참 기다린 다음에 413(용량 초과) 받는 것보단 낫다.&lt;/p&gt;
+&lt;h3&gt;서로 맞춰가기&lt;/h3&gt;
+&lt;p&gt;양쪽이 각자 할 수 있는 걸 내놓고, 둘 다 되는 걸로 맞추거나 정해진 방식으로 실패한다.&lt;br&gt;
+흔히 협상이라고 부른다.&lt;/p&gt;
+&lt;p&gt;양쪽이 따로따로 배포되고 각자 발전할 때 필요하다.&lt;br&gt;
+TLS 에서 암호화 방식을 고르거나, HTTP 에서 압축 방식을 고르는 게 이렇게 돌아간다.&lt;/p&gt;
+&lt;deckgo-highlight-code   &gt;
+          &lt;code slot=&quot;code&quot;&gt;# 클라이언트가 할 수 있는 것들을 내민다
+Accept-Encoding: br, gzip
+
+# 서버가 하나를 고른다 — 맞춰짐
+Content-Encoding: br&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;버전을 맞추는 거라면 이렇게 된다.&lt;/p&gt;
+&lt;deckgo-highlight-code   &gt;
+          &lt;code slot=&quot;code&quot;&gt;클라이언트: &amp;quot;나는 v2, v1 을 할 수 있다&amp;quot;
+서버:       &amp;quot;그럼 v1 로 하자&amp;quot;           ← 맞춰짐
+서버:       &amp;quot;나는 v3 만 된다&amp;quot;            ← 실패. 426 Upgrade Required&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;협상이라고 부르려면 맞추는 규칙과 실패했을 때의 처리가 둘 다 있어야 한다.&lt;br&gt;
+겹치는 게 하나도 없으면 어떻게 되냐는 질문에 답을 못 하면&lt;br&gt;
+그건 협상이 아니라 그냥 운에 맡기는 거다.&lt;/p&gt;
+&lt;h3&gt;그래서 뭘 고를까&lt;/h3&gt;
+&lt;p&gt;순서대로 물어보면 대체로 답이 나오더라.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;상대가 뭘 할 수 있는지 그 자리에서 확인할 수 있나?&lt;br&gt;
+확인할 수 있으면 MAY 로 충분하다. 아니면 다음 질문으로.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;상대가 다른 프로세스나 다른 기기에 있나?&lt;br&gt;
+그렇다면 목록으로 알려주는 게 필요하다. 아니라면 MAY 로 돌아가면 된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;양쪽 다 따로 배포되고 각자 발전하나?&lt;br&gt;
+둘 다 그렇다면 협상까지 가야 한다. 한쪽만 그렇다면 목록으로 충분하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;연결이 유지되는 동안 능력이 바뀌지 않나?&lt;br&gt;
+안 바뀐다면 연결할 때 한 번 주고받고 끝이다.&lt;br&gt;
+바뀔 수 있다면 실행 중에 다시 물어야 하는데, 그 전에 설계를 다시 보는 게 낫다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;마지막 질문이 좀 까다롭다.&lt;br&gt;
+연결 도중에 능력이 바뀔 수 있다는 걸 인정하는 순간&lt;br&gt;
+한 번으로 끝나지 않고, 이미 받아둔 정보를 언제 버릴지가 새로운 문제가 된다.&lt;/p&gt;
+&lt;p&gt;그래서 대부분의 프로토콜은 능력이 연결 중에 바뀌지 않는다는 걸 아예 못 박아둔다.&lt;/p&gt;
+&lt;h3&gt;목록이 거짓말을 하기 시작할 때&lt;/h3&gt;
+&lt;p&gt;능력 목록은 손으로 관리하는 순간 반드시 실제 동작과 어긋난다.&lt;br&gt;
+시간 문제일 뿐이다.&lt;/p&gt;
+&lt;p&gt;메서드를 추가하고 목록에 안 넣거나, 지웠는데 목록에는 남아 있거나.&lt;br&gt;
+그러면 이도 저도 아니게 된다.&lt;br&gt;
+목록을 믿었더니 없고, 안 믿을 거면 목록을 왜 만들었나 싶고. 🤔&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ✕ 나란한 두 목록 — 반드시 어긋난다
+const handlers = {
+  &amp;quot;file/upload&amp;quot;: handleUpload,
+  &amp;quot;file/delete&amp;quot;: handleDelete,
+}
+
+const CAPABILITIES = [&amp;quot;file/upload&amp;quot;, &amp;quot;file/delete&amp;quot;, &amp;quot;file/move&amp;quot;]
+//                                                   ^^^^^^^^^^^
+//                                        3개월 전에 지운 메서드&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ✓ 실제 처리하는 곳에서 만들어 낸다
+const handlers = {
+  &amp;quot;file/upload&amp;quot;: handleUpload,
+  &amp;quot;file/delete&amp;quot;: handleDelete,
+} as const
+
+const CAPABILITIES = Object.keys(handlers)
+// 등록하면 자동으로 나타나고, 지우면 자동으로 사라진다&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;능력 목록은 실제 처리하는 곳에서 만들어 낸다.&lt;/code&gt;&lt;br&gt;
+따로 관리하는 목록은 두지 않는다.&lt;/p&gt;
+&lt;p&gt;지금 당장 목록이 필요 없어도 이렇게 해두면 좋은데,&lt;br&gt;
+나중에 필요해졌을 때 기준이 되는 곳이 이미 하나 있어서 그냥 내보내기만 하면 되기 때문이다.&lt;/p&gt;
+&lt;h2&gt;정리&lt;/h2&gt;
+&lt;p&gt;쓰다 보니 세 얘기가 결국 같은 말을 하고 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;모르는 것을 모른다고 말할 수 있게 만들자.&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;아무 말 없는 걸 괜찮은 걸로 넘기고&lt;/li&gt;
+&lt;li&gt;없는 걸 지원 안 하는 걸로 넘기고&lt;/li&gt;
+&lt;li&gt;시계도 없이 언젠가 오겠지로 넘기고&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;모르는 걸 아는 걸로 넘기는 순간, 그게 버그가 된다.&lt;/p&gt;
+&lt;p&gt;요즘은 인터페이스 하나 만들 때마다 이걸 물어보려고 한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;이 인터페이스는 &quot;모른다&quot; 를 말할 수 있나?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;말할 수 없다면 언젠가 잘못된 신호를 보내게 되더라.&lt;br&gt;
+그리고 그 신호는 대부분 멈춰 있는 화면으로 돌아온다. 🥲&lt;/p&gt;
+&lt;p&gt;비단 개발 작업만이 아니라 인생사에도 똑같이 적용되는 얘기다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;모른다&lt;/code&gt; 는 솔직한 답이다.&lt;br&gt;
+다들 자기가 모른다는 건 알고 있고, 그걸 메우려고 죽을 때까지 노력하는 게 아닐까.&lt;/p&gt;
+&lt;p&gt;요즘은 AI 덕분에 이 모른다가 정말 빠르게 해결되고 있다.&lt;br&gt;
+근데 착각하면 안 되는 게 있다.&lt;br&gt;
+내 모른다를 해결하는 게 중요하지, 그걸 통째로 맡겨버리면 점점 바보가 된다.&lt;/p&gt;
+&lt;p&gt;그러니 잘 쓰자 AI. 🤡&lt;/p&gt;</content:encoded></item><item><title><![CDATA[모든 걸 AFK 하면 안 된다]]></title><description><![CDATA[게임에서 (Away From Keyboard…]]></description><link>https://willowryu.github.io/2026-06-22/</link><guid isPermaLink="false">https://willowryu.github.io/2026-06-22/</guid><pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;게임에서 &lt;code class=&quot;language-text&quot;&gt;AFK&lt;/code&gt;(Away From Keyboard)는 키보드 앞을 떠나 캐릭터를 오토에 맡겨두는 걸 말한다.&lt;br&gt;
 던전 입구에 세워두고 자리를 비웠다가 돌아오면, 가방에 골드가 그득하다.&lt;/p&gt;
 &lt;p&gt;에이전트한테 큰 방향만 툭 던져놓고 &lt;code class=&quot;language-text&quot;&gt;이런 기능 만들어줘&lt;/code&gt; 하고 자리를 비웠다가&lt;br&gt;
 돌아오면 뭔가가 만들어져있다.&lt;/p&gt;

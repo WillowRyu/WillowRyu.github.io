@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FE Factory RSS Feed]]></title><description><![CDATA[tip, info and study case of FE enginner]]></description><link>https://willowryu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Sep 2026 01:29:28 GMT</lastBuildDate><item><title><![CDATA["모른다"를 표현하는 법]]></title><description><![CDATA[인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.  를 어떻게 적어둘 것인가. 브라우저마다 지원하는 API…]]></description><link>https://willowryu.github.io/2026-08-23/</link><guid isPermaLink="false">https://willowryu.github.io/2026-08-23/</guid><pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[FE Factory RSS Feed]]></title><description><![CDATA[tip, info and study case of FE enginner]]></description><link>https://willowryu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Sep 2026 13:51:28 GMT</lastBuildDate><item><title><![CDATA[내 코드는 영원히 살아있을듯]]></title><description><![CDATA[특이점이 온 Astra 를 사용하면서 갑자기 이런 생각이 들었다. 로버트 C…]]></description><link>https://willowryu.github.io/2026-09-07/</link><guid isPermaLink="false">https://willowryu.github.io/2026-09-07/</guid><pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;특이점이 온 Astra 를 사용하면서 갑자기 이런 생각이 들었다.&lt;/p&gt;
+&lt;p&gt;로버트 C. 마틴은 &lt;code class=&quot;language-text&quot;&gt;소프트웨어는 쉽게 바꿀 수 있어야 한다&lt;/code&gt; 고 했다.&lt;br&gt;
+아무도 건드리면 안 되는 코드는 사실상 하드웨어처럼 굳어버린다는 것이다.&lt;/p&gt;
+&lt;p&gt;헌데 지금처럼 소프트할 때가 있을까&lt;/p&gt;
+&lt;p&gt;피터 나우어는 &lt;code class=&quot;language-text&quot;&gt;프로그램의 이론을 가진 팀이 해산할 때 프로그램이 죽는다&lt;/code&gt;고 했다.&lt;br&gt;
+왜 이렇게 만들었고 앞으로 어떻게 고쳐야 하는지 아는 사람들이 사라지는 거다.&lt;br&gt;
+만화 원피스에서 잊히는 걸 죽음에 빗댔던 대사도 생각난다.&lt;/p&gt;
+&lt;p&gt;하지만 AI 가 그 사정을 계속 기억하고 있으면 어떨까.&lt;br&gt;
+왜 이렇게 만들었는지, 저번에는 뭘 건드렸다가 터졌는지까지 다음 작업에 써먹을 수 있다면.&lt;/p&gt;
+&lt;p&gt;꼭 이 프로젝트가 계속 돌아가야만 살아있는 건가 싶기도 하다.&lt;br&gt;
+내 코드가 AI 학습에 들어갔다면, 서비스를 접어도 어딘가엔 흔적이 남지 않을까.&lt;/p&gt;
+&lt;p&gt;프로젝트 통째로 보관된다는 얘기는 아니고,&lt;br&gt;
+거기서 배운 방식이 다른 코드를 만드는 데 쓰일 수는 있겠다.&lt;br&gt;
+나도 예전 회사에서 배운 거나 삽질하면서 찾은 걸 아직 써먹고 있으니까.&lt;/p&gt;
+&lt;p&gt;계속 고쳐주면 오래 살아있고, 없어져도 배운 건 다른 데서 쓰이고.&lt;/p&gt;
+&lt;p&gt;나는 프로젝트 끝났다고 폴더 닫았는데&lt;br&gt;
+내 코드에서 배운 뭔가가 남의 프로젝트에서 또 일하고 있을 것이다. 아마도?&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9d84c8aa7b2bff2f3a36ebc9612b9892/72aae/code-farewell.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.27027027027026%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD8UlEQVR42hWTa0yTBxSGv+zHRFHaflBoaft1LW3BCgUVbEtbWqGC4AoBC06uglC5qaPIVfEaB16iI4BuRMCpUWeYLrtEnVuyGOY2sjmzLGbLsi1LzBI1ZluWGHfj2bcfb07O+fGey/seId2ix6rToFGJhDJsvBLy0+11EMm2EslMwSNpUKtUmJPUFMl5S34mNbnLaQ5kMBD2M7YzzKV99Xwy3cXjuZMIq9NM2I1apMR4kuIUBE3JVKYZqVxhpNCkkWuxKGJj0YsiTouB8jWp+FL1LE8SWSQ8hypmETa1kkxdAoUOM4Iz3UK6TJImT7J2dTpl2XbaA6twmSRcGelUFwWpzPeSYzES8rgo87qpDvqoWBsglOcjzaDHkihiT1aTmhSPUJBlw5miI2+Fic6KAJ2lPprWraEgK4PGwnx21zfSVrGR8lwXfVuqGdm+lWhdDTUbymgIlZJlsSAuWUyyGEdyvAJhsL2cnrZSetsr6GkOsaOhhLqQh/qQmyPRBk4f6GB0dyuTAxFmj3Uxf3mAjvUZeG0GqgpyqMzLYpM/i6qADP8qhN8e3QA+Y+Hf6/D3TRYevQm/nOOfL0d59sMMC4+v8Ne917lzciv7Nvm50L2RE4VWzm92MT8ii3FkK7cONfGRjJvDrQizM7t58mCWJz+d4/cHF3n64zQLP8/w7OsJnt6f5s+7U3x+vJkbB+rYF3Yz3lrCnnwr+30GJopTuLTZwbW2ANd2hrjQ14igU8TikETcVg1Bh5GaYCZ7m4uYP7OTP+bG+XSyj1vDzby3v5aDFTn0r7PT6TISzTVwuMjCaImNyZCZ2ZeW8360HCFBtoW4dDGJckxWLkGzNIakmOdZmyZxe6SJd492cn1kG9NdYQ5VeRirzSXqt7EtR6LXb2aXV+JgQOKIjLFiK4JasZRExTK0ymVI8UrZwCI6ZSxlLjtfTMginI5ydaiGc91hDsqEo1v8DIUy6fC8QGO2xHaPxB6vnq5sLf25egStuIwkZRwahSy7/BF6UUmGWcdYdz23x3Yx1RHiVEsRr7UWsyMoW8ljoW+9nfpsA9UOLb0+E70eAy+79OzyGeUbJsShl/2jVcXJqy9BtTiGFE0CxS4HvRvzGCp3cqIxyKlIIQOlK9kesNCQraM0Tc2GFJGwPYGI00C7W6JppQYhRRuPWSPyf1zvdlJVuI5DkWq+e2eCO2eP8tXZvTy8NcXDD6a4Oz3I28NR9lcX019RwFBlkIEXveyQb9okN6lxyIQW+QfNWhGLTk1/Qy1zZ17l+6uTfHi8h/uXR/nm4jG+vTLOrx9f4sG1Ye69NcH5wTbe6Gvh6oEujm4O0uIysc0l0eqW+A8QgDR/xIiBFAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;누렁이에게 행복한 추억을 많이 쌓으라고 말하는 장면&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9d84c8aa7b2bff2f3a36ebc9612b9892/fcda8/code-farewell.png&quot;
+        srcset=&quot;/static/9d84c8aa7b2bff2f3a36ebc9612b9892/12f09/code-farewell.png 148w,
+/static/9d84c8aa7b2bff2f3a36ebc9612b9892/e4a3f/code-farewell.png 295w,
+/static/9d84c8aa7b2bff2f3a36ebc9612b9892/fcda8/code-farewell.png 590w,
+/static/9d84c8aa7b2bff2f3a36ebc9612b9892/efc66/code-farewell.png 885w,
+/static/9d84c8aa7b2bff2f3a36ebc9612b9892/72aae/code-farewell.png 964w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;코드야~ AI 아저씨 말 잘 듣고 오래오래 행복하게 살아야 한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA["모른다"를 표현하는 법]]></title><description><![CDATA[인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.  를 어떻게 적어둘 것인가. 브라우저마다 지원하는 API…]]></description><link>https://willowryu.github.io/2026-08-23/</link><guid isPermaLink="false">https://willowryu.github.io/2026-08-23/</guid><pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;인터페이스를 설계하다 보면 늘 한 번씩 걸리는 게 있다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;이 기능은 있을 수도 있고 없을 수도 있다&lt;/code&gt; 를 어떻게 적어둘 것인가.&lt;/p&gt;
 &lt;p&gt;브라우저마다 지원하는 API 가 다르고, 서버 버전이 제각각이고,&lt;br&gt;
 통신 방식도 어떤 건 연결이 끊긴 걸 바로 알 수 있고 어떤 건 알 수가 없다.&lt;br&gt;

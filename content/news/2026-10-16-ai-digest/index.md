@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-10-16"
+date: "2026-10-16"
+description: "최근 3일간 AI 업계는 메타의 새로운 오픈 웨이트 모델 출시, AI 에이전트의 일상화, 그리고 AI 데이터 확보 및 안전성 검증을 둘러싼 다양한 변화와 논의가 이어졌습니다."
+---
+
+### 1. 메타, 애플 실리콘에서 구동되는 오픈 웨이트 AI 모델 'Muse Spark' 공개
+메타가 애플과 협력하여 최신 MLX 프레임워크를 통해 애플 실리콘 환경에서 로컬로 구동 가능한 오픈 웨이트 모델 'Muse Spark Open'을 출시했습니다. 이 모델은 데스크톱 환경에서 높은 성능을 제공하며 오픈 웨이트 모델의 새로운 기준을 제시합니다. ([출처](https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx))
+
+### 2. 앤스로픽, AI 모델 안전성 평가 위해 METR 연구진에 내부 접근 권한 허용
+앤스로픽이 AI 모델의 위험성과 안전성을 객관적으로 평가하기 위해 METR 연구진에게 직원 수준의 내부 접근 권한을 제공했습니다. 앤스로픽은 연구진의 평가 결과를 공개하는 과정에서 이를 차단할 권리를 포기하며 투명성을 강화했습니다. ([출처](https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/))
+
+### 3. 블루스카이, AI 기반 'Attie' 플랫폼으로 누구나 웹사이트와 게임 제작 지원
+블루스카이가 AI 플랫폼 'Attie'를 확장하여 사용자가 코딩 지식 없이도 게임, 퀴즈, 웹사이트 등 다양한 인터랙티브 콘텐츠를 제작할 수 있게 했습니다. 생성된 콘텐츠는 블루스카이 소셜 네트워크를 통해 쉽게 공유할 수 있습니다. ([출처](https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps))
+
+### 4. 오픈AI, 챗GPT 크롬 확장 프로그램에 브라우저 탭 읽기 기능 추가
+오픈AI가 챗GPT 크롬 확장 프로그램을 업데이트하여 사용자가 열어둔 브라우저 탭의 내용을 챗GPT가 직접 참조할 수 있게 했습니다. 이를 통해 사용자는 웹 서핑 중 챗GPT와 더욱 유기적으로 상호작용할 수 있습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs))
+
+### 5. 아마존, 일상 업무 자동화하는 개인용 AI 디바이스 출시
+아마존 산하 'Bee'가 대화 요약, 할 일 목록 생성 등이 가능한 75달러부터 시작하는 개인용 AI 디바이스를 출시했습니다. 이 기기들은 알렉사 및 아마존 쇼핑 서비스와 연동되어 사용자 편의성을 높이는 데 초점을 맞췄습니다. ([출처](https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/))
+
+### 6. AI 칩 설계 스타트업 'Ricursive Intelligence', 컴퓨팅 자원 부족 해결 도전
+Ricursive Intelligence는 AI를 활용해 칩을 설계하고 반복 학습을 통해 설계를 최적화하는 기술을 개발 중입니다. 이들은 AI를 통한 설계 자동화로 칩 개발 과정을 가속화하여 현재의 컴퓨팅 자원 부족 문제를 해결하고자 합니다. ([출처](https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/))
+
+### 7. AI 학습 데이터 확보를 위해 폐업 스타트업 데이터 매입하는 AI 연구소들
+최근 AI 연구소들이 모델 학습을 위한 양질의 데이터를 확보하기 위해 폐업한 스타트업의 코드베이스와 데이터를 매입하는 사례가 늘고 있습니다. 데이터의 가치가 재조명되면서 폐업한 기업들이 자산 정리를 통해 수익을 창출하는 새로운 시장이 형성되고 있습니다. ([출처](https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/))
+
+### 8. 벡터 데이터베이스의 핵심 개념과 RAG 시스템 구축 실무
+최근 LLM 활용이 늘면서 벡터 데이터베이스에 대한 관심이 높아지고 있습니다. 특정 벤더에 종속되지 않고 SQLite3나 PostgreSQL 등을 활용해 임베딩부터 RAG 시스템까지 단계적으로 구축하는 실무 원리가 중요해지고 있습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=216146))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

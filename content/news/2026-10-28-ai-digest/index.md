@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-10-28"
+date: "2026-10-28"
+description: "최근 3일간 AI 업계는 앤스로픽의 IPO 준비와 오픈AI의 과학적 성과 발표, 그리고 AI 모델의 성능 고도화와 안전성 논란이 집중적으로 다뤄졌습니다."
+---
+
+### 1. 앤스로픽 IPO와 기업 거버넌스
+앤스로픽이 IPO를 앞두고 복잡한 거버넌스 구조와 안전 중심의 기업 철학을 유지하려는 계획을 공개했습니다. 아마존은 이번 상장을 통해 상당한 지분 가치를 확보할 것으로 예상되며, 기업의 안전성 확보와 투자자 압박 사이의 균형이 주요 과제로 떠올랐습니다. ([출처](https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/))
+
+### 2. 오픈AI의 과학적 발견과 연구 투명성 논란
+오픈AI가 수학, 컴퓨터 과학, 물리학 분야에서 세 가지 주요 발견을 발표하며 외부 학자들과의 협력을 강화했습니다. 그러나 일각에서는 여전히 오픈AI의 폐쇄적인 연구 방식과 성과 공유 방식에 대해 비판적인 목소리가 나오고 있습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics))
+
+### 3. 구글, 더 현실적인 세계 모델 'Genie 4' 발표
+구글이 오디오 생성과 실시간 제어 기능을 강화한 세계 모델 'Genie 4'를 공개했습니다. 이전 모델보다 더 긴 시간 동안 일관된 장면을 유지하며, 더욱 현실적인 상호작용 환경을 제공하는 것이 특징입니다. ([출처](https://www.theverge.com/tech/1019076/google-genie-4-ai-model))
+
+### 4. 애플, 생산성 앱에 AI 챗봇 통합
+애플이 자사의 생산성 앱인 Pages, Keynote, Numbers에 AI 챗봇을 도입합니다. 애플과 오픈AI의 모델을 기반으로 한 이 기능은 문서 맥락을 이해하여 슬라이드 디자인이나 텍스트 정교화 작업을 지원합니다. ([출처](https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update))
+
+### 5. 오페라, 브라우저 내 로컬 AI 실행 'WebAI' 도입
+오페라가 다양한 AI 모델을 브라우저에서 직접 실행할 수 있도록 지원하는 새로운 웹 표준인 'WebAI'를 발표했습니다. 이를 통해 사용자는 외부 서버를 거치지 않고 로컬 환경에서 AI 기능을 활용할 수 있게 됩니다. ([출처](https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/))
+
+### 6. AI 에이전트의 위험성과 보안 주의보
+뱅크오브아메리카는 고객들에게 AI 에이전트에게 은행 비밀번호를 공유하지 말 것을 경고했습니다. AI 에이전트의 접근으로 발생하는 모든 활동의 책임은 사용자에게 있다는 점을 강조하며 보안 의식을 당부했습니다. ([출처](https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/))
+
+### 7. 머신러닝 플랫폼 엔지니어링 실전 가이드
+쿠버네티스 기반의 엔드투엔드 ML/LLM 플랫폼 구축 방법을 다룬 신간이 출간되었습니다. 데이터 통합부터 모델 훈련, 배포, 모니터링까지 AI 시스템 운영을 위한 전체 인프라와 워크플로를 실전 예제를 통해 학습할 수 있습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=216583))
+
+### 8. AI 인프라 확장에 따른 전력망 혁신
+데이터 센터의 급격한 증가가 기존 전력망에 부담을 주고 있지만, 이를 계기로 전력망 현대화와 혁신 기회가 창출되고 있습니다. 에너지 수요 급증에 대응하기 위한 새로운 인프라 기술이 업계의 주목을 받고 있습니다. ([출처](https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

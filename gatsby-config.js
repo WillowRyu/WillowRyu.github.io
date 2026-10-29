@@ -6,7 +6,7 @@ module.exports = {
       summary: `Software enginner`,
       email: "stainer1004@gmail.com",
     },
-    description: `tip, info and study case of FE enginner`,
+    description: `개발 관련 후기, 글, 팁 그리고 내 잡담을 공유하는 블로그`,
     siteUrl: `https://willowryu.github.io`,
     social: {
       twitter: "",

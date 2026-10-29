@@ -6,13 +6,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const newsPost = path.resolve(`./src/templates/news-post.js`)
+  const newsList = path.resolve(`./src/templates/news-list.js`)
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { frontmatter: { date: DESC } }
-          limit: 1000
-        ) {
+        allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
           edges {
             node {
               fields {
@@ -60,6 +58,22 @@ exports.createPages = async ({ graphql, actions }) => {
   const newsPosts = allPosts.filter(
     ({ node }) => node.fields.collection === `news`
   )
+
+  const postsPerPage = 10
+  const numPages = Math.max(1, Math.ceil(newsPosts.length / postsPerPage))
+
+  for (let currentPage = 1; currentPage <= numPages; currentPage++) {
+    createPage({
+      path: currentPage === 1 ? `/news/` : `/news/${currentPage}/`,
+      component: newsList,
+      context: {
+        limit: postsPerPage,
+        skip: (currentPage - 1) * postsPerPage,
+        numPages,
+        currentPage,
+      },
+    })
+  }
 
   newsPosts.forEach(post => {
     createPage({

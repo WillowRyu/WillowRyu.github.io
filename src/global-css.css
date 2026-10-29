@@ -119,3 +119,41 @@ a:link {
 .site-nav a:hover {
   text-decoration: underline;
 }
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: calc(var(--gap) * 2);
+}
+
+.pagination a,
+.pagination-current {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--entry);
+  color: var(--secondary);
+  box-shadow: none;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.pagination a:hover,
+.pagination a:focus-visible {
+  border-color: var(--pblue);
+  color: var(--pblue);
+}
+
+.pagination-current {
+  border-color: var(--pblue);
+  background-color: var(--pblue);
+  color: var(--theme);
+  font-weight: 700;
+}

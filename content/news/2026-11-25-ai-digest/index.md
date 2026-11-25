@@ -1,0 +1,32 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-11-25"
+date: "2026-11-25"
+description: "최근 3일간 AI는 데이터센터의 환경 영향, AI 에이전트의 실무 적용과 한계, 그리고 기업들의 AI 도입에 따른 보안 및 저작권 이슈가 주요 화두로 떠올랐습니다."
+---
+
+### 1. AI 추론의 물 소비량과 환경 영향 연구
+AI 서비스 이용 시 발생하는 물 소비량이 일상적인 소비 활동보다 훨씬 적다는 연구 결과가 발표되었습니다. AI 추론에 필요한 물의 약 90%는 데이터센터가 아닌 전력 생산 과정에서 소비되는 것으로 나타났습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=217769))
+
+### 2. AI 에이전트의 일상 업무 수행 한계
+최신 AI 에이전트들이 일상적인 작업을 수행하는 데 있어 여전히 신뢰성과 안전성 문제에 직면해 있다는 벤치마크 결과가 나왔습니다. 고도화된 모델조차 일상 업무를 완벽히 처리하는 데 어려움을 겪고 있습니다. ([출처](https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/))
+
+### 3. 메타의 AI 에이전트 '뮤즈', 월마트 및 인스타그램 연동
+메타의 AI 에이전트 '뮤즈'가 월마트의 블랙 프라이데이 쇼핑 기능을 지원하며, 인스타그램 다이렉트 메시지(DM)에도 직접 통합되었습니다. 사용자는 별도의 앱 전환 없이 인스타그램 내에서 AI와 소통할 수 있게 되었습니다. ([출처](https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/))
+
+### 4. 음원 플랫폼 타이달, AI 생성 음악 대규모 삭제
+타이달이 AI로 생성된 저품질 음원들이 범람함에 따라 약 2,900만 곡의 AI 생성 음악을 삭제하고 향후 차단하기로 결정했습니다. 다만 AI의 도움을 받은 음악은 허용하되 완전히 AI가 생성한 곡은 금지할 방침입니다. ([출처](https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban))
+
+### 5. 앤스로픽, 코드 리뷰 및 수정 가능한 '클로드 쉽' 출시
+앤스로픽이 소프트웨어 엔지니어를 위한 '클로드 쉽' 기능을 공개했습니다. 이제 클로드 AI는 풀 리퀘스트를 직접 검토하고 수정 사항을 제안하며 승인까지 처리할 수 있습니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests))
+
+### 6. 뉴욕타임스, 포토샵 AI 기능 사용 주의보
+뉴욕타임스가 프리랜서 사진기자들에게 최신 어도비 포토샵 업데이트를 하지 말라고 권고했습니다. 2027 버전의 AI 기능이 사용자가 인지하기 어려운 방식으로 이미지를 변형할 가능성이 있기 때문입니다. ([출처](https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features))
+
+### 7. 영국 정부, AI 기반 사이버 공격 위험 경고
+영국 사이버 보안 기관은 AI 해킹 도구가 단순한 보안 취약점을 악용하고 있다고 경고했습니다. AI 기술이 고도화됨에 따라 기업들이 더욱 강력한 보안 기반을 구축하는 것이 중요해졌습니다. ([출처](https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/))
+
+### 8. 데이터센터 전력 수요와 신재생 에너지
+AI 데이터센터의 급격한 전력 수요 증가가 기후 변화 대응에 새로운 과제를 던지고 있습니다. 차세대 데이터센터의 전력 공급을 위해 태양광 및 에너지 저장 장치(ESS) 도입이 필수적인 대안으로 떠오르고 있습니다. ([출처](https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*

@@ -1,0 +1,35 @@
+---
+title: "AI 뉴스 다이제스트 — 2026-11-28"
+date: "2026-11-28"
+description: "지난 3일간 AI 업계는 오픈AI와 애플의 법적 공방, 엔비디아의 수출 제한 및 경영 리스크, 그리고 생성형 AI 데이터 활용과 규제 이슈가 집중적으로 부각되었습니다."
+---
+
+### 1. 오픈AI, 애플 상대 맞소송 제기
+오픈AI가 애플이 자사의 AI 기기 개발을 방해하기 위해 제조 협력업체에 압력을 행사했다며 맞소송을 제기했습니다. 양사의 갈등은 인재 확보 경쟁을 넘어 하드웨어 공급망 문제로 확대되고 있습니다. ([출처](https://www.aitimes.com/news/articleView.html?idxno=217889))
+
+### 2. 엔비디아, 동남아 AI 칩 선적 일시 중단
+미국의 대중국 AI 칩 수출 규제 강화에 따라 엔비디아가 말레이시아, 싱가포르 등 동남아 4개국으로의 서버용 칩 선적을 일시 중단했습니다. 이는 중국으로의 우회 수출을 차단하기 위한 조치로 풀이됩니다. ([출처](https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/))
+
+### 3. Character.AI 파산 절차 중 사용자 데이터 매각 논란
+파산 절차를 밟고 있는 Character.AI가 2,100만 명 이상의 사용자 채팅 기록을 매각하려 하자 42개 주 법무장관들이 이를 저지하기 위해 나섰습니다. 미성년자 데이터를 포함한 민감한 개인 정보 유출에 대한 우려가 커지고 있습니다. ([출처](https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats))
+
+### 4. 아마존-메타, AI 에이전트 '뮤즈' 차단 해제 논의
+아마존이 메타의 AI 쇼핑 에이전트 '뮤즈'에 대한 차단 조치를 해제하는 방안을 논의 중입니다. 양사는 AI가 추천하는 상품의 범위와 전자상거래 플랫폼에 미칠 영향 등을 중심으로 협의하고 있습니다. ([출처](https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions))
+
+### 5. 스페이스X, AI 칩 탑재 위성 데이터 센터 구축 승인
+FCC가 스페이스X의 '스타마인드' 프로젝트를 승인하며 최대 100만 개의 AI 칩 탑재 위성을 우주에 배치할 수 있게 되었습니다. 구글과 블루 오리진 등도 우주 기반 AI 데이터 센터 구축을 추진 중입니다. ([출처](https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers))
+
+### 6. 타이달(Tidal), AI 생성 음악 퇴출 결정
+음악 스트리밍 서비스 타이달이 오는 12월 9일부터 AI 생성 음악을 플랫폼에서 전면 금지합니다. 이에 따라 약 2,900만 곡의 AI 생성 트랙이 삭제될 예정입니다. ([출처](https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban))
+
+### 7. 뉴욕주, AI 챗봇 장난감 판매 5년간 금지
+뉴욕주가 아동용 AI 챗봇 장난감의 안전성 문제를 이유로 향후 5년간 판매를 금지했습니다. 연구 결과 해당 장난감들이 부적절한 콘텐츠 노출 및 아동의 정서 발달에 위험을 초래할 수 있다는 점이 확인되었습니다. ([출처](https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/))
+
+### 8. 앤스로픽 CEO, AI 의식 논란 일축
+앤스로픽의 다리오 아모데이 CEO가 자사 AI가 인간의 통제를 벗어난다는 일각의 주장을 '터무니없다'고 반박했습니다. 앞서 앤스로픽은 상장 과정에서 AI의 의식 가능성을 리스크 요인으로 언급한 바 있습니다. ([출처](https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/))
+
+### 9. 낫싱(Nothing), AI 이어버드 및 녹음 케이스 공개
+낫싱이 12월 출시 예정인 AI 이어버드 '이어 노트'를 공개했습니다. 이 제품은 통화 녹음은 물론, 충전 케이스를 통해 대화 내용을 기록, 전사 및 요약하는 기능을 지원합니다. ([출처](https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal))
+
+---
+*— 이 글은 Gemini가 자동 요약했습니다 · 사실은 출처를 확인하세요.*
